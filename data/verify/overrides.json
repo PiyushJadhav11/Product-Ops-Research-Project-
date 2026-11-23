@@ -1,0 +1,10 @@
+[
+ {"id": 92, "app": "Otter AI",
+  "reason": "Policy call: no self-serve REST API (Enterprise-only), but the official OAuth MCP (mcp.otter.ai, read-only) is on all plans, so it is buildable with friction rather than blocked.",
+  "set": {"access": "self_serve_free", "verdict": "ready_with_friction", "blocker_type": "other", "verdict_locked": true,
+          "blocker": "REST API & webhooks are Enterprise-only; the official MCP (mcp.otter.ai, OAuth, read-only) is on all plans",
+          "toolkit_shape": "mcp_server"}},
+ {"id": 50, "app": "fanbasis",
+  "reason": "Fix-loop patch set official_mcp=yes from the vendor GitHub org but left mcp_url empty (lint R4).",
+  "set": {"mcp_url": "https://github.com/FanBasis/fbnewapi"}}
+]

@@ -10,6 +10,9 @@ PRIMARY_HINTS = ("docs", "developer", "api", "help", "support", "github.com", "p
 
 
 def rules(r):
+    for k in ("verdict", "access", "toolkit_auth", "official_mcp"):
+        if k not in r:  # e.g. a failed agent run returned {"error": ...}
+            return [f"R0 missing required field {k}"]
     f = []
     ev = r.get("evidence", [])
     if len(ev) < 2:

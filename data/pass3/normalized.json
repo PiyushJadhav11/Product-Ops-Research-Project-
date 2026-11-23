@@ -349,7 +349,7 @@
   "toolkit_auth": "oauth2",
   "auth_notes": "API key via HTTP Basic (key as username, empty password); OAuth 2.0 apps for multi-user integrations (coarse all.full_access scope).",
   "access": "self_serve_trial",
-  "gate_evidence": "No free plan; \"Start your free 14-day trial\u2014no credit card required.\" (close.com pricing). API keys created in Settings > Developer > API Keys; OAuth app creation is self-serve.",
+  "gate_evidence": "No free plan; \"Start your free 14-day trial—no credit card required.\" (close.com pricing). API keys created in Settings > Developer > API Keys; OAuth app creation is self-serve.",
   "api_type": [
    "rest"
   ],

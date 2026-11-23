@@ -865,7 +865,7 @@
   "to": "ready_with_friction",
   "loop": "fix_C4",
   "url": "https://developer.brex.com/docs/mcp",
-  "quote": "An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer."
+  "quote": "An account admin or card admin must accept the Developer API agreement in Settings → Developer."
  },
  {
   "id": 88,
@@ -875,7 +875,7 @@
   "to": "per_tenant_setup",
   "loop": "fix_C4",
   "url": "https://developer.brex.com/docs/mcp",
-  "quote": "An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer."
+  "quote": "An account admin or card admin must accept the Developer API agreement in Settings → Developer."
  },
  {
   "id": 88,
@@ -885,7 +885,7 @@
   "to": "Each customer admin must accept Developer API agreement and generate a user token (partner OAuth needs Brex support); hosted MCP supports OAuth with DCR",
   "loop": "fix_C4",
   "url": "https://developer.brex.com/docs/mcp",
-  "quote": "An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer."
+  "quote": "An account admin or card admin must accept the Developer API agreement in Settings → Developer."
  },
  {
   "id": 92,
@@ -957,7 +957,7 @@
   "to": "paid_plan",
   "loop": "browser",
   "url": "https://devin.ai/pricing",
-  "quote": "Compare Plans table: \"Devin API\" row shows \u2717 for Free ($0), \u2713 for Pro ($20/mo), Max, Team, Enterprise (rendered checkmark icons; JS-only, unreadable by WebFetch)"
+  "quote": "Compare Plans table: \"Devin API\" row shows ✗ for Free ($0), ✓ for Pro ($20/mo), Max, Team, Enterprise (rendered checkmark icons; JS-only, unreadable by WebFetch)"
  },
  {
   "id": 29,
@@ -1088,5 +1088,14 @@
   "loop": "adjudication",
   "url": "https://docs.devin.ai/api-reference/overview",
   "quote": "For teams and standard organizations."
+ },
+ {
+  "id": 92,
+  "app": "Otter AI",
+  "field": "blocker_type",
+  "from": "no_public_api",
+  "to": "other",
+  "loop": "override",
+  "quote": "Policy call: no self-serve REST API (Enterprise-only), but the official OAuth MCP (mcp.otter.ai, read-only) is on all plans, so it is buildable with friction rather than blocked."
  }
 ]

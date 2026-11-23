@@ -1,6 +1,8 @@
 """Score a research file against adjudicated ground truth on a sample.
 Usage: python agent/score.py data/pass2/pass2.json [A|B|all]"""
 import json, sys
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
 FIELDS = ["toolkit_auth", "access", "official_mcp", "verdict"]
 KEYLIKE = {"api_key", "bearer_token"}  # a toolkit handles these identically (static secret in a header)
 
@@ -23,10 +25,11 @@ def score(recs, truth, ids):
 
 if __name__ == "__main__":
     recs = json.load(open(sys.argv[1]))
-    truth = json.load(open("data/verify/truth.json"))
-    s = json.load(open("data/verify/sample.json"))
+    truth = json.load(open(ROOT / "data/verify/truth.json"))
+    s = json.load(open(ROOT / "data/verify/sample.json"))
     which = sys.argv[2] if len(sys.argv) > 2 else "all"
     ids = {"A": s["calibration_A"], "B": s["holdout_B"], "all": s["calibration_A"] + s["holdout_B"]}[which]
     h, n, m = score(recs, truth, ids)
     print(f"{which}: {h}/{n} = {h/n:.1%}")
-    for x in m: print("  MISS", x)
+    for x in m:
+        print("  MISS", x)

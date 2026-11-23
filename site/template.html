@@ -263,12 +263,14 @@ python agent/normalize.py data/pass3/patched.json data/pass3/patched_norm.json
 python agent/score.py     data/pass1/pass1.json all      # 74.2%
 python agent/score.py     data/pass2/pass2.json all      # 86.7%
 python agent/score.py     data/pass3/patched_norm.json B # 90.0% holdout
+python agent/pipeline.py   # rebuild data/final.json from the agent outputs
+python site/build.py       # rebuild this page
 
 # re-run the research agent on any app(s)
 export ANTHROPIC_API_KEY=...   COMPOSIO_API_KEY=...   # Composio optional
 python agent/run.py research --ids 41-50 --out data/run/ecom.json
 python agent/run.py fix --in data/run/ecom.json --out data/run/ecom.patches.json</pre>
-  <p class="small muted">The submitted dataset came from Claude agents running these exact prompts with web search and fetch tools (10 research workers, 3 blind verifiers, 5 fix-loop workers, plus browser checks). <code>agent/run.py</code> is the same loop as a standalone script against the Anthropic API. It is syntax-checked but had not been run end to end at submission time.</p>
+  <p class="small muted">The submitted dataset came from Claude agents running these exact prompts with web search and fetch tools (10 research workers, 3 blind verifiers, 5 fix-loop workers, plus browser checks). <code>agent/run.py</code> is the same loop as a standalone script against the Anthropic API. Its full loop (pause/continue, schema retry, patching, lint, normalise) is tested offline against a mocked API; it has not yet been run with a live key.</p>
 </div></section>
 </main>
 <footer><div class="wrap">Research run 23 Nov 2026. Vendor pricing and gating change often, so every claim links to the page it came from. Labels follow <code>agent/prompts/rubric.md</code>.</div></footer>

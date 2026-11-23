@@ -351,7 +351,7 @@
   "toolkit_auth": "oauth2",
   "auth_notes": "API key via HTTP Basic (key as username, empty password); OAuth 2.0 apps for multi-user integrations (coarse all.full_access scope).",
   "access": "app_review",
-  "gate_evidence": "No free plan; \"Start your free 14-day trial\u2014no credit card required.\" (close.com pricing). API keys created in Settings > Developer > API Keys; OAuth app creation is self-serve.",
+  "gate_evidence": "No free plan; \"Start your free 14-day trial—no credit card required.\" (close.com pricing). API keys created in Settings > Developer > API Keys; OAuth app creation is self-serve.",
   "api_type": [
    "rest"
   ],
@@ -2705,7 +2705,8 @@
   "evidence_quality": "primary",
   "confidence": 0.55,
   "needs_human": true,
-  "notes": "Surprising: public API exists though fanbasis.com marketing site does not mention it (docs branded 'Commas'). Could not read commasdocs.com (robots) or find how keys are obtained. No MCP search done beyond general results."
+  "notes": "Surprising: public API exists though fanbasis.com marketing site does not mention it (docs branded 'Commas'). Could not read commasdocs.com (robots) or find how keys are obtained. No MCP search done beyond general results.",
+  "mcp_url": "https://github.com/FanBasis/fbnewapi"
  },
  {
   "id": 51,
@@ -4665,15 +4666,15 @@
     "url": "https://www.brex.com/pricing"
    },
    {
-    "claim": "[fix-loop C4] verdict: An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer.",
+    "claim": "[fix-loop C4] verdict: An account admin or card admin must accept the Developer API agreement in Settings → Developer.",
     "url": "https://developer.brex.com/docs/mcp"
    },
    {
-    "claim": "[fix-loop C4] blocker_type: An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer.",
+    "claim": "[fix-loop C4] blocker_type: An account admin or card admin must accept the Developer API agreement in Settings → Developer.",
     "url": "https://developer.brex.com/docs/mcp"
    },
    {
-    "claim": "[fix-loop C4] blocker: An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer.",
+    "claim": "[fix-loop C4] blocker: An account admin or card admin must accept the Developer API agreement in Settings → Developer.",
     "url": "https://developer.brex.com/docs/mcp"
    }
   ],
@@ -5073,7 +5074,7 @@
     "url": "https://docs.devin.ai/api-reference/v3/overview"
    },
    {
-    "claim": "[browser check] Compare Plans table: \"Devin API\" row shows \u2717 for Free ($0), \u2713 for Pro ($20/mo), Max, Team, Enterprise (rendered checkmark icons; JS-only, unreadable by WebFetch)",
+    "claim": "[browser check] Compare Plans table: \"Devin API\" row shows ✗ for Free ($0), ✓ for Pro ($20/mo), Max, Team, Enterprise (rendered checkmark icons; JS-only, unreadable by WebFetch)",
     "url": "https://devin.ai/pricing"
    }
   ],
