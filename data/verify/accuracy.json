@@ -1,0 +1,104 @@
+{
+ "pass1": {
+  "A_toolkit_auth": [
+   18,
+   20
+  ],
+  "A_access": [
+   10,
+   20
+  ],
+  "A_official_mcp": [
+   16,
+   20
+  ],
+  "A_verdict": [
+   16,
+   20
+  ],
+  "B_toolkit_auth": [
+   7,
+   10
+  ],
+  "B_access": [
+   7,
+   10
+  ],
+  "B_official_mcp": [
+   7,
+   10
+  ],
+  "B_verdict": [
+   8,
+   10
+  ]
+ },
+ "pass2": {
+  "A_toolkit_auth": [
+   18,
+   20
+  ],
+  "A_access": [
+   17,
+   20
+  ],
+  "A_official_mcp": [
+   19,
+   20
+  ],
+  "A_verdict": [
+   16,
+   20
+  ],
+  "B_toolkit_auth": [
+   8,
+   10
+  ],
+  "B_access": [
+   7,
+   10
+  ],
+  "B_official_mcp": [
+   10,
+   10
+  ],
+  "B_verdict": [
+   9,
+   10
+  ]
+ },
+ "loops": {
+  "A_toolkit_auth": [
+   19,
+   20
+  ],
+  "A_access": [
+   18,
+   20
+  ],
+  "A_official_mcp": [
+   20,
+   20
+  ],
+  "A_verdict": [
+   18,
+   20
+  ],
+  "B_toolkit_auth": [
+   9,
+   10
+  ],
+  "B_access": [
+   8,
+   10
+  ],
+  "B_official_mcp": [
+   10,
+   10
+  ],
+  "B_verdict": [
+   9,
+   10
+  ]
+ }
+}

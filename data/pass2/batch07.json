@@ -1,0 +1,495 @@
+[
+ {
+  "id": 61,
+  "app": "GitHub",
+  "subcategory": "code hosting",
+  "one_liner": "Code hosting and collaboration platform with a broad REST and GraphQL API.",
+  "docs_url": "https://docs.github.com/rest",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2",
+   "jwt_signed",
+   "basic"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Fine-grained/classic PAT, GitHub App tokens (JWT-signed app auth, installation tokens), OAuth app tokens; basic auth only for client id/secret on some app endpoints. Username/password not supported.",
+  "access": "self_serve_free",
+  "gate_evidence": "Page describes PAT, GitHub App and OAuth app tokens as self-created; no approval step stated. Free-account sign-up inferred, not quoted.",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://api.githubcopilot.com/mcp/",
+  "community_mcp": "Local server also at https://github.com/github/github-mcp-server (same org)",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "REST API auth via fine-grained PAT, GitHub App token, or OAuth app token; GitHub recommends GitHub Apps for org access",
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api"
+   },
+   {
+    "claim": "Official remote GitHub MCP server hosted by GitHub, GA with OAuth",
+    "url": "https://github.blog/changelog/2025-09-04-remote-github-mcp-server-is-now-generally-available/"
+   },
+   {
+    "claim": "github/github-mcp-server repo: remote hosted server at api.githubcopilot.com/mcp, PAT or OAuth",
+    "url": "https://github.com/github/github-mcp-server"
+   }
+  ],
+  "confidence": 0.85,
+  "notes": "Gate for free accounts not quoted from a pricing page; GraphQL/webhooks taken as well-known, not fetched.",
+  "category": "Developer, Infra and Data platforms",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 62,
+  "app": "Vercel",
+  "subcategory": "hosting/deployment",
+  "one_liner": "Frontend cloud and deployment platform with a REST API and SDK.",
+  "docs_url": "https://vercel.com/docs/rest-api",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "bearer_token",
+  "auth_notes": "Access tokens passed as Bearer, scopable to account/team/project. OAuth is used by the official MCP; third-party OAuth for REST (Integrations / Sign in with Vercel) not verified.",
+  "access": "self_serve_free",
+  "gate_evidence": "Tokens are created via dashboard, CLI (vercel tokens add) or POST /v3/user/tokens; docs show Hobby accounts as default plan and no approval step. Hobby-specific API entitlement not explicitly quoted.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.vercel.com",
+  "community_mcp": "Quegenx/vercel-mcp-server, nganiet/mcp-vercel",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Access tokens authenticate REST API and CLI; passed as Bearer in Authorization header",
+    "url": "https://vercel.com/docs/accounts/access-tokens"
+   },
+   {
+    "claim": "Official Vercel MCP: remote, OAuth, at https://mcp.vercel.com",
+    "url": "https://vercel.com/docs/agent-resources/vercel-mcp"
+   },
+   {
+    "claim": "Vercel announces official MCP server in public beta",
+    "url": "https://vercel.com/changelog/vercels-mcp"
+   }
+  ],
+  "confidence": 0.75,
+  "notes": "Webhook plan gating (reportedly Pro+) not verified. Official MCP uses allowlisted clients per a secondary source.",
+  "category": "Developer, Infra and Data platforms",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 63,
+  "app": "Netlify",
+  "subcategory": "hosting/deployment",
+  "one_liner": "Web hosting and deploy platform with a REST API.",
+  "docs_url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "PAT for personal use; OAuth2 required for public integrations (register app for client key/secret).",
+  "access": "self_serve_free",
+  "gate_evidence": "Page states no plan requirement for API, PAT, OAuth2 or webhooks; OAuth app registered in user settings (no review mentioned).",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://netlify-mcp.netlify.app/mcp",
+  "community_mcp": "",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "PAT as Bearer; OAuth2 mandatory for public integrations; no plan requirement stated; 500 req/min",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+   },
+   {
+    "claim": "Official Netlify MCP server docs (remote endpoint + npx @netlify/mcp)",
+    "url": "https://docs.netlify.com/welcome/build-with-ai/netlify-mcp-server"
+   },
+   {
+    "claim": "Netlify official MCP server repo",
+    "url": "https://github.com/netlify/netlify-mcp"
+   }
+  ],
+  "confidence": 0.85,
+  "category": "Developer, Infra and Data platforms",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 64,
+  "app": "Cloudflare",
+  "subcategory": "CDN/edge platform",
+  "one_liner": "Edge, DNS, security and developer platform with a very broad REST API.",
+  "docs_url": "https://developers.cloudflare.com/api/",
+  "auth_methods": [
+   "bearer_token",
+   "api_key",
+   "oauth2"
+  ],
+  "toolkit_auth": "bearer_token",
+  "auth_notes": "Scoped user or account API tokens (Bearer, preferred); legacy Global API key; OAuth access tokens mentioned in changelog only for account creation automation.",
+  "access": "self_serve_free",
+  "gate_evidence": "Account API tokens GA for all accounts; changelog says Free accounts can be created via dashboard/API with user-owned API tokens. Explicit 'tokens on free plan' sentence not found (a secondary blog says so).",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.cloudflare.com",
+  "community_mcp": "",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Create user/account API tokens in dashboard; secret shown once; cfut_ prefix",
+    "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/"
+   },
+   {
+    "claim": "Official cloudflare/mcp-server-cloudflare repo lists remote MCP servers *.mcp.cloudflare.com and a Code Mode server at mcp.cloudflare.com",
+    "url": "https://github.com/cloudflare/mcp-server-cloudflare"
+   },
+   {
+    "claim": "Changelog: Free accounts creatable via dashboard and API with API tokens",
+    "url": "https://developers.cloudflare.com/fundamentals/changelog"
+   }
+  ],
+  "confidence": 0.8,
+  "notes": "Surprise: Code Mode MCP (mcp.cloudflare.com) covers whole API (~2,500 endpoints) via search/execute; per-product servers also exist. Some features per-plan gated.",
+  "category": "Developer, Infra and Data platforms",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 65,
+  "app": "Supabase",
+  "subcategory": "backend-as-a-service",
+  "one_liner": "Postgres-based backend platform; Management API manages orgs/projects, project APIs are per-project.",
+  "docs_url": "https://supabase.com/docs/reference/api/introduction",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2",
+   "api_key"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Management API: PATs (scoped or legacy) or OAuth2 (short-lived, scoped). Per-project data APIs use project API keys (anon/service_role) - not verified here.",
+  "access": "self_serve_free",
+  "gate_evidence": "Management API needs an access token (PAT or OAuth2); docs show self-created PATs; no approval mentioned. OAuth app registration terms not fetched.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.supabase.com/mcp",
+  "community_mcp": "",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [
+   {
+    "claim": "Management API auth via PAT or OAuth2; 120 req/min limit",
+    "url": "https://supabase.com/docs/reference/api/introduction"
+   },
+   {
+    "claim": "Official hosted Supabase MCP at mcp.supabase.com/mcp, OAuth, also PAT via Authorization header",
+    "url": "https://supabase.com/docs/guides/ai-tools/mcp"
+   },
+   {
+    "claim": "Supabase launches official remote MCP server",
+    "url": "https://supabase.com/blog/remote-mcp-server"
+   }
+  ],
+  "confidence": 0.8,
+  "notes": "MCP branching tools require paid plan.",
+  "category": "Developer, Infra and Data platforms",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 66,
+  "app": "Neo4j",
+  "subcategory": "graph database",
+  "one_liner": "Graph database; Aura management REST API plus per-instance Query API over HTTPS.",
+  "docs_url": "https://neo4j.com/docs/aura/api/",
+  "auth_methods": [
+   "oauth2",
+   "basic",
+   "bearer_token"
+  ],
+  "toolkit_auth": "basic",
+  "auth_notes": "Aura API: client-credentials OAuth2 (Basic to /oauth/token, 1h Bearer token). Data: Query API with per-instance database user basic auth (Bearer if SSO configured).",
+  "access": "self_serve_free",
+  "gate_evidence": "'All tiers can create Aura API credentials.' Aura Free tier exists (blog: sign up for the Aura free tier).",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "no",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://neo4j.com/docs/mcp/current/",
+  "community_mcp": "neo4j-contrib/mcp-neo4j (Neo4j Labs, unsupported by product team)",
+  "verdict": "ready_with_friction",
+  "blocker": "Data access is per-instance DB credentials, not a multi-tenant OAuth; each end-user supplies own instance URL + creds",
+  "blocker_type": "per_tenant_setup",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "All tiers can create Aura API credentials; client credentials -> Bearer token, 1h expiry",
+    "url": "https://neo4j.com/docs/aura/api/authentication/"
+   },
+   {
+    "claim": "Official neo4j-mcp server (product team) and hosted MCP for Aura on Free/Pro/BC tiers",
+    "url": "https://neo4j.com/docs/mcp/current/mcp-for-aura/"
+   },
+   {
+    "claim": "Query API available on Aura across all tiers, basic auth",
+    "url": "https://neo4j.com/blog/developer/query-api-neo4j-aura-https/"
+   },
+   {
+    "claim": "neo4j-contrib repo states it is Labs, not product-supported; points to the official server",
+    "url": "https://github.com/neo4j-contrib/mcp-neo4j"
+   }
+  ],
+  "confidence": 0.75,
+  "notes": "Surprise: Aura-hosted MCP per instance. Webhooks set 'no' as none found in docs (absence, low certainty). Sandbox = free Aura tier.",
+  "category": "Developer, Infra and Data platforms",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 67,
+  "app": "Snowflake",
+  "subcategory": "data warehouse",
+  "one_liner": "Cloud data platform; SQL API (REST) and Snowflake-managed MCP server, all per-account.",
+  "docs_url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+  "auth_methods": [
+   "oauth2",
+   "jwt_signed",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "SQL API: OAuth, key-pair JWT, programmatic access token (PAT). Every tenant has own account URL; OAuth needs admin-created security integration.",
+  "access": "self_serve_trial",
+  "gate_evidence": "Trial accounts last 30 days or until $400 free credits are used; adding a credit card converts to paid.",
+  "api_type": [
+   "rest",
+   "cli",
+   "sdk_only"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "no",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+  "community_mcp": "IndexSeek/mcp",
+  "verdict": "ready_with_friction",
+  "blocker": "Per-customer-account setup (account URL, OAuth integration or PAT, role grants); no free tier beyond 30-day trial",
+  "blocker_type": "per_tenant_setup",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "SQL API authentication: OAuth, key-pair JWT, PAT",
+    "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating"
+   },
+   {
+    "claim": "Trial accounts: 30 days or $400 credits, credit card converts to paid",
+    "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account"
+   },
+   {
+    "claim": "Snowflake-managed MCP server: OAuth recommended, PAT supported, RBAC per tool",
+    "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp"
+   }
+  ],
+  "confidence": 0.8,
+  "notes": "Snowflake MCP is an account-scoped object, not a shared vendor endpoint. Webhooks 'no' = none found (low certainty). Some AI features disabled on trial until card added.",
+  "category": "Developer, Infra and Data platforms",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "subcategory": "database-as-a-service",
+  "one_liner": "Managed MongoDB; Atlas Administration API manages infra only, not cluster data.",
+  "docs_url": "https://www.mongodb.com/docs/atlas/api/",
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "basic"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Service accounts (OAuth2 client-credentials, 1h tokens, recommended); legacy API keys via HTTP Digest. Admin API cannot read/write data; data needs DB user credentials/connection string.",
+  "access": "self_serve_free",
+  "gate_evidence": "Docs state no pricing tier requirement for service accounts/API keys; Atlas has free M0 tier (not quoted in a fetched page). Project/org Owner role required to create credentials.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://github.com/mongodb-js/mongodb-mcp-server",
+  "community_mcp": "",
+  "verdict": "ready_with_friction",
+  "blocker": "Admin API does not cover cluster data; per-tenant service account or DB connection string needed",
+  "blocker_type": "per_tenant_setup",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Service accounts recommended (OAuth2 client credentials); API keys legacy; no tier requirement stated; Admin API doesn't access cluster data",
+    "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/"
+   },
+   {
+    "claim": "Official MongoDB MCP server (Docker Hub verified publisher MongoDB; MDB_MCP_API_CLIENT_ID/SECRET)",
+    "url": "https://hub.docker.com/r/mongodb/mongodb-mcp-server"
+   },
+   {
+    "claim": "MCP server docs prerequisites on mongodb.com",
+    "url": "https://www.mongodb.com/docs/mcp-server/prerequisites/"
+   }
+  ],
+  "confidence": 0.75,
+  "notes": "MCP is local stdio/Docker, not a hosted endpoint (no hosted URL found). Free-tier claim not directly cited.",
+  "category": "Developer, Infra and Data platforms",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 69,
+  "app": "Datadog",
+  "subcategory": "observability",
+  "one_liner": "Monitoring/observability SaaS with broad REST API and an official remote MCP server.",
+  "docs_url": "https://docs.datadoghq.com/api/",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "toolkit_auth": "api_key",
+  "auth_notes": "REST API needs API key (write) plus application key (read), per-site region endpoints. OAuth used by official MCP connectors. REST OAuth for third parties not verified.",
+  "access": "self_serve_trial",
+  "gate_evidence": "Free trial: 14 days, no credit card (trial page). A permanent free tier / post-trial API access terms not verified.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "unknown",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "mcp_url": "https://docs.datadoghq.com/mcp_server/setup/",
+  "community_mcp": "",
+  "verdict": "ready_with_friction",
+  "blocker": "Paid plan after 14-day trial; keys and site region are per customer",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "All API requests must be authenticated with API key; reads also need application key",
+    "url": "https://docs.datadoghq.com/api/latest/authentication/"
+   },
+   {
+    "claim": "Official Datadog MCP Server setup, endpoint per site, OAuth, in Claude directory",
+    "url": "https://docs.datadoghq.com/mcp_server/setup/"
+   },
+   {
+    "claim": "Datadog free trial: 14 days",
+    "url": "https://datadoghq.com/trial"
+   },
+   {
+    "claim": "Datadog blog: org with 14-day trial and API key provisioned",
+    "url": "https://datadoghq.com/blog/datadog-stripe-projects"
+   }
+  ],
+  "confidence": 0.7,
+  "needs_human": true,
+  "notes": "Needs human: confirm post-trial/free-tier API access and webhooks. MCP not available on some gov sites.",
+  "category": "Developer, Infra and Data platforms",
+  "evidence_quality": "primary"
+ },
+ {
+  "id": 70,
+  "app": "Sentry",
+  "subcategory": "error monitoring",
+  "one_liner": "Error/performance monitoring with REST API, OAuth2 integrations and an official hosted MCP.",
+  "docs_url": "https://docs.sentry.io/api/",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2",
+   "basic"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Org auth tokens via internal integration, user personal tokens, OAuth2 auth-code (30-day tokens, refresh), device flow; legacy API keys (basic) disabled for new accounts.",
+  "access": "self_serve_free",
+  "gate_evidence": "Free Developer plan exists ('Start free on the Developer plan forever'). Pricing page lists 'API & third-party integrations' under Team, so free-plan API/integration entitlement is ambiguous.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.sentry.dev/mcp",
+  "community_mcp": "MCP-100/mcp-sentry",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Sentry API auth: auth tokens, personal tokens, OAuth2 authorization code, device flow",
+    "url": "https://docs.sentry.io/api/auth/"
+   },
+   {
+    "claim": "Official hosted Sentry MCP with OAuth at mcp.sentry.dev/mcp",
+    "url": "https://docs.sentry.io/ai/mcp/"
+   },
+   {
+    "claim": "Pricing: free Developer plan; Team lists API & third-party integrations",
+    "url": "https://sentry.io/pricing/"
+   },
+   {
+    "claim": "Official repo getsentry/sentry-mcp",
+    "url": "https://github.com/getsentry/sentry-mcp"
+   }
+  ],
+  "confidence": 0.65,
+  "needs_human": true,
+  "notes": "Needs human: whether Developer (free) plan can use OAuth/internal integrations. Webhooks via Integration Platform (secondary listing, not fetched).",
+  "category": "Developer, Infra and Data platforms",
+  "evidence_quality": "primary"
+ }
+]

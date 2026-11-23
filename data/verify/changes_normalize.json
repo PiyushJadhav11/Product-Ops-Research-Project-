@@ -1,0 +1,170 @@
+[
+ {
+  "id": 5,
+  "app": "Twenty",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "normalize"
+ },
+ {
+  "id": 7,
+  "app": "Zoho CRM",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "normalize"
+ },
+ {
+  "id": 10,
+  "app": "DealCloud",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "blocked",
+  "loop": "normalize"
+ },
+ {
+  "id": 15,
+  "app": "Pylon",
+  "field": "blocker_type",
+  "from": "other",
+  "to": "paid_plan",
+  "loop": "normalize"
+ },
+ {
+  "id": 25,
+  "app": "Pumble",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "normalize"
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "blocked",
+  "loop": "normalize"
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "normalize"
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 40,
+  "app": "SendGrid",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 52,
+  "app": "SE Ranking",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "normalize"
+ },
+ {
+  "id": 52,
+  "app": "SE Ranking",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 60,
+  "app": "Clay",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "normalize"
+ },
+ {
+  "id": 60,
+  "app": "Clay",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 69,
+  "app": "Datadog",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "normalize"
+ },
+ {
+  "id": 69,
+  "app": "Datadog",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 84,
+  "app": "Paygent Connect",
+  "field": "blocker_type",
+  "from": "other",
+  "to": "no_public_api",
+  "loop": "normalize"
+ },
+ {
+  "id": 87,
+  "app": "Xero",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "normalize"
+ },
+ {
+  "id": 87,
+  "app": "Xero",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 88,
+  "app": "Brex",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "blocked",
+  "loop": "normalize"
+ },
+ {
+  "id": 89,
+  "app": "Ramp",
+  "field": "blocker_type",
+  "from": "per_tenant_setup",
+  "to": "app_review",
+  "loop": "normalize"
+ },
+ {
+  "id": 98,
+  "app": "Mermaid CLI",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "blocked",
+  "loop": "normalize"
+ }
+]

@@ -1,0 +1,612 @@
+[
+ {
+  "id": 2,
+  "app": "HubSpot",
+  "labels": {
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "app_review",
+   "official_mcp": "yes",
+   "mcp_url": "https://mcp.hubspot.com",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "app_review"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/manage-apps-in-hubspot",
+    "quote": "Static token apps: can only be installed in 1 standard HubSpot account at a time (OAuth vs static token auth)",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/manage-apps-in-hubspot",
+    "quote": "Marketplace OAuth app prior to listing: can be installed in up to 25 accounts",
+    "certain": true
+   },
+   "access": {
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/manage-apps-in-hubspot",
+    "quote": "Marketplace OAuth app prior to listing: can be installed in up to 25 accounts (not including developer test accounts)",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://developers.hubspot.com/docs/build-with-ai/remote-mcp-server",
+    "quote": "The remote HubSpot MCP server is a publicly hosted endpoint ... enables an agent to read, write, and update HubSpot records",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://developers.hubspot.com/docs/build-with-ai/remote-mcp-server",
+    "quote": "https://mcp.hubspot.com",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://developers.hubspot.com/docs/build-with-ai/remote-mcp-server",
+    "quote": "HubSpot CRM APIs (REST); GraphQL exists only for CMS, not counted",
+    "certain": false
+   },
+   "verdict": {
+    "url": "https://developers.hubspot.com/changelog/new-marketplace-distribution-app-install-limits",
+    "quote": "capped at 25 installs until they receive approval for the Marketplace listing",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://developers.hubspot.com/changelog/new-marketplace-distribution-app-install-limits",
+    "quote": "capped at 25 installs until they receive approval for the Marketplace listing",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 6,
+  "app": "Podio",
+  "labels": {
+   "auth_methods": [
+    "oauth2"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "self_serve_free",
+   "official_mcp": "no",
+   "mcp_url": "",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://developers.podio.com/authentication",
+    "quote": "The Podio API uses the OAuth2 protocol for authentication.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://developers.podio.com/authentication",
+    "quote": "Server-side flow ... the preferred way of authenticating for web apps",
+    "certain": true
+   },
+   "access": {
+    "url": "https://www.progress.com/podio/pricing",
+    "quote": "Free plan $0 ... Up to 5 users; All plans include API integrations at 1,000 calls per hour",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://developers.podio.com/authentication",
+    "quote": "No vendor MCP found in Podio dev docs; web search budget exhausted so not exhaustively checked",
+    "certain": false
+   },
+   "mcp_url": {
+    "url": "https://developers.podio.com/authentication",
+    "quote": "n/a",
+    "certain": false
+   },
+   "api_type": {
+    "url": "https://developers.podio.com/index/api",
+    "quote": "The API is available at https://api.podio.com. It is RESTful and uses json",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://www.progress.com/podio/pricing",
+    "quote": "All plans include API integrations at 1,000 calls per hour",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://www.progress.com/podio/pricing",
+    "quote": "Free plan ... Up to 5 users",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 10,
+  "app": "DealCloud",
+  "labels": {
+   "auth_methods": [
+    "api_key",
+    "oauth2"
+   ],
+   "toolkit_auth": "api_key",
+   "access": "partner_gated",
+   "official_mcp": "yes",
+   "mcp_url": "https://api.docs.dealcloud.com/mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "blocked",
+   "blocker_type": "partner_gate"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://api.docs.dealcloud.com/docs/token",
+    "quote": "Your Client Id and Secret are needed to generate a Token ... grant_type=client_credentials",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "quote": "user opens their profile ... clicks Enable in the API Key section, and copies the key (client-credentials, no 3rd-party OAuth registration)",
+    "certain": false
+   },
+   "access": {
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "quote": "Users without the Admin section ... directed to their organization's admin or DealCloud's Customer Success Manager (enterprise customer only)",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://api.docs.dealcloud.com/mcp/authentication",
+    "quote": "DealCloud MCP uses OAuth to authenticate, letting AI assistants connect on behalf of an individual user.",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://api.docs.dealcloud.com/mcp",
+    "quote": "The DealCloud MCP Server helps teams turn their DealCloud data into faster, higher-quality outcomes (endpoint not shown)",
+    "certain": false
+   },
+   "api_type": {
+    "url": "https://api.docs.dealcloud.com/docs",
+    "quote": "provide an overview of the REST APIs, their capabilities",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "quote": "requires a DealCloud user account and admin-configured permissions; no self-serve signup",
+    "certain": false
+   },
+   "blocker_type": {
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "quote": "contact your admin or DealCloud support",
+    "certain": false
+   }
+  }
+ },
+ {
+  "id": 14,
+  "app": "Front",
+  "labels": {
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "app_review",
+   "official_mcp": "yes",
+   "mcp_url": "https://mcp.frontapp.com/mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "app_review"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://dev.frontapp.com/docs/authentication",
+    "quote": "OAuth is required for public integrations ... generate an API token ... prefixed with Bearer",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://dev.frontapp.com/docs/oauth",
+    "quote": "OAuth is required for public integrations available to all Front customers unless you obtain an exception from us.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+    "quote": "By default, apps are private to the Front instance they are created in.",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://dev.frontapp.com/docs/mcp-server",
+    "quote": "Front's MCP server (mcp.frontapp.com/mcp) lets AI agents act on Front conversation data using a single OAuth-authenticated endpoint.",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://dev.frontapp.com/docs/mcp-server",
+    "quote": "Endpoint | https://mcp.frontapp.com/mcp",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://dev.frontapp.com/docs/authentication",
+    "quote": "Each request must include the token in the Authorization header (Core REST API)",
+    "certain": false
+   },
+   "verdict": {
+    "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+    "quote": "To make an app available to all Front customers, you must publish it by notifying Front's team",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+    "quote": "apps are private to the Front instance they are created in",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 17,
+  "app": "Plain",
+  "labels": {
+   "auth_methods": [
+    "api_key",
+    "oauth2"
+   ],
+   "toolkit_auth": "api_key",
+   "access": "self_serve_trial",
+   "official_mcp": "yes",
+   "mcp_url": "https://mcp.plain.com/mcp",
+   "api_type": [
+    "graphql"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://www.plain.com/docs/graphql/authentication",
+    "quote": "Authorization: Bearer plainApiKey_xxx ... To call the API as a user in your workspace, use an OAuth app.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://www.plain.com/docs/graphql/oauth",
+    "quote": "The app only works in the workspace you created it in.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://www.plain.com/pricing",
+    "quote": "Start with a 7-day free trial, no credit card required.",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://help.plain.com/article/does-the-plain-mcp-server-support-api-key-authentication-h7d83qtfdzxo4h49x4oyklwx",
+    "quote": "The Plain Model Context Protocol (MCP) server at https://mcp.plain.com/mcp supports OAuth only.",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://help.plain.com/article/does-the-plain-mcp-server-support-api-key-authentication-h7d83qtfdzxo4h49x4oyklwx",
+    "quote": "https://mcp.plain.com/mcp",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://plain.com/docs/api-reference/graphql/introduction",
+    "quote": "Plain itself is built on this same GraphQL API ... no limitations in what can be done via the API vs the UI",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://www.plain.com/pricing",
+    "quote": "Start with a 7-day free trial, no credit card required. (API plan inclusion not confirmed)",
+    "certain": false
+   },
+   "blocker_type": {
+    "url": "https://www.plain.com/pricing",
+    "quote": "7-day free trial, no credit card required",
+    "certain": false
+   }
+  }
+ },
+ {
+  "id": 19,
+  "app": "Gorgias",
+  "labels": {
+   "auth_methods": [
+    "oauth2",
+    "basic"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "app_review",
+   "official_mcp": "yes",
+   "mcp_url": "https://mcp.gorgias.com/mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "app_review"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://developers.gorgias.com/reference/authentication.md",
+    "quote": "Private app -> API key; Public app -> OAuth2 (API key used via HTTP Basic auth with email)",
+    "certain": false
+   },
+   "toolkit_auth": {
+    "url": "https://developers.gorgias.com/reference/authentication.md",
+    "quote": "Using OAuth2 is mandatory for public apps.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://developers.gorgias.com/docs/oauth2-authentication-for-creating-apps-with-gorgias.md",
+    "quote": "app doesn't appear on the helpdesk applications page until it's approved (only preview/test install via sandbox)",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546.md",
+    "quote": "The Gorgias MCP is currently in beta ... allows your third-party AI assistant to access your Gorgias data and account.",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546.md",
+    "quote": "https://mcp.gorgias.com/mcp",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://developers.gorgias.com/reference/introduction",
+    "quote": "Gorgias REST API reference",
+    "certain": false
+   },
+   "verdict": {
+    "url": "https://developers.gorgias.com/docs/5-submit-app-for-review.md",
+    "quote": "Our tech partnership team will review your app to make sure it works properly",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://developers.gorgias.com/docs/5-submit-app-for-review.md",
+    "quote": "If it is approved, it will appear in both the in-product App Store and the public App Store page.",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 28,
+  "app": "WhatsApp Business",
+  "labels": {
+   "auth_methods": [
+    "bearer_token",
+    "oauth2"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "app_review",
+   "official_mcp": "no",
+   "mcp_url": "",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "app_review"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://developers.facebook.com/docs/whatsapp/access-tokens",
+    "quote": "System user access tokens ... Business Integration system user access tokens ... implement Embedded Signup with Facebook Login for Businesses",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://developers.facebook.com/docs/whatsapp/access-tokens",
+    "quote": "Business Integration system user access tokens: Used by Tech Providers and Solution Partners for onboarded customers",
+    "certain": true
+   },
+   "access": {
+    "url": "https://developers.facebook.com/docs/whatsapp/access-tokens",
+    "quote": "Tech Provider onboarding via Embedded Signup; App Review/business verification for advanced access (Tech Provider page unfetchable)",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "quote": "No Meta-maintained WhatsApp MCP found; search budget exhausted",
+    "certain": false
+   },
+   "mcp_url": {
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "quote": "n/a",
+    "certain": false
+   },
+   "api_type": {
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "quote": "Cloud API is part of Graph API (HTTPS REST)",
+    "certain": false
+   },
+   "verdict": {
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "quote": "a test business phone number ... send free messages to up to 5 recipient phone numbers",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://developers.facebook.com/docs/whatsapp/access-tokens",
+    "quote": "Used by Tech Providers and Solution Partners for onboarded customers",
+    "certain": false
+   }
+  }
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "labels": {
+   "auth_methods": [
+    "oauth2",
+    "basic"
+   ],
+   "toolkit_auth": "basic",
+   "access": "self_serve_trial",
+   "official_mcp": "no",
+   "mcp_url": "",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://developers.aircall.io/api-references",
+    "quote": "Authentication can be done through OAuth or Basic Auth.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://developers.aircall.io/api-references",
+    "quote": "mainly the case for Technology Partners - please use the OAuth flow ... It is a requirement to be listed on the Aircall App Marketplace.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://aircall.io/pricing/",
+    "quote": "Aircall offers free access to test the platform ... All plans include API access (if counting OAuth path, app_review)",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://developers.aircall.io/api-references",
+    "quote": "No MCP mention in Aircall developer docs; search budget exhausted",
+    "certain": false
+   },
+   "mcp_url": {
+    "url": "https://developers.aircall.io/api-references",
+    "quote": "n/a",
+    "certain": false
+   },
+   "api_type": {
+    "url": "https://developers.aircall.io/api-references",
+    "quote": "Aircall Public API (REST, JSON)",
+    "certain": false
+   },
+   "verdict": {
+    "url": "https://aircall.io/pricing/",
+    "quote": "All plans include API access and 250+ integrations.",
+    "certain": false
+   },
+   "blocker_type": {
+    "url": "https://developers.aircall.io/tutorials/how-aircall-oauth-flow-works/",
+    "quote": "client_id and client_secret ... by contacting Aircall at marketplace@aircall.io (OAuth gated; basic auth not)",
+    "certain": false
+   }
+  }
+ },
+ {
+  "id": 30,
+  "app": "Vonage",
+  "labels": {
+   "auth_methods": [
+    "basic",
+    "api_key",
+    "jwt_signed"
+   ],
+   "toolkit_auth": "api_key",
+   "access": "self_serve_free",
+   "official_mcp": "yes",
+   "mcp_url": "https://www.npmjs.com/package/@vonage/vonage-mcp-server-api-bindings",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "API key and secret sent Base64 encoded in the Authorization header ... JSON Web Tokens (JWTs)",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "When you create a Vonage account, an API key and secret will be created for you.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://developer.vonage.com/en/home",
+    "quote": "Create a free account now! (free trial credit not confirmed on fetched page)",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://developer.vonage.com/mcp-server/how-to-guides/install-tooling-mcp-server",
+    "quote": "@vonage/vonage-mcp-server-api-bindings ... invoke various API actions directly through your LLM Assistant or IDE of choice",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://developer.vonage.com/mcp-server/how-to-guides/install-tooling-mcp-server",
+    "quote": "npx -y @vonage/vonage-mcp-server-api-bindings",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "Vonage REST APIs",
+    "certain": false
+   },
+   "verdict": {
+    "url": "https://developer.vonage.com/en/home",
+    "quote": "Create a free account now!",
+    "certain": false
+   },
+   "blocker_type": {
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "an API key and secret will be created for you",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "labels": {
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "app_review",
+   "official_mcp": "yes",
+   "mcp_url": "https://services.leadconnectorhq.com/mcp/anthropic/v2",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "app_review"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://marketplace.gohighlevel.com/docs/",
+    "quote": "OAuth 2.0 or Private Integration Token",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://marketplace.gohighlevel.com/docs/",
+    "quote": "Build and distribute apps in the HighLevel marketplace",
+    "certain": true
+   },
+   "access": {
+    "url": "https://marketplace.gohighlevel.com/docs/MarketplacePolicies/PrivateAppInstallLimits.md",
+    "quote": "A Private app may be installed in up to 5 Agencies.",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://marketplace.gohighlevel.com/docs/other/mcp.md",
+    "quote": "sign in with your HighLevel login ... No key to create, paste, or rotate (acts on live sub-account data)",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://marketplace.gohighlevel.com/docs/other/mcp.md",
+    "quote": "https://services.leadconnectorhq.com/mcp/anthropic/v2",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://marketplace.gohighlevel.com/docs/",
+    "quote": "HighLevel API v2 REST endpoints",
+    "certain": false
+   },
+   "verdict": {
+    "url": "https://marketplace.gohighlevel.com/docs/MarketplacePolicies/PrivateAppInstallLimits.md",
+    "quote": "A Private app may be installed in up to 5 Agencies.",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://marketplace.gohighlevel.com/docs/MarketplacePolicies/PrivateAppInstallLimits.md",
+    "quote": "Only after you exceed the cap (installs in 6 or more Agencies)",
+    "certain": true
+   }
+  }
+ }
+]

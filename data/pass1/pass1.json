@@ -1,0 +1,2849 @@
+[
+ {
+  "id": 1,
+  "app": "Salesforce",
+  "category": "CRM and Sales",
+  "subcategory": "CRM",
+  "one_liner": "Enterprise CRM platform",
+  "docs_url": "https://developer.salesforce.com/docs/apis",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "paid_plan",
+  "api_type": [
+   "rest",
+   "graphql",
+   "soap"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "API needs Enterprise+ edition; per-org connected app",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8,
+  "mcp_url": "https://github.com/salesforcecli/mcp"
+ },
+ {
+  "id": 2,
+  "app": "HubSpot",
+  "category": "CRM and Sales",
+  "subcategory": "CRM",
+  "one_liner": "CRM and marketing platform",
+  "docs_url": "https://developers.hubspot.com/docs/api",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://mcp.hubspot.com"
+ },
+ {
+  "id": 3,
+  "app": "Pipedrive",
+  "category": "CRM and Sales",
+  "subcategory": "CRM",
+  "one_liner": "Sales pipeline CRM",
+  "docs_url": "https://developers.pipedrive.com/docs/api/v1",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Marketplace approval for public OAuth app",
+  "blocker_type": "app_review",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6,
+  "mcp_url": "https://github.com/pipedrive/mcp-server-pipedrive"
+ },
+ {
+  "id": 4,
+  "app": "Attio",
+  "category": "CRM and Sales",
+  "subcategory": "CRM",
+  "one_liner": "Data-driven CRM",
+  "docs_url": "https://developers.attio.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8,
+  "mcp_url": "https://mcp.attio.com/mcp"
+ },
+ {
+  "id": 5,
+  "app": "Twenty",
+  "category": "CRM and Sales",
+  "subcategory": "CRM",
+  "one_liner": "Open-source CRM",
+  "docs_url": "https://twenty.com/developers",
+  "auth_methods": [
+   "api_key",
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "unknown",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6
+ },
+ {
+  "id": 6,
+  "app": "Podio",
+  "category": "CRM and Sales",
+  "subcategory": "Project/CRM",
+  "one_liner": "Work platform by Citrix/Workday",
+  "docs_url": "https://developers.podio.com",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6
+ },
+ {
+  "id": 7,
+  "app": "Zoho CRM",
+  "category": "CRM and Sales",
+  "subcategory": "CRM",
+  "one_liner": "Zoho CRM",
+  "docs_url": "https://www.zoho.com/crm/developer/docs/api/v6",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7,
+  "mcp_url": "https://www.zoho.com/mcp"
+ },
+ {
+  "id": 8,
+  "app": "Close",
+  "category": "CRM and Sales",
+  "subcategory": "CRM",
+  "one_liner": "Sales CRM for SMBs",
+  "docs_url": "https://developer.close.com",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7,
+  "mcp_url": "https://github.com/closeio/closeio-mcp"
+ },
+ {
+  "id": 9,
+  "app": "Copper",
+  "category": "CRM and Sales",
+  "subcategory": "CRM",
+  "one_liner": "Google Workspace CRM",
+  "docs_url": "https://developer.copper.com",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "API on paid plan",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.55,
+  "needs_human": true
+ },
+ {
+  "id": 10,
+  "app": "DealCloud",
+  "category": "CRM and Sales",
+  "subcategory": "CRM",
+  "one_liner": "Deal management for financial services",
+  "docs_url": "https://api.docs.dealcloud.com",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "partner_gated",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "blocked",
+  "blocker": "Customer-only access",
+  "blocker_type": "partner_gate",
+  "toolkit_shape": "wait_for_partner",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.55,
+  "needs_human": true
+ },
+ {
+  "id": 11,
+  "app": "Zendesk",
+  "category": "Support and Helpdesk",
+  "subcategory": "Helpdesk",
+  "one_liner": "Customer support suite",
+  "docs_url": "https://developer.zendesk.com/api-reference",
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "basic"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7,
+  "mcp_url": "https://developer.zendesk.com/documentation/ai-agents/mcp"
+ },
+ {
+  "id": 12,
+  "app": "Intercom",
+  "category": "Support and Helpdesk",
+  "subcategory": "Helpdesk",
+  "one_liner": "Customer messaging",
+  "docs_url": "https://developers.intercom.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.75,
+  "mcp_url": "https://mcp.intercom.com"
+ },
+ {
+  "id": 13,
+  "app": "Freshdesk",
+  "category": "Support and Helpdesk",
+  "subcategory": "Helpdesk",
+  "one_liner": "Helpdesk by Freshworks",
+  "docs_url": "https://developers.freshdesk.com/api",
+  "auth_methods": [
+   "api_key",
+   "basic"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.65,
+  "mcp_url": "https://github.com/freshworks/mcp"
+ },
+ {
+  "id": 14,
+  "app": "Front",
+  "category": "Support and Helpdesk",
+  "subcategory": "Helpdesk",
+  "one_liner": "Shared inbox",
+  "docs_url": "https://dev.frontapp.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "API on paid plans",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.55,
+  "needs_human": true
+ },
+ {
+  "id": 15,
+  "app": "Pylon",
+  "category": "Support and Helpdesk",
+  "subcategory": "Helpdesk",
+  "one_liner": "B2B support platform",
+  "docs_url": "https://docs.usepylon.com",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Admin-issued token on plan",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.5,
+  "mcp_url": "https://docs.usepylon.com/pylon-docs/developer/mcp",
+  "needs_human": true
+ },
+ {
+  "id": 16,
+  "app": "LiveAgent",
+  "category": "Support and Helpdesk",
+  "subcategory": "Helpdesk",
+  "one_liner": "Helpdesk software",
+  "docs_url": "https://support.liveagent.com/061754-How-to-make-requests-with-API",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.5,
+  "needs_human": true
+ },
+ {
+  "id": 17,
+  "app": "Plain",
+  "category": "Support and Helpdesk",
+  "subcategory": "Helpdesk",
+  "one_liner": "API-first support platform",
+  "docs_url": "https://www.plain.com/docs",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_free",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.65,
+  "mcp_url": "https://www.plain.com/docs/mcp"
+ },
+ {
+  "id": 18,
+  "app": "Help Scout",
+  "category": "Support and Helpdesk",
+  "subcategory": "Helpdesk",
+  "one_liner": "Customer support inbox",
+  "docs_url": "https://developer.helpscout.com",
+  "auth_methods": [
+   "oauth2",
+   "basic"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.65
+ },
+ {
+  "id": 19,
+  "app": "Gorgias",
+  "category": "Support and Helpdesk",
+  "subcategory": "Helpdesk",
+  "one_liner": "Ecommerce helpdesk",
+  "docs_url": "https://developers.gorgias.com",
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "basic"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.55,
+  "mcp_url": "https://developers.gorgias.com",
+  "needs_human": true
+ },
+ {
+  "id": 20,
+  "app": "Gladly",
+  "category": "Support and Helpdesk",
+  "subcategory": "Helpdesk",
+  "one_liner": "Customer service platform",
+  "docs_url": "https://developer.gladly.com",
+  "auth_methods": [
+   "basic"
+  ],
+  "toolkit_auth": "basic",
+  "access": "partner_gated",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "blocked",
+  "blocker": "Customer-only access",
+  "blocker_type": "partner_gate",
+  "toolkit_shape": "wait_for_partner",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.5,
+  "needs_human": true
+ },
+ {
+  "id": 21,
+  "app": "Slack",
+  "category": "Communications and Messaging",
+  "subcategory": "Chat",
+  "one_liner": "Workplace messaging",
+  "docs_url": "https://api.slack.com",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.9,
+  "mcp_url": "https://docs.slack.dev/ai/mcp-server"
+ },
+ {
+  "id": 22,
+  "app": "Twilio",
+  "category": "Communications and Messaging",
+  "subcategory": "CPaaS",
+  "one_liner": "Communications APIs",
+  "docs_url": "https://www.twilio.com/docs",
+  "auth_methods": [
+   "basic",
+   "api_key"
+  ],
+  "toolkit_auth": "basic",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://github.com/twilio-labs/mcp"
+ },
+ {
+  "id": 23,
+  "app": "Zoho Cliq",
+  "category": "Communications and Messaging",
+  "subcategory": "Chat",
+  "one_liner": "Zoho team chat",
+  "docs_url": "https://www.zoho.com/cliq/help/restapi/v2",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6
+ },
+ {
+  "id": 24,
+  "app": "Lark (Larksuite)",
+  "category": "Communications and Messaging",
+  "subcategory": "Chat",
+  "one_liner": "Lark/Feishu suite",
+  "docs_url": "https://open.larksuite.com/document",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.75,
+  "mcp_url": "https://github.com/larksuite/lark-openapi-mcp"
+ },
+ {
+  "id": 25,
+  "app": "Pumble",
+  "category": "Communications and Messaging",
+  "subcategory": "Chat",
+  "one_liner": "Slack alternative",
+  "docs_url": "https://pumble.com/help/integrations/add-pumble-api-keys",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "narrow",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "Very limited API",
+  "blocker_type": "other",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.45,
+  "needs_human": true
+ },
+ {
+  "id": 26,
+  "app": "Discord",
+  "category": "Communications and Messaging",
+  "subcategory": "Chat",
+  "one_liner": "Community chat",
+  "docs_url": "https://discord.com/developers/docs",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest",
+   "websocket"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85
+ },
+ {
+  "id": 27,
+  "app": "Telegram",
+  "category": "Communications and Messaging",
+  "subcategory": "Chat",
+  "one_liner": "Messenger Bot API",
+  "docs_url": "https://core.telegram.org/bots/api",
+  "auth_methods": [
+   "other"
+  ],
+  "toolkit_auth": "other",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85
+ },
+ {
+  "id": 28,
+  "app": "WhatsApp Business",
+  "category": "Communications and Messaging",
+  "subcategory": "Messaging",
+  "one_liner": "WhatsApp Cloud API",
+  "docs_url": "https://developers.facebook.com/docs/whatsapp",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "app_review",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "Business verification/app review",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8,
+  "auth_notes": ""
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "category": "Communications and Messaging",
+  "subcategory": "Telephony",
+  "one_liner": "Cloud phone system",
+  "docs_url": "https://developer.aircall.io",
+  "auth_methods": [
+   "oauth2",
+   "basic"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "app_review",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "Partner approval for public OAuth app",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6
+ },
+ {
+  "id": 30,
+  "app": "Vonage",
+  "category": "Communications and Messaging",
+  "subcategory": "CPaaS",
+  "one_liner": "Communications APIs",
+  "docs_url": "https://developer.vonage.com",
+  "auth_methods": [
+   "api_key",
+   "jwt_signed"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7,
+  "mcp_url": "https://github.com/Vonage/vonage-mcp-server-api-bindings"
+ },
+ {
+  "id": 31,
+  "app": "Google Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "subcategory": "Ads",
+  "one_liner": "Google advertising platform",
+  "docs_url": "https://developers.google.com/google-ads/api",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "app_review",
+  "api_type": [
+   "rest",
+   "graphql",
+   "rpc"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "no",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Developer token approval",
+  "blocker_type": "app_review",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://github.com/googleads/google-ads-mcp"
+ },
+ {
+  "id": 32,
+  "app": "Meta Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "subcategory": "Ads",
+  "one_liner": "Meta advertising",
+  "docs_url": "https://developers.facebook.com/docs/marketing-apis",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "app_review",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "App review / advanced access",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85
+ },
+ {
+  "id": 33,
+  "app": "LinkedIn Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "subcategory": "Ads",
+  "one_liner": "LinkedIn marketing APIs",
+  "docs_url": "https://learn.microsoft.com/linkedin/marketing",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "app_review",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "no",
+  "sandbox": "yes",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "Marketing Developer Platform approval",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "category": "Marketing, Ads, Email and Social",
+  "subcategory": "Marketing CRM",
+  "one_liner": "All-in-one agency CRM",
+  "docs_url": "https://highlevel.stoplight.io",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "app_review",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6,
+  "mcp_url": "https://marketplace.gohighlevel.com/docs/other/mcp"
+ },
+ {
+  "id": 35,
+  "app": "Mailchimp",
+  "category": "Marketing, Ads, Email and Social",
+  "subcategory": "Email",
+  "one_liner": "Email marketing",
+  "docs_url": "https://mailchimp.com/developer",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7,
+  "mcp_url": "https://github.com/mailchimp/mcp"
+ },
+ {
+  "id": 36,
+  "app": "Klaviyo",
+  "category": "Marketing, Ads, Email and Social",
+  "subcategory": "Email",
+  "one_liner": "Ecommerce marketing",
+  "docs_url": "https://developers.klaviyo.com",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8,
+  "mcp_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server"
+ },
+ {
+  "id": 37,
+  "app": "systeme.io",
+  "category": "Marketing, Ads, Email and Social",
+  "subcategory": "Funnel builder",
+  "one_liner": "Funnels and email",
+  "docs_url": "https://developer.systeme.io",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "narrow",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.5,
+  "needs_human": true
+ },
+ {
+  "id": 38,
+  "app": "Pinterest",
+  "category": "Marketing, Ads, Email and Social",
+  "subcategory": "Social",
+  "one_liner": "Pinterest API",
+  "docs_url": "https://developers.pinterest.com/docs",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "app_review",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "Trial access needs approval",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.75
+ },
+ {
+  "id": 39,
+  "app": "Threads (Meta)",
+  "category": "Marketing, Ads, Email and Social",
+  "subcategory": "Social",
+  "one_liner": "Threads API",
+  "docs_url": "https://developers.facebook.com/docs/threads",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "app_review",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "Meta app review",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7
+ },
+ {
+  "id": 40,
+  "app": "SendGrid",
+  "category": "Marketing, Ads, Email and Social",
+  "subcategory": "Email",
+  "one_liner": "Transactional email",
+  "docs_url": "https://www.twilio.com/docs/sendgrid",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7
+ },
+ {
+  "id": 41,
+  "app": "Shopify",
+  "category": "Ecommerce",
+  "subcategory": "Ecommerce",
+  "one_liner": "Commerce platform",
+  "docs_url": "https://shopify.dev",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Per-store install; app review for public apps",
+  "blocker_type": "app_review",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://shopify.dev/docs/apps/build/devmcp"
+ },
+ {
+  "id": 42,
+  "app": "WooCommerce",
+  "category": "Ecommerce",
+  "subcategory": "Ecommerce",
+  "one_liner": "WordPress ecommerce",
+  "docs_url": "https://woocommerce.github.io/woocommerce-rest-api-docs",
+  "auth_methods": [
+   "basic",
+   "api_key"
+  ],
+  "toolkit_auth": "basic",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Self-hosted per-store setup",
+  "blocker_type": "per_tenant_setup",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7,
+  "mcp_url": "https://developer.woocommerce.com/docs/features/mcp"
+ },
+ {
+  "id": 43,
+  "app": "BigCommerce",
+  "category": "Ecommerce",
+  "subcategory": "Ecommerce",
+  "one_liner": "SaaS ecommerce",
+  "docs_url": "https://developer.bigcommerce.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.65,
+  "mcp_url": "https://developer.bigcommerce.com/docs/mcp"
+ },
+ {
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "category": "Ecommerce",
+  "subcategory": "Ecommerce",
+  "one_liner": "Salesforce B2C Commerce",
+  "docs_url": "https://developer.salesforce.com/docs/commerce/commerce-api",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "partner_gated",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "no",
+  "verdict": "blocked",
+  "blocker": "Customer-only, per-tenant",
+  "blocker_type": "partner_gate",
+  "toolkit_shape": "wait_for_partner",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6
+ },
+ {
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "subcategory": "Ecommerce",
+  "one_liner": "Adobe Commerce",
+  "docs_url": "https://developer.adobe.com/commerce",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "Per-instance setup",
+  "blocker_type": "per_tenant_setup",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.65
+ },
+ {
+  "id": 46,
+  "app": "Squarespace",
+  "category": "Ecommerce",
+  "subcategory": "Ecommerce",
+  "one_liner": "Website builder",
+  "docs_url": "https://developers.squarespace.com",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "Commerce APIs need paid plan",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6
+ },
+ {
+  "id": 47,
+  "app": "Ecwid",
+  "category": "Ecommerce",
+  "subcategory": "Ecommerce",
+  "one_liner": "Ecommerce by Lightspeed",
+  "docs_url": "https://api-docs.ecwid.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.65
+ },
+ {
+  "id": 48,
+  "app": "Gumroad",
+  "category": "Ecommerce",
+  "subcategory": "Ecommerce",
+  "one_liner": "Creator sales platform",
+  "docs_url": "https://gumroad.com/api",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7
+ },
+ {
+  "id": 49,
+  "app": "Amazon Selling Partner",
+  "category": "Ecommerce",
+  "subcategory": "Ecommerce",
+  "one_liner": "Amazon SP-API",
+  "docs_url": "https://developer-docs.amazon.com/sp-api",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "app_review",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "Developer registration/role approval",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8
+ },
+ {
+  "id": 50,
+  "app": "fanbasis",
+  "category": "Ecommerce",
+  "subcategory": "Ecommerce",
+  "one_liner": "Creator payments platform",
+  "docs_url": "https://fanbasis.com",
+  "auth_methods": [
+   "unknown"
+  ],
+  "toolkit_auth": "unknown",
+  "access": "unknown",
+  "api_type": [
+   "none"
+  ],
+  "api_breadth": "unknown",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "no",
+  "verdict": "blocked",
+  "blocker": "Unknown API",
+  "blocker_type": "no_public_api",
+  "toolkit_shape": "wait_for_partner",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.2,
+  "needs_human": true
+ },
+ {
+  "id": 51,
+  "app": "DataForSEO",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "SEO data",
+  "one_liner": "SEO data APIs",
+  "docs_url": "https://docs.dataforseo.com",
+  "auth_methods": [
+   "basic"
+  ],
+  "toolkit_auth": "basic",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8
+ },
+ {
+  "id": 52,
+  "app": "SE Ranking",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "SEO",
+  "one_liner": "SEO platform",
+  "docs_url": "https://seranking.com/api",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Paid plan for API",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6,
+  "mcp_url": "https://github.com/seranking/seranking-mcp-server"
+ },
+ {
+  "id": 53,
+  "app": "Ahrefs",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "SEO",
+  "one_liner": "SEO toolset",
+  "docs_url": "https://docs.ahrefs.com",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Paid plan for API",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7,
+  "mcp_url": "https://docs.ahrefs.com/mcp"
+ },
+ {
+  "id": 54,
+  "app": "MrScraper",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "Scraping",
+  "one_liner": "Web scraping API",
+  "docs_url": "https://docs.mrscraper.com",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.45,
+  "needs_human": true
+ },
+ {
+  "id": 55,
+  "app": "Apify",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "Scraping",
+  "one_liner": "Scraping platform",
+  "docs_url": "https://docs.apify.com",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.9,
+  "mcp_url": "https://mcp.apify.com"
+ },
+ {
+  "id": 56,
+  "app": "Firecrawl",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "Scraping",
+  "one_liner": "Web crawl API",
+  "docs_url": "https://docs.firecrawl.dev",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.9,
+  "mcp_url": "https://github.com/firecrawl/firecrawl-mcp-server"
+ },
+ {
+  "id": 57,
+  "app": "Bright Data",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "Scraping",
+  "one_liner": "Proxy/scraping platform",
+  "docs_url": "https://docs.brightdata.com",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8,
+  "mcp_url": "https://github.com/brightdata/brightdata-mcp"
+ },
+ {
+  "id": 58,
+  "app": "Sherlock",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "OSINT",
+  "one_liner": "Username search CLI",
+  "docs_url": "https://github.com/sherlock-project/sherlock",
+  "auth_methods": [
+   "none"
+  ],
+  "toolkit_auth": "none",
+  "access": "self_serve_free",
+  "api_type": [
+   "cli"
+  ],
+  "api_breadth": "none",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "CLI only, no SaaS API",
+  "blocker_type": "not_a_saas_api",
+  "toolkit_shape": "cli_wrapper",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8
+ },
+ {
+  "id": 59,
+  "app": "Waterfall.io",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "Data enrichment",
+  "one_liner": "Contact/company intel",
+  "docs_url": "https://waterfall.io",
+  "auth_methods": [
+   "unknown"
+  ],
+  "toolkit_auth": "unknown",
+  "access": "unknown",
+  "api_type": [
+   "none"
+  ],
+  "api_breadth": "unknown",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "no",
+  "verdict": "blocked",
+  "blocker": "Unknown",
+  "blocker_type": "other",
+  "toolkit_shape": "wait_for_partner",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.2,
+  "needs_human": true
+ },
+ {
+  "id": 60,
+  "app": "Clay",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "Data enrichment",
+  "one_liner": "GTM data enrichment",
+  "docs_url": "https://university.clay.com",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "narrow",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "API on paid plan, limited",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.45,
+  "mcp_url": "https://www.clay.com/mcp",
+  "needs_human": true
+ },
+ {
+  "id": 61,
+  "app": "GitHub",
+  "category": "Developer, Infra and Data platforms",
+  "subcategory": "Dev platform",
+  "one_liner": "Code hosting",
+  "docs_url": "https://docs.github.com/rest",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.95,
+  "mcp_url": "https://github.com/github/github-mcp-server"
+ },
+ {
+  "id": 62,
+  "app": "Vercel",
+  "category": "Developer, Infra and Data platforms",
+  "subcategory": "Infra",
+  "one_liner": "Frontend cloud",
+  "docs_url": "https://vercel.com/docs/rest-api",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://mcp.vercel.com"
+ },
+ {
+  "id": 63,
+  "app": "Netlify",
+  "category": "Developer, Infra and Data platforms",
+  "subcategory": "Infra",
+  "one_liner": "Web hosting",
+  "docs_url": "https://docs.netlify.com/api",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8,
+  "mcp_url": "https://github.com/netlify/netlify-mcp"
+ },
+ {
+  "id": 64,
+  "app": "Cloudflare",
+  "category": "Developer, Infra and Data platforms",
+  "subcategory": "Infra",
+  "one_liner": "CDN and edge",
+  "docs_url": "https://developers.cloudflare.com/api",
+  "auth_methods": [
+   "bearer_token",
+   "api_key"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.9,
+  "mcp_url": "https://github.com/cloudflare/mcp-server-cloudflare"
+ },
+ {
+  "id": 65,
+  "app": "Supabase",
+  "category": "Developer, Infra and Data platforms",
+  "subcategory": "Database",
+  "one_liner": "Postgres backend",
+  "docs_url": "https://supabase.com/docs/reference/api",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://github.com/supabase-community/supabase-mcp"
+ },
+ {
+  "id": 66,
+  "app": "Neo4j",
+  "category": "Developer, Infra and Data platforms",
+  "subcategory": "Database",
+  "one_liner": "Graph database",
+  "docs_url": "https://neo4j.com/docs/aura/api",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Aura API per account; DB via Bolt",
+  "blocker_type": "per_tenant_setup",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6,
+  "mcp_url": "https://github.com/neo4j-contrib/mcp-neo4j"
+ },
+ {
+  "id": 67,
+  "app": "Snowflake",
+  "category": "Developer, Infra and Data platforms",
+  "subcategory": "Data warehouse",
+  "one_liner": "Cloud data platform",
+  "docs_url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+  "auth_methods": [
+   "oauth2",
+   "jwt_signed",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest",
+   "sdk_only"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Per-account setup",
+  "blocker_type": "per_tenant_setup",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7,
+  "mcp_url": "https://github.com/Snowflake-Labs/mcp"
+ },
+ {
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "category": "Developer, Infra and Data platforms",
+  "subcategory": "Database",
+  "one_liner": "Atlas admin API",
+  "docs_url": "https://www.mongodb.com/docs/atlas/api",
+  "auth_methods": [
+   "basic",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.75,
+  "mcp_url": "https://github.com/mongodb-js/mongodb-mcp-server"
+ },
+ {
+  "id": 69,
+  "app": "Datadog",
+  "category": "Developer, Infra and Data platforms",
+  "subcategory": "Observability",
+  "one_liner": "Monitoring platform",
+  "docs_url": "https://docs.datadoghq.com/api",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://docs.datadoghq.com/bits_ai/mcp_server"
+ },
+ {
+  "id": 70,
+  "app": "Sentry",
+  "category": "Developer, Infra and Data platforms",
+  "subcategory": "Observability",
+  "one_liner": "Error tracking",
+  "docs_url": "https://docs.sentry.io/api",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://mcp.sentry.dev"
+ },
+ {
+  "id": 71,
+  "app": "Notion",
+  "category": "Productivity and Project Management",
+  "subcategory": "Productivity",
+  "one_liner": "Workspace and docs",
+  "docs_url": "https://developers.notion.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.95,
+  "mcp_url": "https://mcp.notion.com"
+ },
+ {
+  "id": 72,
+  "app": "Airtable",
+  "category": "Productivity and Project Management",
+  "subcategory": "Productivity",
+  "one_liner": "Database/spreadsheet",
+  "docs_url": "https://airtable.com/developers",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://github.com/airtable/airtable-mcp"
+ },
+ {
+  "id": 73,
+  "app": "Linear",
+  "category": "Productivity and Project Management",
+  "subcategory": "Project mgmt",
+  "one_liner": "Issue tracking",
+  "docs_url": "https://developers.linear.app",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.9,
+  "mcp_url": "https://mcp.linear.app"
+ },
+ {
+  "id": 74,
+  "app": "Jira",
+  "category": "Productivity and Project Management",
+  "subcategory": "Project mgmt",
+  "one_liner": "Atlassian Jira",
+  "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest",
+  "auth_methods": [
+   "oauth2",
+   "basic"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://mcp.atlassian.com"
+ },
+ {
+  "id": 75,
+  "app": "Asana",
+  "category": "Productivity and Project Management",
+  "subcategory": "Project mgmt",
+  "one_liner": "Work management",
+  "docs_url": "https://developers.asana.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://developers.asana.com/docs/using-asanas-mcp-server"
+ },
+ {
+  "id": 76,
+  "app": "Monday.com",
+  "category": "Productivity and Project Management",
+  "subcategory": "Project mgmt",
+  "one_liner": "Work OS",
+  "docs_url": "https://developer.monday.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85,
+  "mcp_url": "https://github.com/mondaycom/mcp"
+ },
+ {
+  "id": 77,
+  "app": "ClickUp",
+  "category": "Productivity and Project Management",
+  "subcategory": "Project mgmt",
+  "one_liner": "Productivity suite",
+  "docs_url": "https://developer.clickup.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8,
+  "mcp_url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickup-via-mcp"
+ },
+ {
+  "id": 78,
+  "app": "Coda",
+  "category": "Productivity and Project Management",
+  "subcategory": "Docs",
+  "one_liner": "Collaborative docs",
+  "docs_url": "https://coda.io/developers/apis/v1",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7,
+  "mcp_url": "https://help.coda.io/en/articles/9362609"
+ },
+ {
+  "id": 79,
+  "app": "Smartsheet",
+  "category": "Productivity and Project Management",
+  "subcategory": "Project mgmt",
+  "one_liner": "Spreadsheet work mgmt",
+  "docs_url": "https://developers.smartsheet.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.65,
+  "mcp_url": "https://developers.smartsheet.com/mcp"
+ },
+ {
+  "id": 80,
+  "app": "Harvest",
+  "category": "Productivity and Project Management",
+  "subcategory": "Time tracking",
+  "one_liner": "Time tracking",
+  "docs_url": "https://help.getharvest.com/api-v2",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.75
+ },
+ {
+  "id": 81,
+  "app": "Stripe",
+  "category": "Finance and Fintech",
+  "subcategory": "Payments",
+  "one_liner": "Payments platform",
+  "docs_url": "https://docs.stripe.com/api",
+  "auth_methods": [
+   "api_key",
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.95,
+  "mcp_url": "https://mcp.stripe.com"
+ },
+ {
+  "id": 82,
+  "app": "Plaid",
+  "category": "Finance and Fintech",
+  "subcategory": "Open banking",
+  "one_liner": "Bank data aggregator",
+  "docs_url": "https://plaid.com/docs",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8,
+  "mcp_url": "https://plaid.com/docs/resources/mcp"
+ },
+ {
+  "id": 83,
+  "app": "Binance",
+  "category": "Finance and Fintech",
+  "subcategory": "Crypto exchange",
+  "one_liner": "Crypto exchange",
+  "docs_url": "https://binance-docs.github.io/apidocs",
+  "auth_methods": [
+   "api_key",
+   "jwt_signed"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest",
+   "websocket"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7,
+  "mcp_url": "https://github.com/binance/binance-mcp-server"
+ },
+ {
+  "id": 84,
+  "app": "Paygent Connect",
+  "category": "Finance and Fintech",
+  "subcategory": "Payments",
+  "one_liner": "NMI-powered gateway",
+  "docs_url": "https://www.paygent.co.jp/developer",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "partner_gated",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "no",
+  "sandbox": "yes",
+  "official_mcp": "no",
+  "verdict": "blocked",
+  "blocker": "Merchant contract required",
+  "blocker_type": "partner_gate",
+  "toolkit_shape": "wait_for_partner",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.3,
+  "needs_human": true
+ },
+ {
+  "id": 85,
+  "app": "iPayX",
+  "category": "Finance and Fintech",
+  "subcategory": "Payments",
+  "one_liner": "Agent payments",
+  "docs_url": "https://ipayx.ai/docs",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "narrow",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.3,
+  "needs_human": true
+ },
+ {
+  "id": 86,
+  "app": "QuickBooks",
+  "category": "Finance and Fintech",
+  "subcategory": "Accounting",
+  "one_liner": "Intuit accounting",
+  "docs_url": "https://developer.intuit.com",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "App review for production",
+  "blocker_type": "app_review",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8,
+  "mcp_url": "https://github.com/intuit/quickbooks-online-mcp-server"
+ },
+ {
+  "id": 87,
+  "app": "Xero",
+  "category": "Finance and Fintech",
+  "subcategory": "Accounting",
+  "one_liner": "Accounting",
+  "docs_url": "https://developer.xero.com",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "App certification for scale/pricing tiers",
+  "blocker_type": "app_review",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.8,
+  "mcp_url": "https://github.com/XeroAPI/xero-mcp-server"
+ },
+ {
+  "id": 88,
+  "app": "Brex",
+  "category": "Finance and Fintech",
+  "subcategory": "Corporate cards",
+  "one_liner": "Spend management",
+  "docs_url": "https://developer.brex.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "partner_gated",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Requires Brex customer account",
+  "blocker_type": "partner_gate",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6,
+  "mcp_url": "https://github.com/brexhq/brex-mcp"
+ },
+ {
+  "id": 89,
+  "app": "Ramp",
+  "category": "Finance and Fintech",
+  "subcategory": "Corporate cards",
+  "one_liner": "Spend management",
+  "docs_url": "https://docs.ramp.com",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Requires Ramp customer account",
+  "blocker_type": "per_tenant_setup",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.6,
+  "mcp_url": "https://docs.ramp.com/developer-api/v1/mcp"
+ },
+ {
+  "id": 90,
+  "app": "PitchBook",
+  "category": "Finance and Fintech",
+  "subcategory": "Market data",
+  "one_liner": "Private market data",
+  "docs_url": "https://pitchbook.com/products/direct-data",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "access": "partner_gated",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "blocked",
+  "blocker": "Enterprise subscription/contact sales",
+  "blocker_type": "partner_gate",
+  "toolkit_shape": "wait_for_partner",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.75
+ },
+ {
+  "id": 91,
+  "app": "NotebookLM",
+  "category": "AI, Research and Media-native",
+  "subcategory": "AI research",
+  "one_liner": "Google NotebookLM",
+  "docs_url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "narrow",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "Enterprise-only API",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.55,
+  "needs_human": true
+ },
+ {
+  "id": 92,
+  "app": "Otter AI",
+  "category": "AI, Research and Media-native",
+  "subcategory": "Transcription",
+  "one_liner": "Meeting transcription",
+  "docs_url": "https://help.otter.ai",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "narrow",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "API limited/enterprise",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.4,
+  "mcp_url": "https://help.otter.ai/hc/en-us/articles/mcp",
+  "needs_human": true
+ },
+ {
+  "id": 93,
+  "app": "Fathom",
+  "category": "AI, Research and Media-native",
+  "subcategory": "Meetings",
+  "one_liner": "AI notetaker",
+  "docs_url": "https://developers.fathom.ai",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7
+ },
+ {
+  "id": 94,
+  "app": "Consensus",
+  "category": "AI, Research and Media-native",
+  "subcategory": "AI research",
+  "one_liner": "Academic search",
+  "docs_url": "https://consensus.app",
+  "auth_methods": [
+   "unknown"
+  ],
+  "toolkit_auth": "unknown",
+  "access": "unknown",
+  "api_type": [
+   "none"
+  ],
+  "api_breadth": "unknown",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "unknown",
+  "verdict": "blocked",
+  "blocker": "No public API known",
+  "blocker_type": "no_public_api",
+  "toolkit_shape": "wait_for_partner",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.35,
+  "needs_human": true
+ },
+ {
+  "id": 95,
+  "app": "Reducto",
+  "category": "AI, Research and Media-native",
+  "subcategory": "Document AI",
+  "one_liner": "Document parsing",
+  "docs_url": "https://docs.reducto.ai",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7
+ },
+ {
+  "id": 96,
+  "app": "Devin",
+  "category": "AI, Research and Media-native",
+  "subcategory": "AI agent",
+  "one_liner": "AI software engineer",
+  "docs_url": "https://docs.devin.ai/api-reference",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready_with_friction",
+  "blocker": "Paid plan",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "mcp_server",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.7,
+  "mcp_url": "https://docs.devin.ai/work-with-devin/devin-mcp"
+ },
+ {
+  "id": 97,
+  "app": "higgsfield",
+  "category": "AI, Research and Media-native",
+  "subcategory": "AI media",
+  "one_liner": "AI video platform",
+  "docs_url": "https://higgsfield.ai",
+  "auth_methods": [
+   "unknown"
+  ],
+  "toolkit_auth": "unknown",
+  "access": "unknown",
+  "api_type": [
+   "cli"
+  ],
+  "api_breadth": "unknown",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "unknown",
+  "verdict": "ready_with_friction",
+  "blocker": "Unknown API",
+  "blocker_type": "other",
+  "toolkit_shape": "cli_wrapper",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.3,
+  "needs_human": true
+ },
+ {
+  "id": 98,
+  "app": "Mermaid CLI",
+  "category": "AI, Research and Media-native",
+  "subcategory": "CLI",
+  "one_liner": "Mermaid diagram renderer CLI",
+  "docs_url": "https://github.com/mermaid-js/mermaid-cli",
+  "auth_methods": [
+   "none"
+  ],
+  "toolkit_auth": "none",
+  "access": "self_serve_free",
+  "api_type": [
+   "cli"
+  ],
+  "api_breadth": "none",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "CLI only, no SaaS API",
+  "blocker_type": "not_a_saas_api",
+  "toolkit_shape": "cli_wrapper",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.85
+ },
+ {
+  "id": 99,
+  "app": "YouTube Transcript",
+  "category": "AI, Research and Media-native",
+  "subcategory": "Transcripts",
+  "one_liner": "YouTube transcript API",
+  "docs_url": "https://transcriptapi.com/docs",
+  "auth_methods": [
+   "api_key",
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "narrow",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.5,
+  "needs_human": true
+ },
+ {
+  "id": 100,
+  "app": "Grain",
+  "category": "AI, Research and Media-native",
+  "subcategory": "Meetings",
+  "one_liner": "AI meeting notes",
+  "docs_url": "https://developers.grain.com",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [],
+  "evidence_quality": "none",
+  "confidence": 0.5,
+  "mcp_url": "https://grain.com/mcp",
+  "needs_human": true
+ }
+]

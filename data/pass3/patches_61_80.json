@@ -1,0 +1,406 @@
+{
+ "patches": [
+  {
+   "id": 68,
+   "app": "MongoDB Atlas",
+   "field": "toolkit_auth",
+   "from": "oauth2",
+   "to": "api_key",
+   "check": "C2",
+   "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+   "quote": "Service accounts provide improved security over API keys by using the industry standard OAuth 2.0 protocol with the Client Credentials flow."
+  },
+  {
+   "id": 70,
+   "app": "Sentry",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "paid_plan",
+   "check": "C5",
+   "url": "https://sentry.io/pricing/",
+   "quote": "| API | No | Yes | Yes | Yes | (Developer column = No; Team lists \"API & third-party integrations\")"
+  },
+  {
+   "id": 70,
+   "app": "Sentry",
+   "field": "verdict",
+   "from": "ready",
+   "to": "ready_with_friction",
+   "check": "C5",
+   "url": "https://sentry.io/pricing/",
+   "quote": "| API | No | Yes | Yes | Yes |"
+  },
+  {
+   "id": 70,
+   "app": "Sentry",
+   "field": "blocker_type",
+   "from": "none",
+   "to": "paid_plan",
+   "check": "C5",
+   "url": "https://sentry.io/pricing/",
+   "quote": "| Third-party integrations | No | Yes | Yes | Yes |"
+  },
+  {
+   "id": 70,
+   "app": "Sentry",
+   "field": "blocker",
+   "from": "none",
+   "to": "API and third-party integrations require Team plan or higher (Developer free plan: API No); Business 14-day trial",
+   "check": "C5",
+   "url": "https://sentry.io/pricing/",
+   "quote": "try Business for 14 days with no credit card"
+  },
+  {
+   "id": 71,
+   "app": "Notion",
+   "field": "access",
+   "from": "app_review",
+   "to": "self_serve_free",
+   "check": "C3",
+   "url": "https://developers.notion.com/guides/get-started/marketplace-listing.md",
+   "quote": "your connection can be used via its OAuth flow without being listed."
+  },
+  {
+   "id": 71,
+   "app": "Notion",
+   "field": "verdict",
+   "from": "ready_with_friction",
+   "to": "ready",
+   "check": "C3",
+   "url": "https://developers.notion.com/guides/get-started/marketplace-listing.md",
+   "quote": "Listing on the Marketplace is optional and helps your connection reach a wider audience."
+  },
+  {
+   "id": 71,
+   "app": "Notion",
+   "field": "blocker_type",
+   "from": "app_review",
+   "to": "none",
+   "check": "C3",
+   "url": "https://developers.notion.com/guides/get-started/marketplace-listing.md",
+   "quote": "The Notion team reviews every listing submission"
+  },
+  {
+   "id": 71,
+   "app": "Notion",
+   "field": "blocker",
+   "from": "Public (multi-tenant) OAuth connection is submitted for review; unclear whether review gates installs or only listing.",
+   "to": "none",
+   "check": "C3",
+   "url": "https://developers.notion.com/guides/get-started/marketplace-listing.md",
+   "quote": "your connection can be used via its OAuth flow without being listed."
+  },
+  {
+   "id": 69,
+   "app": "Datadog",
+   "field": "access",
+   "from": "self_serve_trial",
+   "to": "self_serve_free",
+   "check": "C5",
+   "url": "https://www.datadoghq.com/pricing/",
+   "quote": "On the Free tier, you get up to five Basic hosts with 1-day metric retention, at no cost."
+  },
+  {
+   "id": 69,
+   "app": "Datadog",
+   "field": "webhooks",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://docs.datadoghq.com/api/latest/webhooks-integration/",
+   "quote": "Configure your Datadog-Webhooks integration directly through the Datadog API."
+  },
+  {
+   "id": 62,
+   "app": "Vercel",
+   "field": "webhooks",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://vercel.com/docs/rest-api",
+   "quote": "POST /v1/webhooks ... Creates a webhook"
+  },
+  {
+   "id": 78,
+   "app": "Coda",
+   "field": "verdict",
+   "from": "ready_with_friction",
+   "to": "ready",
+   "check": "C4",
+   "url": "https://coda.io/developers/apis/v1",
+   "quote": "We make the Coda API available to all of our users free of charge, in both free and paid workspaces."
+  },
+  {
+   "id": 78,
+   "app": "Coda",
+   "field": "blocker_type",
+   "from": "per_tenant_setup",
+   "to": "none",
+   "check": "C4",
+   "url": "https://coda.io/developers/apis/v1",
+   "quote": "The Coda API can be accessed using an API token, which can be obtained from My account in Coda."
+  },
+  {
+   "id": 78,
+   "app": "Coda",
+   "field": "blocker",
+   "from": "No OAuth for REST API: multi-tenant use relies on user-pasted API tokens.",
+   "to": "none",
+   "check": "C4",
+   "url": "https://coda.io/developers/apis/v1",
+   "quote": "The Coda API can be accessed using an API token, which can be obtained from My account in Coda."
+  },
+  {
+   "id": 79,
+   "app": "Smartsheet",
+   "field": "gate_evidence",
+   "from": "MCP docs: 'Required plan: Business, Enterprise, or Advanced Work Management'; Smartsheet community staff: generating an access token requires a license on a multi-user plan such as Business or Enterprise (Individual plan excluded). 30-day Business trial available.",
+   "to": "Smartsheet Help 'Generate an API key': Who can use this? Business, Enterprise (replaces community staff reply as primary source). 30-day Business trial available.",
+   "check": "C5",
+   "url": "https://help.smartsheet.com/articles/2482389-generate-API-key",
+   "quote": "Who can use this? ... Business ... Enterprise"
+  }
+ ],
+ "checked": [
+  {
+   "id": 61,
+   "app": "GitHub",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 remote GitHub MCP GA (vendor org); C2 OAuth apps/GitHub Apps auth-code self-registered; C3 no review for OAuth apps (Marketplace optional). No change."
+  },
+  {
+   "id": 62,
+   "app": "Vercel",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 mcp.vercel.com official (beta, vendor docs). C2 toolkit bearer_token fine. Webhooks resolved via REST API reference."
+  },
+  {
+   "id": 63,
+   "app": "Netlify",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 netlify/netlify-mcp vendor org; C2 OAuth2 app registration in user settings; C3 no review stated. No change."
+  },
+  {
+   "id": 64,
+   "app": "Cloudflare",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 cloudflare/mcp-server-cloudflare vendor org, usable; C2 bearer tokens. webhooks remains unknown (not verified). No change."
+  },
+  {
+   "id": 65,
+   "app": "Supabase",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 mcp.supabase.com official; C2 Management API OAuth2 auth-code for OAuth apps; no review found. No change."
+  },
+  {
+   "id": 66,
+   "app": "Neo4j",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 official neo4j-mcp (product team); toolkit_auth basic consistent with per-instance creds. No change."
+  },
+  {
+   "id": 67,
+   "app": "Snowflake",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 Snowflake-managed MCP usable (account object); C2 OAuth auth-code needs admin security integration per tenant -> per_tenant_setup already captured. No change."
+  },
+  {
+   "id": 68,
+   "app": "MongoDB Atlas",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C2: Atlas OAuth is client-credentials (service accounts) only; no auth-code flow -> toolkit_auth api_key (client id/secret or legacy digest key). Verdict unchanged (ready_with_friction/per_tenant_setup). Quotes from vendor auth page."
+  },
+  {
+   "id": 69,
+   "app": "Datadog",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C5: vendor pricing page shows permanent Free tier -> access self_serve_free (verdict stays ready). Webhooks resolved yes (Webhooks Integration API). C4 toolkit api_key correct."
+  },
+  {
+   "id": 70,
+   "app": "Sentry",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C5: pricing table marks API and Third-party integrations 'No' for free Developer plan -> paid_plan (Team+); Business 14-day trial exists. Re-derived verdict ready_with_friction/paid_plan. Auth docs state no plan requirement, so a human may still confirm whether internal-integration tokens work on Developer."
+  },
+  {
+   "id": 71,
+   "app": "Notion",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C3: Marketplace listing guide says review applies to listings and unlisted connections work via OAuth flow -> self_serve_free/ready. Caveat: authorization page caption says Authorization URL 'populates after a public connection is submitted for review'; flag for human if conservative."
+  },
+  {
+   "id": 72,
+   "app": "Airtable",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 official MCP all plans; C3 OAuth integration self-serve, no review found. No change."
+  },
+  {
+   "id": 73,
+   "app": "Linear",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 mcp.linear.app official; plan for MCP not stated on vendor page (secondary paid claim unverified). No change."
+  },
+  {
+   "id": 74,
+   "app": "Jira",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 Rovo MCP GA; C3 3LO apps distributable via developer console sharing, Marketplace optional. No change."
+  },
+  {
+   "id": 75,
+   "app": "Asana",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 MCP V2 official; C2 OAuth auth-code self-registered. No change."
+  },
+  {
+   "id": 76,
+   "app": "Monday.com",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C3: public (unlisted) apps installable by anyone via installation URL with no review (banner 'not been vetted'); marketplace review optional -> self_serve_free stands. No change."
+  },
+  {
+   "id": 77,
+   "app": "ClickUp",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 vendor help center: 'ClickUp MCP is available on all plans', OAuth only; C3 no review found. No change."
+  },
+  {
+   "id": 78,
+   "app": "Coda",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C4: no OAuth for REST; per-user API token on free workspaces is the key path. Per rubric, user-pasted tokens are not per-tenant provisioning -> verdict ready, blocker_type none. Webhooks still unknown (not on API page)."
+  },
+  {
+   "id": 79,
+   "app": "Smartsheet",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C5: replaced community-staff evidence with vendor help article (Business/Enterprise only). paid_plan/ready_with_friction confirmed. MCP plan requirement confirmed on vendor install page."
+  },
+  {
+   "id": 80,
+   "app": "Harvest",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1 Harvest MCP at api.harvestapp.com/mcp on vendor support page, prerequisites just an active account (beta/GA status unstated). Webhooks left unknown. No change."
+  }
+ ]
+}

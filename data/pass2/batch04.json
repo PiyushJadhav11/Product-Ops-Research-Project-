@@ -1,0 +1,495 @@
+[
+ {
+  "id": 31,
+  "app": "Google Ads",
+  "subcategory": "advertising",
+  "one_liner": "Google's ad platform; Google Ads API (gRPC/REST) for campaign management and reporting.",
+  "docs_url": "https://developers.google.com/google-ads/api/docs/start",
+  "auth_methods": [
+   "oauth2",
+   "jwt_signed"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "OAuth 2.0 user creds or service account. Developer tokens were sunset 2026-09-09; API access level now tied to the Google Cloud project (Test, Explorer, Basic, Standard).",
+  "access": "app_review",
+  "gate_evidence": "Enabling the API grants Test access against test accounts; production accounts need Explorer, Basic or Standard access or calls fail with CLOUD_PROJECT_NOT_APPROVED_FOR_PRODUCTION.",
+  "api_type": [
+   "rest",
+   "rpc"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "no",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://github.com/googleads/google-ads-mcp",
+  "community_mcp": "bluealpha-google-ads-mcp (read+write) and others",
+  "verdict": "ready_with_friction",
+  "blocker": "Production access level must be approved per Google Cloud project; multi-tenant needs Basic/Standard access.",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Official Google Ads MCP server (googleads org), read-only by default-config option; OAuth/ADC auth; production needs approved access level; developer tokens sunset 2026-09-09",
+    "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server"
+   },
+   {
+    "claim": "Google announced open-source Google Ads API MCP server, initial release read-only",
+    "url": "https://developers.google.com/ads/blog/posts/2025/10/open-source-google-ads-api-mcp-server"
+   },
+   {
+    "claim": "Official repo for the MCP server",
+    "url": "https://github.com/googleads/google-ads-mcp"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.8,
+  "needs_human": false,
+  "notes": "Pre-sunset docs required developer token approval; new access-level model details (Explorer/Basic/Standard review) not fetched in depth. Webhooks/sandbox from prior knowledge (test accounts) - not re-verified.",
+  "category": "Marketing, Ads, Email and Social"
+ },
+ {
+  "id": 32,
+  "app": "Meta Ads",
+  "subcategory": "advertising",
+  "one_liner": "Meta Marketing API (Graph API) for Facebook/Instagram ads, plus a Meta-hosted ads MCP server.",
+  "docs_url": "https://developers.facebook.com/docs/marketing-apis",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "OAuth via Facebook Login (for Business) or pre-obtained access token; system user tokens for business.",
+  "access": "app_review",
+  "gate_evidence": "Review is needed only if you manage data for other businesses (agency/partner): submit app for review and request Advanced Access on ads_mcp_management.",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.facebook.com/ads",
+  "community_mcp": "pipeboard-co/meta-ads-mcp, brijr/meta-ads-mcp, byadsco/meta-ads-mcp",
+  "verdict": "ready_with_friction",
+  "blocker": "Advanced Access app review (plus business verification) for multi-tenant use.",
+  "blocker_type": "app_review",
+  "toolkit_shape": "mcp_server",
+  "evidence": [
+   {
+    "claim": "Meta opened its ads MCP server to any developer with their own Meta app; OAuth or access token; App Review/Advanced Access only for managing other businesses",
+    "url": "https://developers.facebook.com/blog/post/2026/07/16/meta-ads-mcp-server/"
+   },
+   {
+    "claim": "Meta-hosted ads MCP server documentation",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview"
+   },
+   {
+    "claim": "Third-party repo references Meta's official MCP at mcp.facebook.com/ads (secondary for URL)",
+    "url": "https://github.com/byadsco/meta-ads-mcp/"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.75,
+  "needs_human": false,
+  "notes": "MCP URL taken from a secondary repo README; the Meta blog did not state the endpoint. Webhooks/sandbox not re-verified.",
+  "category": "Marketing, Ads, Email and Social"
+ },
+ {
+  "id": 33,
+  "app": "LinkedIn Ads",
+  "subcategory": "advertising",
+  "one_liner": "LinkedIn Marketing/Advertising API for campaign management and reporting.",
+  "docs_url": "https://learn.microsoft.com/linkedin/marketing",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "3-legged OAuth 2.0 with scopes r_ads, rw_ads, r_ads_reporting; 2-legged for some programs.",
+  "access": "app_review",
+  "gate_evidence": "Create an app, add Advertising API and complete the access form; LinkedIn will review your application. Development tier allows edit on up to 5 ad accounts; Standard tier needed for multi-account campaign management.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "Advertising API is vetted: application review for access, separate upgrade to Standard tier for multi-account use.",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Advertising API requires application and LinkedIn review; development vs standard tier",
+    "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api"
+   },
+   {
+    "claim": "Dev tier: edit up to 5 ad accounts; Standard tier for multiple ad accounts; Advertising API vetted product",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access"
+   },
+   {
+    "claim": "Tier definitions and Marketing API program terms",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.75,
+  "needs_human": false,
+  "notes": "official_mcp=no based on absence of results in search, not an explicit vendor statement. Webhooks/sandbox not verified in this pass (sandbox set no: docs say all calls hit production data).",
+  "category": "Marketing, Ads, Email and Social"
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "subcategory": "CRM / marketing automation",
+  "one_liner": "All-in-one agency CRM/marketing platform (HighLevel) with REST API v2 and an official MCP server.",
+  "docs_url": "https://marketplace.gohighlevel.com/docs/",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "OAuth 2.0 for Marketplace/public apps; Private Integration Tokens (bearer) for single account. Date-based Version header.",
+  "access": "self_serve_trial",
+  "gate_evidence": "14-day free trial on any plan; Starter plan has Basic API access, Agency Pro/Founders has Advanced API (OAuth, agency-level tokens, some restricted endpoints). PITs enabled for sandbox/trial accounts.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://services.leadconnectorhq.com/mcp/",
+  "community_mcp": "many (e.g. basicmachines-co/open-ghl-mcp, drausal/gohighlevel-mcp)",
+  "verdict": "ready_with_friction",
+  "blocker": "No free tier: needs paid plan after 14-day trial; some endpoints need top plan; marketplace app listing for public OAuth apps.",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "mcp_server",
+  "evidence": [
+   {
+    "claim": "Official HighLevel MCP server docs: per-client OAuth endpoints (e.g. /mcp/anthropic/v2) and PIT bearer on /mcp/",
+    "url": "https://marketplace.gohighlevel.com/docs/other/mcp"
+   },
+   {
+    "claim": "API access varies by plan: Basic on Starter/Unlimited, Advanced on Agency Pro; OAuth and PIT supported",
+    "url": "https://gohighlevelassist.freshdesk.com/support/solutions/articles/48001060529-highlevel-api-documentation"
+   },
+   {
+    "claim": "Pricing page: 14-day free trial, Starter includes Basic API Access, Agency Pro Advanced API Access",
+    "url": "https://www.gohighlevel.com/pricing?tab=suite"
+   },
+   {
+    "claim": "PITs available for sandbox and trial accounts",
+    "url": "https://ideas.gohighlevel.com/changelog/private-integration-tokens-pits-now-available-for-sandbox-trial-accounts"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.8,
+  "needs_human": false,
+  "notes": "Third-party claim that API only on $297 plan is outdated vs official help center (Starter has basic API). Plan-restricted endpoints list not fully reviewed.",
+  "category": "Marketing, Ads, Email and Social"
+ },
+ {
+  "id": 35,
+  "app": "Mailchimp",
+  "subcategory": "email marketing",
+  "one_liner": "Intuit Mailchimp email marketing platform; Marketing API v3 REST.",
+  "docs_url": "https://mailchimp.com/developer/marketing/",
+  "auth_methods": [
+   "api_key",
+   "oauth2",
+   "basic",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "API key (Basic or Bearer) for own account; OAuth 2 for accessing other users' accounts (register an app). Server prefix (dc) in base URL.",
+  "access": "self_serve_free",
+  "gate_evidence": "To use the Marketing API you need a Mailchimp account; what you can do depends on plan level. Get an API key then begin calls; OAuth 2 for third-party apps.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "mcp_url": "https://ai-inc.mailchimp.com/claude/mcp/v2",
+  "community_mcp": "damientilman/mailchimp-mcp-server (227 tools), AlexlaGuardia/mcp-mailchimp",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "API keys and OAuth 2 tokens supported; API key for own account, OAuth 2 for others' accounts",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication"
+   },
+   {
+    "claim": "Marketing API needs a Mailchimp account; capabilities depend on plan",
+    "url": "https://mailchimp.com/developer/guides/get-started-with-Mailchimp-api-3/"
+   },
+   {
+    "claim": "Mailchimp first-party page for its Claude connector (official remote MCP, endpoint per directory listing)",
+    "url": "https://mailchimp.com/resources/connect-mailchimp-to-claude/"
+   },
+   {
+    "claim": "Dev docs site MCP at mailchimp.com/developer/_mcp/server searches docs only, not account data",
+    "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.75,
+  "needs_human": false,
+  "notes": "Official account MCP endpoint URL comes from a secondary directory (skillsplayground/mcpservers.org); the vendor page confirms the connector exists. Free-plan API access not explicitly quoted. Mailchimp Transactional (Mandrill) is a separate paid add-on API. Sandbox not verified.",
+  "category": "Marketing, Ads, Email and Social"
+ },
+ {
+  "id": 36,
+  "app": "Klaviyo",
+  "subcategory": "email/SMS marketing",
+  "one_liner": "B2C CRM and email/SMS marketing platform with versioned JSON:API REST.",
+  "docs_url": "https://developers.klaviyo.com/en/reference/api_overview",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Private API keys with scopes (Authorization: Klaviyo-API-Key) for own account; OAuth recommended for tech partners/multi-tenant apps; public company ID key for client endpoints.",
+  "access": "self_serve_free",
+  "gate_evidence": "New developers set up an account, obtain API credentials (private key created in Settings > API keys by Owner/Admin/Manager); OAuth for tech partners requires app registration.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.klaviyo.com/mcp",
+  "community_mcp": "mcparmory-klaviyo",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [
+   {
+    "claim": "Three auth methods: private key, public key, OAuth; OAuth recommended for tech partners",
+    "url": "https://developers.klaviyo.com/en/docs/authenticate"
+   },
+   {
+    "claim": "Official Klaviyo MCP server: remote https://mcp.klaviyo.com/mcp (OAuth) and local uvx server with private key",
+    "url": "https://developers.klaviyo.com/en/v2026-04-15/docs/klaviyo_mcp_server"
+   },
+   {
+    "claim": "MCP server available to all Klaviyo customers",
+    "url": "https://www.klaviyo.com/newsroom/mcp-server"
+   },
+   {
+    "claim": "Remote MCP restricted to Owner/Admin/Manager roles",
+    "url": "https://developers.klaviyo.com/en/v2026-07-15/docs/connect_to_the_klaviyo_mcp_server"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.7,
+  "needs_human": false,
+  "notes": "Free-plan API access not explicitly quoted (an older doc mentions a 'note for free users' on MCP that I did not read). Webhooks exist per prior knowledge, not re-verified here; sandbox not verified.",
+  "category": "Marketing, Ads, Email and Social"
+ },
+ {
+  "id": 37,
+  "app": "systeme.io",
+  "subcategory": "funnel builder / email marketing",
+  "one_liner": "All-in-one funnel, email and course platform with public REST API and built-in MCP server.",
+  "docs_url": "https://developer.systeme.io/reference/api",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "auth_notes": "Public API key sent in X-API-Key header; max 3 keys per account (older help article says 2); separate MCP keys for MCP.",
+  "access": "unknown",
+  "gate_evidence": "Help center describes creating public API keys under Settings > MCP & API keys, with no plan requirement stated; third-party MCP README claims free plan works.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "narrow",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.systeme.io/mcp",
+  "community_mcp": "snzeeee/mcp-server-systemeio",
+  "verdict": "ready_with_friction",
+  "blocker": "Plan requirement for API/MCP keys not documented; API covers contacts, tags, courses, etc. only (funnel editing via MCP unsupported).",
+  "blocker_type": "other",
+  "toolkit_shape": "mcp_server",
+  "evidence": [
+   {
+    "claim": "Public API key created in account settings; up to 3 keys; no plan requirement mentioned",
+    "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api"
+   },
+   {
+    "claim": "Official systeme.io MCP: connect Claude via https://mcp.systeme.io/mcp?mcpKey=KEY",
+    "url": "https://help.systeme.io/article/11230-how-to-connect-your-systemeio-account-with-claude-using-mcp-keys"
+   },
+   {
+    "claim": "systeme.io built-in MCP server product page",
+    "url": "https://systeme.io/mcp"
+   },
+   {
+    "claim": "Nexla doc: API authenticates with key in X-API-Key header (secondary)",
+    "url": "https://docs.nexla.com/user-guides/connectors/systeme_api"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.55,
+  "needs_human": true,
+  "notes": "Whether API/MCP keys are on the free plan is unconfirmed from official sources; webhooks claim from prior knowledge, unverified. Breadth narrow-moderate (contacts, tags, courses, communities, newsletters).",
+  "category": "Marketing, Ads, Email and Social"
+ },
+ {
+  "id": 38,
+  "app": "Pinterest",
+  "subcategory": "social / ads",
+  "one_liner": "Pinterest API v5 for pins, boards, ads, catalogs, analytics; MCP server announced.",
+  "docs_url": "https://developers.pinterest.com/docs/api/v5/",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "OAuth 2.0 (authorization code, client credentials); app secret withheld until Standard access.",
+  "access": "app_review",
+  "gate_evidence": "If approved for API use, your app receives Trial access; Standard access (full functionality, public pins, higher limits) requires upgrade with review incl. video demo of OAuth flow.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://api.pinterest.com/mcp",
+  "community_mcp": "community wrappers exist",
+  "verdict": "ready_with_friction",
+  "blocker": "Trial approval is manual (many reports of long pending) and Standard access needs review; Trial pins are sandbox-only.",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Access tiers: Trial after approval, Standard via upgrade; Trial sandbox",
+    "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/"
+   },
+   {
+    "claim": "Official Pinterest MCP server announced by Pinterest on its business community",
+    "url": "https://community.pinterest.biz/t/introducing-the-pinterest-mcp-server/51358"
+   },
+   {
+    "claim": "Pinterest MCP page shows endpoint https://api.pinterest.com/mcp with OAuth 2.0 but invites 'be first to know when it launches'",
+    "url": "https://developers.pinterest.com/about-pinterest-mcp/"
+   },
+   {
+    "claim": "Community reports of Trial access stuck pending",
+    "url": "https://community.pinterest.biz/t/update-developer-app-approvals/45527?page=2"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.65,
+  "needs_human": true,
+  "notes": "MCP launch status ambiguous (announced Sept 2026; docs page suggests not generally available). Webhooks claim not verified in this pass.",
+  "category": "Marketing, Ads, Email and Social"
+ },
+ {
+  "id": 39,
+  "app": "Threads (Meta)",
+  "subcategory": "social",
+  "one_liner": "Threads API (Meta) for publishing, replies, insights, keyword search.",
+  "docs_url": "https://developers.facebook.com/docs/threads",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Threads OAuth at threads.com/oauth/authorize; short-lived then long-lived tokens; permissions threads_basic, threads_content_publish, etc.",
+  "access": "app_review",
+  "gate_evidence": "Users without a role on the app can grant permissions only after each permission is approved through App Review and the app is published; role holders/Threads testers work in dev mode.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "verdict": "ready_with_friction",
+  "blocker": "App Review (and business verification for some webhooks) required before non-tester users can authorize.",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Create a Meta app with Threads use case; each permission needs App Review and app published for users without roles",
+    "url": "https://developers.facebook.com/docs/threads/get-started"
+   },
+   {
+    "claim": "Threads API use-case permissions list",
+    "url": "https://developers.facebook.com/docs/development/create-an-app/threads-use-case"
+   },
+   {
+    "claim": "Threads API open to all developers (changelog June 2024)",
+    "url": "https://developers.facebook.com/documentation/threads/changelog"
+   },
+   {
+    "claim": "Webhooks require verified business",
+    "url": "https://developers.facebook.com/documentation/threads/webhooks"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.7,
+  "needs_human": false,
+  "notes": "official_mcp=no based on absence in search; Meta's ads MCP is Ads-only. Sandbox: none documented beyond dev-mode testers.",
+  "category": "Marketing, Ads, Email and Social"
+ },
+ {
+  "id": 40,
+  "app": "SendGrid",
+  "subcategory": "transactional/marketing email",
+  "one_liner": "Twilio SendGrid email delivery and Marketing Campaigns, REST v3 API.",
+  "docs_url": "https://www.twilio.com/docs/sendgrid/api-reference",
+  "auth_methods": [
+   "api_key",
+   "bearer_token"
+  ],
+  "toolkit_auth": "api_key",
+  "auth_notes": "API key as Bearer token (SG.xxx) with per-key scopes; sender identity verification required to send.",
+  "access": "self_serve_trial",
+  "gate_evidence": "Free Trial: $0/mo for 60 days, 100 emails/day, no credit card; after trial, a paid plan (Essentials from $19.95/mo) is needed to keep sending via API/SMTP.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "no",
+  "community_mcp": "Garoth/sendgrid-mcp, deyikong/sendgrid-mcp, neschadin/sendgrid-mcp",
+  "verdict": "ready",
+  "blocker": "Free tier is a 60-day trial; paid plan after.",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Free Trial plan: 100 emails/day for 60 days, no credit card; Essentials from $19.95",
+    "url": "https://www.twilio.com/en-us/pricing/email-api"
+   },
+   {
+    "claim": "After 60-day trial, email send via API/SMTP stops unless a plan is chosen",
+    "url": "https://support.sendgrid.com/hc/en-us/articles/35270136965403"
+   },
+   {
+    "claim": "Twilio MCP (mcp.twilio.com/docs) only indexes SendGrid docs, no account actions; twilio-labs/mcp exposes Twilio APIs",
+    "url": "https://twilio.com/docs/ai/mcp"
+   },
+   {
+    "claim": "Twilio blog: building your own SendGrid MCP server with API key (no official one)",
+    "url": "https://www.twilio.com/en-us/blog/developers/community/build-a-sendgrid-mcp-server-for-ai-email-workflows"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.65,
+  "needs_human": false,
+  "notes": "official_mcp=no is an absence finding; a third-party blog says 'no official hosted MCP server' (secondary). Sandbox = sandbox_mode mail setting (prior knowledge). Older SendGrid pages mention a free plan; current pricing page shows trial.",
+  "category": "Marketing, Ads, Email and Social"
+ }
+]

@@ -1,0 +1,366 @@
+{
+ "patches": [
+  {
+   "id": 87,
+   "app": "Xero",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "app_review",
+   "check": "C3",
+   "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+   "quote": "The Starter tier has unlimited data access to enable early innovation but is capped at 5 connections."
+  },
+  {
+   "id": 87,
+   "app": "Xero",
+   "field": "verdict",
+   "from": "ready",
+   "to": "ready_with_friction",
+   "check": "C3",
+   "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+   "quote": "The Starter tier has unlimited data access to enable early innovation but is capped at 5 connections."
+  },
+  {
+   "id": 87,
+   "app": "Xero",
+   "field": "blocker_type",
+   "from": "none",
+   "to": "app_review",
+   "check": "C3",
+   "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+   "quote": "The Starter tier has unlimited data access to enable early innovation but is capped at 5 connections."
+  },
+  {
+   "id": 87,
+   "app": "Xero",
+   "field": "blocker",
+   "from": "none",
+   "to": "Free Starter tier capped at 5 connections; more requires paid Core tier, Plus+ requires App Certification",
+   "check": "C3",
+   "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+   "quote": "The Starter tier has unlimited data access to enable early innovation but is capped at 5 connections."
+  },
+  {
+   "id": 88,
+   "app": "Brex",
+   "field": "toolkit_auth",
+   "from": "oauth2",
+   "to": "bearer_token",
+   "check": "C4",
+   "url": "https://developer.brex.com/guides/authentication.md",
+   "quote": "sign in to the dashboard as an account admin or card admin"
+  },
+  {
+   "id": 88,
+   "app": "Brex",
+   "field": "access",
+   "from": "partner_gated",
+   "to": "self_serve_free",
+   "check": "C4",
+   "url": "https://www.brex.com/pricing",
+   "quote": "Essentials ... $0 user/month ... Brex API access"
+  },
+  {
+   "id": 88,
+   "app": "Brex",
+   "field": "verdict",
+   "from": "blocked",
+   "to": "ready_with_friction",
+   "check": "C4",
+   "url": "https://developer.brex.com/docs/mcp",
+   "quote": "An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer."
+  },
+  {
+   "id": 88,
+   "app": "Brex",
+   "field": "blocker_type",
+   "from": "partner_gate",
+   "to": "per_tenant_setup",
+   "check": "C4",
+   "url": "https://developer.brex.com/docs/mcp",
+   "quote": "An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer."
+  },
+  {
+   "id": 88,
+   "app": "Brex",
+   "field": "blocker",
+   "from": "Multi-tenant OAuth client credentials issued only by Brex developer support; every user must be a Brex customer",
+   "to": "Each customer admin must accept Developer API agreement and generate a user token (partner OAuth needs Brex support); hosted MCP supports OAuth with DCR",
+   "check": "C4",
+   "url": "https://developer.brex.com/docs/mcp",
+   "quote": "An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer."
+  },
+  {
+   "id": 92,
+   "app": "Otter AI",
+   "field": "evidence_quality",
+   "from": "secondary",
+   "to": "primary",
+   "check": "C5",
+   "url": "https://otter.ai/pricing",
+   "quote": "Enterprise: Otter API & Webhooks ... Basic: Otter MCP server"
+  },
+  {
+   "id": 92,
+   "app": "Otter AI",
+   "field": "gate_evidence",
+   "from": null,
+   "to": "Otter pricing page lists 'Otter API & Webhooks' on the Enterprise plan card; 'Otter MCP server' on Basic.",
+   "check": "C5",
+   "url": "https://otter.ai/pricing",
+   "quote": "Otter API & Webhooks"
+  },
+  {
+   "id": 83,
+   "app": "Binance",
+   "field": "sandbox",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
+   "quote": "Testnet (section in Spot Trading docs sidebar)"
+  }
+ ],
+ "checked": [
+  {
+   "id": 81,
+   "app": "Stripe",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change: api_key toolkit auth, sandbox keys self-serve, official hosted MCP confirmed in record evidence."
+  },
+  {
+   "id": 82,
+   "app": "Plaid",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change: production approval -> app_review; official Dashboard MCP usable (diagnostics-oriented)."
+  },
+  {
+   "id": 83,
+   "app": "Binance",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "sandbox resolved to yes (Testnet section in official Spot docs). Other labels unchanged."
+  },
+  {
+   "id": 84,
+   "app": "Paygent Connect",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "gopaygent.com has no dev docs links; og:url points to paygent.transactiongateway.com (NMI-style white-label gateway, robots-blocked). Unknowns unresolvable; keep blocked/needs_human."
+  },
+  {
+   "id": 85,
+   "app": "iPayX",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "ipayx.ai and /pricing show no API/keys/developer docs; 'MCP FX server' only a meta keyword. Keep blocked; official_mcp effectively no but left unknown (no vendor page)."
+  },
+  {
+   "id": 86,
+   "app": "QuickBooks",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Intuit partner-faq page is JS-rendered (no content fetched); production-review claim still secondary. No patch."
+  },
+  {
+   "id": 87,
+   "app": "Xero",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Starter free tier capped at 5 connections (install cap) -> app_review / ready_with_friction."
+  },
+  {
+   "id": 88,
+   "app": "Brex",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C4: per-user admin token exists and Essentials $0 includes API access; partner OAuth not the gate. Hosted MCP OAuth+DCR. Patched to bearer_token/self_serve_free/ready_with_friction (per-tenant admin agreement). Brex account opening may involve business approval (not verified)."
+  },
+  {
+   "id": 89,
+   "app": "Ramp",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change."
+  },
+  {
+   "id": 90,
+   "app": "PitchBook",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change: contract-gated."
+  },
+  {
+   "id": 91,
+   "app": "NotebookLM",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change; official MCP not checked beyond record evidence."
+  },
+  {
+   "id": 92,
+   "app": "Otter AI",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Vendor pricing page confirms API & Webhooks on Enterprise plan; MCP on Basic; MCP article: 'We currently do not have a public API key at this time.' Labels unchanged, evidence upgraded to primary."
+  },
+  {
+   "id": 93,
+   "app": "Fathom",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change."
+  },
+  {
+   "id": 94,
+   "app": "Consensus",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change."
+  },
+  {
+   "id": 95,
+   "app": "Reducto",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change."
+  },
+  {
+   "id": 96,
+   "app": "Devin",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "access still unknown: devin.ai/pricing shows Free $0, Pro $20, Teams $80, Max $200 plans with a 'Devin API' row but per-plan inclusion not readable; docs state no plan requirement."
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change."
+  },
+  {
+   "id": 98,
+   "app": "Mermaid CLI",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change: not a SaaS API."
+  },
+  {
+   "id": 99,
+   "app": "YouTube Transcript",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change."
+  },
+  {
+   "id": 100,
+   "app": "Grain",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No change."
+  }
+ ]
+}

@@ -1,0 +1,416 @@
+{
+ "patches": [
+  {
+   "id": 8,
+   "app": "Close",
+   "field": "access",
+   "from": "self_serve_trial",
+   "to": "app_review",
+   "check": "C3",
+   "url": "https://developer.close.com/integrations/publish",
+   "quote": "Once approved, your app will be marked as Public and any Close user will be able to authorize it."
+  },
+  {
+   "id": 8,
+   "app": "Close",
+   "field": "verdict",
+   "from": "ready",
+   "to": "ready_with_friction",
+   "check": "C3",
+   "url": "https://developer.close.com/integrations/publish",
+   "quote": "Once approved, your app will be marked as Public and any Close user will be able to authorize it."
+  },
+  {
+   "id": 8,
+   "app": "Close",
+   "field": "blocker_type",
+   "from": "none",
+   "to": "app_review",
+   "check": "C3",
+   "url": "https://developer.close.com/integrations/publish",
+   "quote": "Once approved, your app will be marked as Public and any Close user will be able to authorize it."
+  },
+  {
+   "id": 8,
+   "app": "Close",
+   "field": "blocker",
+   "from": "none",
+   "to": "Multi-org OAuth app must be made Public via Close review before other organizations can authorize it",
+   "check": "C3",
+   "url": "https://developer.close.com/integrations/publish",
+   "quote": "Once approved, your app will be marked as Public and any Close user will be able to authorize it."
+  },
+  {
+   "id": 14,
+   "app": "Front",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "app_review",
+   "check": "C3",
+   "url": "https://dev.frontapp.com/docs/partnering-with-front",
+   "quote": "We'll use your form submission to first test your integration ... We reserve the right to refuse certain integrations."
+  },
+  {
+   "id": 14,
+   "app": "Front",
+   "field": "verdict",
+   "from": "ready",
+   "to": "ready_with_friction",
+   "check": "C3",
+   "url": "https://dev.frontapp.com/docs/partnering-with-front",
+   "quote": "We'll use your form submission to first test your integration ... We reserve the right to refuse certain integrations."
+  },
+  {
+   "id": 14,
+   "app": "Front",
+   "field": "blocker_type",
+   "from": "none",
+   "to": "app_review",
+   "check": "C3",
+   "url": "https://dev.frontapp.com/docs/partnering-with-front",
+   "quote": "We'll use your form submission to first test your integration ... We reserve the right to refuse certain integrations."
+  },
+  {
+   "id": 14,
+   "app": "Front",
+   "field": "blocker",
+   "from": "none",
+   "to": "Apps are private to the creating Front instance by default; publishing for all customers requires Front partner submission/test/approval",
+   "check": "C3",
+   "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+   "quote": "By default, apps are private to the Front instance they are created in"
+  },
+  {
+   "id": 15,
+   "app": "Pylon",
+   "field": "access",
+   "from": "paid_plan",
+   "to": "partner_gated",
+   "check": "C5",
+   "url": "https://www.usepylon.com/pricing",
+   "quote": "Pylon offers free trials for prospects. Your sales representative will work with you on setting up the demo organization."
+  },
+  {
+   "id": 15,
+   "app": "Pylon",
+   "field": "verdict",
+   "from": "ready_with_friction",
+   "to": "blocked",
+   "check": "C5",
+   "url": "https://www.usepylon.com/pricing",
+   "quote": "Pylon offers free trials for prospects. Your sales representative will work with you on setting up the demo organization."
+  },
+  {
+   "id": 15,
+   "app": "Pylon",
+   "field": "blocker_type",
+   "from": "paid_plan",
+   "to": "partner_gate",
+   "check": "C5",
+   "url": "https://www.usepylon.com/pricing",
+   "quote": "Professional and Advanced CTAs: \"Book a demo\"; Enterprise: \"Talk to sales\" (no self-serve signup)"
+  },
+  {
+   "id": 15,
+   "app": "Pylon",
+   "field": "sandbox",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://www.usepylon.com/pylon-facts",
+   "quote": "Everything in Advanced + MSA, SAML SSO, SCIM, sandbox, data retention controls, priority support SLAs"
+  },
+  {
+   "id": 10,
+   "app": "DealCloud",
+   "field": "toolkit_auth",
+   "from": "oauth2",
+   "to": "api_key",
+   "check": "C2",
+   "url": "https://api.docs.dealcloud.com/docs/token",
+   "quote": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token"
+  },
+  {
+   "id": 11,
+   "app": "Zendesk",
+   "field": "webhooks",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://developer.zendesk.com/documentation/webhooks/",
+   "quote": "Use the Webhooks API to create a webhook."
+  },
+  {
+   "id": 11,
+   "app": "Zendesk",
+   "field": "sandbox",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://developer.zendesk.com/documentation/developer-tools/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+   "quote": "Customer developers or individual private app developers should use their own instances or sandboxes."
+  },
+  {
+   "id": 11,
+   "app": "Zendesk",
+   "field": "official_mcp",
+   "from": "unknown",
+   "to": "no",
+   "check": "C1",
+   "url": "https://www.zendesk.com/newsroom/articles/relate-2026/",
+   "quote": "Zendesk MCP Server ... Early access this summer"
+  },
+  {
+   "id": 19,
+   "app": "Gorgias",
+   "field": "sandbox",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://developers.gorgias.com/docs/1-register-on-developer-portal.md",
+   "quote": "You will need to have a draft app to get approved for the Sandbox Account."
+  }
+ ],
+ "checked": [
+  {
+   "id": 1,
+   "app": "Salesforce",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Hosted MCP GA (per evidence); 3-legged OAuth via connected/external client apps; free Developer Edition. No change."
+  },
+  {
+   "id": 2,
+   "app": "HubSpot",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Labels consistent with vendor evidence (25-install cap pre-listing, remote MCP). No change."
+  },
+  {
+   "id": 3,
+   "app": "Pipedrive",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Vendor newsroom confirms MCP 'built and maintained by Pipedrive', 'available to customers on all Pipedrive plans'; endpoint URL still only secondary. No label change."
+  },
+  {
+   "id": 4,
+   "app": "Attio",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Pricing page fetch did not show per-plan API/webhook values; auth page shows no app review (only workspace-admin install approval). Free-plan API still secondary; no patch."
+  },
+  {
+   "id": 5,
+   "app": "Twenty",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "MCP docs mention webhooks tool; no vendor webhooks/sandbox page found. No change."
+  },
+  {
+   "id": 6,
+   "app": "Podio",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "MCP live at mcp.podio.com, beta 'intended for evaluation and testing' on progress.com -> counts as yes. No review on API keys. No change."
+  },
+  {
+   "id": 7,
+   "app": "Zoho CRM",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "MCP described as pre-built and available, acts on CRM data; Notification APIs confirmed on v8 page (webhooks=yes ok). Sandbox not mentioned on fetched pages -> stays unknown."
+  },
+  {
+   "id": 8,
+   "app": "Close",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Public OAuth apps need Close review before other orgs can authorize -> app_review. Webhooks confirmed on integrations page."
+  },
+  {
+   "id": 9,
+   "app": "Copper",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Copper auth page: 'OAuth2.0 is the preferred approach for partner integrations'; api_key toolkit_auth kept. No vendor page confirms/denies MCP; official_mcp=no unchanged (low confidence)."
+  },
+  {
+   "id": 10,
+   "app": "DealCloud",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Only client_credentials grant documented -> toolkit_auth api_key (user-generated key/secret). MCP docs exist and act on user data, GA status unstated. Webhooks/sandbox not found in docs nav (Publications = event feed); left unknown."
+  },
+  {
+   "id": 11,
+   "app": "Zendesk",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Webhooks API and sandboxes confirmed. MCP server only announced 'Early access this summer'; no developer-doc page for it -> official_mcp=no (re-check if EAP docs appear)."
+  },
+  {
+   "id": 12,
+   "app": "Intercom",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Labels consistent with vendor evidence. No change."
+  },
+  {
+   "id": 13,
+   "app": "Freshdesk",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Freshworks MCP GA since Sep 10 2026 on Growth/Pro/Enterprise (confirms yes). API doc page has no webhook/sandbox mention; both remain unknown."
+  },
+  {
+   "id": 14,
+   "app": "Front",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Apps private to creating instance by default; publishing for all customers requires Front test/approval -> app_review. MCP usable now."
+  },
+  {
+   "id": 15,
+   "app": "Pylon",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "No self-serve signup: all tiers 'Book a demo'/'Talk to sales', trial set up by sales rep -> partner_gated/blocked. Sandbox on Enterprise."
+  },
+  {
+   "id": 16,
+   "app": "LiveAgent",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "MCP documented as current built-in feature. Webhooks/sandbox not mentioned on fetched vendor pages (docs suggest a free trial account for testing); left unknown."
+  },
+  {
+   "id": 17,
+   "app": "Plain",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Auth page: API keys + OAuth app for acting as user; no review info. Sandbox not mentioned; left unknown."
+  },
+  {
+   "id": 18,
+   "app": "Help Scout",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Vendor confirms gate (replaces secondary): docs.helpscout.com/article/1140-mailbox-api 'The Free plan does not include access to the API or integrations.' OAuth apps self-created under My apps, no review stated. No label change."
+  },
+  {
+   "id": 19,
+   "app": "Gorgias",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Sandbox via developer portal after draft-app approval -> sandbox yes. Public app review by tech partnership team confirms app_review. Webhooks not found in llms.txt index (HTTP integration object only); left unknown."
+  },
+  {
+   "id": 20,
+   "app": "Gladly",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Vendor site gladly.ai is demo/sales-led ('Get a Demo', 'Contact sales'), no MCP mention on homepage or REST docs; sandbox via CSM ('contact your Gladly CSM'). Labels kept."
+  }
+ ]
+}

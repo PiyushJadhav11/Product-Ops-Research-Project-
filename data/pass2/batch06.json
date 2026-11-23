@@ -1,0 +1,465 @@
+[
+ {
+  "id": 51,
+  "app": "DataForSEO",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "SEO data API",
+  "one_liner": "Pay-as-you-go SEO data APIs (SERP, keywords, backlinks, on-page, merchant).",
+  "docs_url": "https://docs.dataforseo.com/v3/",
+  "auth_methods": [
+   "basic"
+  ],
+  "toolkit_auth": "basic",
+  "auth_notes": "API login + auto-generated API password (separate from account password) from dashboard API Access tab; Base64 in Authorization header.",
+  "access": "self_serve_free",
+  "gate_evidence": "Free account gives API credentials; $1 trial credit, free Sandbox with sample responses; minimum top-up $50 for real usage.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.dataforseo.com/mcp",
+  "community_mcp": "Apify actor wrappers, @scalably-io/dataforseo-mcp wrapper",
+  "verdict": "ready",
+  "blocker": "none (real data needs $50 min top-up; $1 trial credit and free sandbox for dev)",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Basic authentication is the only way to access the API; credentials from API Access tab of free account",
+    "url": "https://docs.dataforseo.com/v3/auth/"
+   },
+   {
+    "claim": "Minimum top-up $50; new accounts get $1 trial credit; Sandbox provides free sample responses",
+    "url": "https://dataforseo.com/pricing"
+   },
+   {
+    "claim": "Official MCP server, remote at https://mcp.dataforseo.com/mcp, repo dataforseo/mcp-server-typescript",
+    "url": "https://dataforseo.com/help-center/setting-up-the-official-dataforseo-mcp-server-simple-guide"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.9,
+  "needs_human": false,
+  "notes": "Webhooks=pingback/postback task callbacks (from general knowledge; not re-verified on a fetched page)."
+ },
+ {
+  "id": 52,
+  "app": "SE Ranking",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "SEO platform / data API",
+  "one_liner": "SEO and AI-visibility platform with Data API and Project API.",
+  "docs_url": "https://seranking.com/api/",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "auth_notes": "Authorization: Token <key> (or apikey query param); unified key for Data and Project APIs. Hosted MCP also supports OAuth 2.1 but REST is key-only.",
+  "access": "self_serve_trial",
+  "gate_evidence": "14-day free trial with 100K API credits, no credit card; afterwards paid standalone API / add-on / pay-as-you-go (from $50/250K credits). Project API needs Business/Enterprise plan.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "unknown",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "mcp_url": "https://api.seranking.com/mcp",
+  "community_mcp": "seranking/seo-data-api-mcp-server (docker), TeamDay-AI/se-ranking-mcp",
+  "verdict": "ready_with_friction",
+  "blocker": "API beyond 14-day trial requires paid credits/add-on; Project API requires Business/Enterprise plan",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Authorization: Token YOUR_API_KEY header; apikey query param alternative",
+    "url": "https://seranking.com/api-beginning-of-work.html"
+   },
+   {
+    "claim": "14-day trial with 100K credits; standalone plan, add-on; Project API only on Business/Enterprise",
+    "url": "https://seranking.com/api/how-to-get-api/"
+   },
+   {
+    "claim": "Pricing: free trial 100K credits, MCP included, standalone from $179/mo annual",
+    "url": "https://seranking.com/api-pricing.html"
+   },
+   {
+    "claim": "Official hosted MCP at api.seranking.com/mcp, OAuth 2.1 or X-Api-Key header",
+    "url": "https://seranking.com/api/integrations/mcp/"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.85,
+  "needs_human": false,
+  "notes": "Webhook support not confirmed."
+ },
+ {
+  "id": 53,
+  "app": "Ahrefs",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "SEO data API",
+  "one_liner": "SEO backlink/keyword/site data via REST API v3 and hosted MCP.",
+  "docs_url": "https://docs.ahrefs.com/docs/api/reference/introduction",
+  "auth_methods": [
+   "api_key",
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "bearer_token",
+  "auth_notes": "API v3 key as Bearer token, created by workspace owner/admin. OAuth only via Ahrefs Connect partner program and MCP (MCP-scoped keys are not interchangeable with API keys).",
+  "access": "paid_plan",
+  "gate_evidence": "API on eligible paid plans (Lite or higher per help center); others get limited free test queries. Units shared with MCP; extra units only on Enterprise.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "no",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://api.ahrefs.com/mcp/mcp",
+  "community_mcp": "Old local @ahrefs/mcp (archived, v3 keys only)",
+  "verdict": "ready_with_friction",
+  "blocker": "Paid subscription (Lite+) required; unit-metered; hosted MCP forbids custom scripted clients",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "API key required; created by owners/admins; available on eligible paid plans, limited free test queries otherwise; 60 req/min",
+    "url": "https://docs.ahrefs.com/docs/api/reference/introduction"
+   },
+   {
+    "claim": "Direct API v3 access on all paid plans starting from Lite; units shared with MCP/Connect",
+    "url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3"
+   },
+   {
+    "claim": "Hosted MCP on Lite+; custom scripts/standalone HTTP clients to the MCP endpoint not permitted; use public API",
+    "url": "https://docs.ahrefs.com/docs/mcp/introduction"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.85,
+  "needs_human": false,
+  "notes": "Free test queries = sandbox-like (no units); webhooks not seen in docs (set no, low certainty)."
+ },
+ {
+  "id": 54,
+  "app": "MrScraper",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "web scraping",
+  "one_liner": "AI web scraping platform with scraper API, unblocker, residential proxies.",
+  "docs_url": "https://docs.mrscraper.com/",
+  "auth_methods": [
+   "api_key",
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "api_key",
+  "auth_notes": "x-api-token header (Platform API); Bearer for Marketplace endpoints; token created in dashboard. Hosted MCP uses OAuth 2.1.",
+  "access": "self_serve_free",
+  "gate_evidence": "Token created self-serve in dashboard; vendor blog says free tier with credits, third-party pricing summaries show $0 Free plan (paid $49+). Free tier size not confirmed in official docs.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.mrscraper.com/mcp",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Auth via x-api-token header; token created at dashboard API Tokens page",
+    "url": "https://docs.mrscraper.com/docs/api/authentication"
+   },
+   {
+    "claim": "Vendor blog states free tier gives real credits",
+    "url": "https://mrscraper.com/blog/free-web-scraping-apis"
+   },
+   {
+    "claim": "Official hosted MCP at mcp.mrscraper.com/mcp with OAuth 2.1; webhooks listed (secondary aggregator, not verified on vendor page)",
+    "url": "https://apis.io/providers/mrscraper/"
+   }
+  ],
+  "evidence_quality": "secondary",
+  "confidence": 0.6,
+  "needs_human": true,
+  "notes": "MCP and webhook claims from apis.io aggregator; MrScraper docs MCP page fetch failed. Verify free tier and MCP on vendor site."
+ },
+ {
+  "id": 55,
+  "app": "Apify",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "web scraping platform",
+  "one_liner": "Cloud platform to run/publish scraping Actors with API, storage, proxies.",
+  "docs_url": "https://docs.apify.com/api/v2",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "bearer_token",
+  "auth_notes": "API token as Bearer; hosted MCP supports OAuth sign-in or Bearer token; prepaid-token agentic payments also exist.",
+  "access": "self_serve_free",
+  "gate_evidence": "Free plan: $0, $5 monthly prepaid credit, no credit card required.",
+  "api_type": [
+   "rest",
+   "sdk_only",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.apify.com",
+  "community_mcp": "Third-party Actors wrapping other MCPs",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "mcp_server",
+  "evidence": [
+   {
+    "claim": "Free plan $0 with $5 monthly credit, no credit card",
+    "url": "https://apify.com/pricing"
+   },
+   {
+    "claim": "Official hosted MCP mcp.apify.com with OAuth or Bearer API token; running Actors always needs auth",
+    "url": "https://docs.apify.com/platform/integrations/mcp"
+   },
+   {
+    "claim": "Official repo apify/apify-mcp-server",
+    "url": "https://github.com/apify/apify-mcp-server"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.9,
+  "needs_human": false,
+  "notes": "Webhooks supported on platform (general knowledge, not re-verified)."
+ },
+ {
+  "id": 56,
+  "app": "Firecrawl",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "web scraping",
+  "one_liner": "Web scrape/crawl/search/extract API returning LLM-ready markdown/JSON.",
+  "docs_url": "https://docs.firecrawl.dev/",
+  "auth_methods": [
+   "bearer_token",
+   "none"
+  ],
+  "toolkit_auth": "bearer_token",
+  "auth_notes": "API key as Authorization Bearer; keyless mode (per-IP limited) for search/scrape/parse/interact; MCP also OAuth for ChatGPT/Claude.ai.",
+  "access": "self_serve_free",
+  "gate_evidence": "Keyless free use; free API key gives 1,000 credits and higher limits; no credit card mentioned.",
+  "api_type": [
+   "rest",
+   "sdk_only",
+   "cli"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.firecrawl.dev/v2/mcp",
+  "community_mcp": "Many forks of firecrawl-mcp",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Keyless access plus optional API key as Bearer token; webhooks listed as async event delivery",
+    "url": "https://docs.firecrawl.dev/introduction"
+   },
+   {
+    "claim": "Keyless free limits; free API key gives 1,000 credits; free plan per-minute rate limits",
+    "url": "https://docs.firecrawl.dev/rate-limits"
+   },
+   {
+    "claim": "Official MCP server firecrawl-mcp, hosted keyless endpoint, API key bearer",
+    "url": "https://docs.firecrawl.dev/mcp-server/keyless-api-key.md"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.9,
+  "needs_human": false,
+  "notes": "Older third-party posts cite 500 free credits; current docs say 1,000."
+ },
+ {
+  "id": 57,
+  "app": "Bright Data",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "proxy / web data platform",
+  "one_liner": "Proxy networks, Web Unlocker, scraper APIs, datasets and browser APIs.",
+  "docs_url": "https://docs.brightdata.com/",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "auth_notes": "API key as Bearer; created by admin in account settings with permission level (Admin/Finance/Ops/Limit/User) and expiry. Proxy zones use separate credentials.",
+  "access": "self_serve_free",
+  "gate_evidence": "New accounts get free credit; MCP free tier 5,000 requests/month, no credit card required.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.brightdata.com/mcp",
+  "community_mcp": "",
+  "verdict": "ready",
+  "blocker": "none",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Bearer API key created in control panel, admin-only section, permission levels",
+    "url": "https://docs.brightdata.com/api-reference/authentication"
+   },
+   {
+    "claim": "MCP free tier 5,000 requests/month; new users get free credit",
+    "url": "https://docs.brightdata.com/products/mcp-server/overview.md"
+   },
+   {
+    "claim": "Official MCP repo brightdata/brightdata-mcp, hosted server with token",
+    "url": "https://github.com/brightdata/brightdata-mcp"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.8,
+  "needs_human": false,
+  "notes": "Hosted MCP passes token in URL query. Webhook support (dataset delivery notify) from general knowledge, not verified. Some endpoints (browser/datasets) are paid only."
+ },
+ {
+  "id": 58,
+  "app": "Sherlock",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "OSINT username search (open source)",
+  "one_liner": "Open-source Python CLI that checks a username across 400+ sites.",
+  "docs_url": "https://github.com/sherlock-project/sherlock",
+  "auth_methods": [
+   "none"
+  ],
+  "toolkit_auth": "none",
+  "auth_notes": "No account or API; local tool. Install via pipx/pip/Docker.",
+  "access": "self_serve_free",
+  "gate_evidence": "MIT-licensed open-source CLI installable with pipx install sherlock-project; no credentials needed.",
+  "api_type": [
+   "cli"
+  ],
+  "api_breadth": "narrow",
+  "webhooks": "no",
+  "sandbox": "no",
+  "official_mcp": "no",
+  "community_mcp": "Third-party wrappers (e.g. Apify actor); no vendor-run MCP found",
+  "verdict": "blocked",
+  "blocker": "Not a SaaS API; CLI only (runs locally, hits third-party sites)",
+  "blocker_type": "not_a_saas_api",
+  "toolkit_shape": "cli_wrapper",
+  "evidence": [
+   {
+    "claim": "Sherlock is a CLI: sherlock user123; MIT license; install via pipx/Docker",
+    "url": "https://github.com/sherlock-project/sherlock"
+   },
+   {
+    "claim": "CLI tool with CSV/XLSX output, proxy options, Python 3.9+",
+    "url": "https://bellingcat.gitbook.io/more/all-tools/sherlock"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.9,
+  "needs_human": false,
+  "notes": "Could still be a cli_wrapper toolkit; blocked only in the SaaS-API sense. No official MCP found (absence not exhaustively proven)."
+ },
+ {
+  "id": 59,
+  "app": "Waterfall.io",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "B2B contact/company enrichment",
+  "one_liner": "B2B contact, phone, company enrichment and email verification API.",
+  "docs_url": "https://docs.waterfall.io/",
+  "auth_methods": [
+   "api_key"
+  ],
+  "toolkit_auth": "api_key",
+  "auth_notes": "x-api-key header; master key can create sub-keys. Marketing page examples show inconsistent header names (x-waterfall-api-key vs x-api-key).",
+  "access": "unknown",
+  "gate_evidence": "Docs do not explain how a new developer obtains a first key; site says usage-based pricing and pushes booking a call/onboarding.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "unknown",
+  "verdict": "ready_with_friction",
+  "blocker": "Unclear how first API key is obtained (likely sales/onboarding call); no free trial documented",
+  "blocker_type": "other",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Base URL api.waterfall.io, x-api-key header, 13 endpoints, async jobs, signed Ed25519 webhooks, sub-keys via master key",
+    "url": "https://docs.waterfall.io/"
+   },
+   {
+    "claim": "Marketing page: usage-based pricing, API key acquisition not explained, no free trial or MCP mentioned, book a call/Slack onboarding",
+    "url": "https://www.waterfall.io/"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.45,
+  "needs_human": true,
+  "notes": "Verify signup/gating and MCP (docs mention a 'Use Waterfall with an agent' page not fetched)."
+ },
+ {
+  "id": 60,
+  "app": "Clay",
+  "category": "Data, SEO and Scraping",
+  "subcategory": "GTM data enrichment",
+  "one_liner": "GTM data enrichment/waterfall platform with Public API, CLI and hosted MCP.",
+  "docs_url": "https://developers.clay.com/",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "toolkit_auth": "api_key",
+  "auth_notes": "Public API: clay-api-key header (beta), key tied to a user, created in Settings > API keys or via clay api-keys create. Hosted MCP is OAuth 2.1 only; no API key for MCP.",
+  "access": "self_serve_free",
+  "gate_evidence": "Dev platform available on all plans incl. free but with tight limits (free: 100 results/30 days); table queries and Audiences require Enterprise.",
+  "api_type": [
+   "rest",
+   "cli"
+  ],
+  "api_breadth": "narrow",
+  "webhooks": "yes",
+  "sandbox": "no",
+  "official_mcp": "yes",
+  "mcp_url": "https://api.clay.com/v3/mcp",
+  "verdict": "ready_with_friction",
+  "blocker": "Free-plan limits tiny; table reads/API table sync are Enterprise; keys per-user and API labeled beta (not true app review)",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Developer platform available on all Clay plans incl. free; per-plan search result limits; table sync Enterprise",
+    "url": "https://university.clay.com/docs/clay-api-cli"
+   },
+   {
+    "claim": "Public API clay-api-key header, base api.clay.com/public/v0, signed webhooks, table queries Enterprise; MCP OAuth 2.1 only",
+    "url": "https://www.scalekit.com/blog/clay-mcp-vs-api"
+   },
+   {
+    "claim": "Hosted MCP at api.clay.com/v3/mcp, vendor-listed",
+    "url": "https://mcpservers.org/remote-mcp-servers/clay"
+   }
+  ],
+  "evidence_quality": "primary",
+  "confidence": 0.7,
+  "needs_human": false,
+  "notes": "Access enum chosen as closest-fit; actually 'self-serve free but limited, Enterprise for deeper'. Per-user keys, beta API."
+ }
+]

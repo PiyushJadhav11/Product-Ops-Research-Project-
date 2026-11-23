@@ -1,0 +1,518 @@
+[
+ {
+  "id": 71,
+  "app": "Notion",
+  "category": "Productivity and Project Management",
+  "subcategory": "docs/wiki/databases",
+  "one_liner": "Connected workspace for docs, wikis and databases.",
+  "docs_url": "https://developers.notion.com",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Internal connection static token (workspace owner creates), user-scoped PAT, public OAuth2 connection.",
+  "access": "app_review",
+  "gate_evidence": "Public connection authorization URL 'populates after a public connection is submitted for review'; internal tokens are self-serve but single-workspace.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.notion.com/mcp",
+  "community_mcp": "awkoy/notion-mcp-server and many others",
+  "verdict": "ready_with_friction",
+  "blocker": "Public (multi-tenant) OAuth connection is submitted for review; unclear whether review gates installs or only listing.",
+  "blocker_type": "app_review",
+  "evidence": [
+   {
+    "claim": "Auth: internal token, PAT, public OAuth2; public connection submitted for review",
+    "url": "https://developers.notion.com/docs/authorization"
+   },
+   {
+    "claim": "REST API at api.notion.com, JSON",
+    "url": "https://developers.notion.com/reference/intro"
+   },
+   {
+    "claim": "Webhooks let a connection receive real-time updates",
+    "url": "https://developers.notion.com/reference/webhooks"
+   },
+   {
+    "claim": "Official makenotion MCP; hosted remote Notion MCP with OAuth",
+    "url": "https://github.com/makenotion/notion-mcp-server"
+   },
+   {
+    "claim": "Hosted MCP endpoint listed as published by Notion",
+    "url": "https://apitracker.io/mcp-server/registry/com.notion/mcp"
+   }
+  ],
+  "confidence": 0.65,
+  "needs_human": true,
+  "notes": "Review requirement for public connections not clearly stated as blocking installs; verify.",
+  "evidence_quality": "primary",
+  "toolkit_shape": "agent_skills"
+ },
+ {
+  "id": 72,
+  "app": "Airtable",
+  "category": "Productivity and Project Management",
+  "subcategory": "database/spreadsheet",
+  "one_liner": "Spreadsheet-database hybrid with REST API and automations.",
+  "docs_url": "https://airtable.com/developers/web/api/introduction",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Personal access tokens and OAuth integrations (airtable.com/create/oauth). Sharing OAuth integration needs privacy policy + ToS URLs.",
+  "access": "self_serve_free",
+  "gate_evidence": "MCP server 'is available to all users on all plans'; OAuth integration registered self-serve at /create/oauth, needing privacy policy and ToS URLs before sharing.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.airtable.com/mcp",
+  "community_mcp": "",
+  "verdict": "ready",
+  "blocker": "none",
+  "evidence": [
+   {
+    "claim": "REST-style API with JSON",
+    "url": "https://airtable.com/developers/web/api/introduction"
+   },
+   {
+    "claim": "OAuth integration registration; privacy policy/ToS required to share",
+    "url": "https://airtable.com/developers/web/guides/oauth-integrations"
+   },
+   {
+    "claim": "Webhooks exist; PAT/OAuth webhooks expire after 7 days unless refreshed",
+    "url": "https://airtable.com/developers/web/api/webhooks-overview"
+   },
+   {
+    "claim": "Official hosted MCP server, available on all plans, OAuth/PAT",
+    "url": "https://airtable.com/developers/agents/mcp/getting-started"
+   },
+   {
+    "claim": "Support doc: plan availability All plans, mcp.airtable.com/mcp",
+    "url": "https://support.airtable.com/docs/using-the-airtable-mcp-server"
+   }
+  ],
+  "confidence": 0.85,
+  "notes": "Marketplace-style OAuth review not found; token/OAuth self-serve.",
+  "evidence_quality": "primary",
+  "needs_human": false,
+  "toolkit_shape": "agent_skills",
+  "blocker_type": "none"
+ },
+ {
+  "id": 73,
+  "app": "Linear",
+  "category": "Productivity and Project Management",
+  "subcategory": "issue tracking",
+  "one_liner": "Modern issue tracker and project management tool with GraphQL API.",
+  "docs_url": "https://linear.app/developers",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "OAuth 2.0 (incl. actor authorization) or personal API keys.",
+  "access": "self_serve_free",
+  "gate_evidence": "Docs: 'Use OAuth 2.0 or personal API keys to authenticate your requests'; no plan or review requirement stated on the developer page (free-plan API availability not explicitly confirmed).",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.linear.app/mcp",
+  "community_mcp": "NimbleBrainInc/mcp-linear, others",
+  "verdict": "ready",
+  "blocker": "none",
+  "evidence": [
+   {
+    "claim": "OAuth 2.0 or personal API keys; GraphQL API",
+    "url": "https://linear.app/developers"
+   },
+   {
+    "claim": "Linear webhooks push notifications on create/update/remove",
+    "url": "https://linear.app/developers/webhooks"
+   },
+   {
+    "claim": "Official remote MCP server at mcp.linear.app/mcp, OAuth",
+    "url": "https://linear.app/docs/mcp"
+   }
+  ],
+  "confidence": 0.8,
+  "notes": "One secondary source claims MCP needs paid subscription; not verified from Linear.",
+  "evidence_quality": "primary",
+  "needs_human": false,
+  "toolkit_shape": "agent_skills",
+  "blocker_type": "none"
+ },
+ {
+  "id": 74,
+  "app": "Jira",
+  "category": "Productivity and Project Management",
+  "subcategory": "issue tracking",
+  "one_liner": "Atlassian issue and project tracking with Cloud REST API.",
+  "docs_url": "https://developer.atlassian.com/cloud/jira/platform/",
+  "auth_methods": [
+   "basic",
+   "oauth2",
+   "other"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "API token + email basic auth; OAuth 2.0 (3LO) via developer console; Forge/Connect apps. Atlassian says apps that collect API tokens don't comply; build a distributable 3LO app.",
+  "access": "self_serve_free",
+  "gate_evidence": "Basic auth uses self-generated API tokens; 3LO apps created in developer console; Rovo MCP rate limits list a Free plan tier (500 calls/hour).",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.atlassian.com/v2/mcp",
+  "community_mcp": "various Jira MCP servers (CData etc.)",
+  "verdict": "ready",
+  "blocker": "none",
+  "evidence": [
+   {
+    "claim": "API token basic auth, OAuth 2.0 3LO, Forge",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/"
+   },
+   {
+    "claim": "Jira Cloud webhooks exist",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/webhooks/"
+   },
+   {
+    "claim": "Official Atlassian Rovo MCP server, GA, OAuth 2.1 or API token",
+    "url": "https://github.com/atlassian/atlassian-mcp-server"
+   },
+   {
+    "claim": "Rovo MCP available to all Cloud customers with per-plan rate limits incl. Free",
+    "url": "https://www.atlassian.com/ja/platform/remote-mcp-server"
+   }
+  ],
+  "confidence": 0.8,
+  "notes": "Plan gating for REST on Free plan not stated explicitly in the docs fetched; Free is widely used.",
+  "evidence_quality": "primary",
+  "needs_human": false,
+  "toolkit_shape": "agent_skills",
+  "blocker_type": "none"
+ },
+ {
+  "id": 75,
+  "app": "Asana",
+  "category": "Productivity and Project Management",
+  "subcategory": "work management",
+  "one_liner": "Work management platform with REST API.",
+  "docs_url": "https://developers.asana.com",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "PAT, OAuth 2.0, OpenID Connect; service accounts are Enterprise-only. MCP tokens work only with MCP server.",
+  "access": "self_serve_free",
+  "gate_evidence": "PATs/OAuth have no listed plan requirement; 'Service Accounts are an Enterprise tier feature'.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.asana.com/v2/mcp",
+  "community_mcp": "roychri/mcp-server-asana",
+  "verdict": "ready",
+  "blocker": "none",
+  "evidence": [
+   {
+    "claim": "PAT, service account (Enterprise), OAuth, OIDC",
+    "url": "https://developers.asana.com/docs/authentication"
+   },
+   {
+    "claim": "Webhooks notify of changes in Asana",
+    "url": "https://developers.asana.com/docs/webhooks-guide"
+   },
+   {
+    "claim": "Official MCP V2 server at mcp.asana.com/v2/mcp; V1 beta shut down 05/11/2026",
+    "url": "https://developers.asana.com/docs/using-asanas-mcp-server"
+   },
+   {
+    "claim": "MCP requires own OAuth app registration; MCP tokens only work with MCP",
+    "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server"
+   }
+  ],
+  "confidence": 0.8,
+  "evidence_quality": "primary",
+  "needs_human": false,
+  "toolkit_shape": "agent_skills",
+  "blocker_type": "none"
+ },
+ {
+  "id": 76,
+  "app": "Monday.com",
+  "category": "Productivity and Project Management",
+  "subcategory": "work OS",
+  "one_liner": "Work management platform with GraphQL API and apps framework.",
+  "docs_url": "https://developer.monday.com",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Personal API token; OAuth for apps. Marketplace listing requires app review.",
+  "access": "self_serve_free",
+  "gate_evidence": "'Sign up for a free monday.com developer account' with all Free-plan features plus higher limits, separate from production data; marketplace listing requires submitting app for review.",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.monday.com/mcp",
+  "community_mcp": "",
+  "verdict": "ready",
+  "blocker": "none",
+  "evidence": [
+   {
+    "claim": "Free developer/sandbox account",
+    "url": "https://developer.monday.com/api-reference/docs/developer-sandbox"
+   },
+   {
+    "claim": "Personal API tokens identify calling user",
+    "url": "https://developer.monday.com/api-reference/docs/authentication"
+   },
+   {
+    "claim": "Hosted Platform MCP, API token/OAuth/DCR, executed as GraphQL calls",
+    "url": "https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp"
+   },
+   {
+    "claim": "Platform MCP maintained by monday.com",
+    "url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp"
+   },
+   {
+    "claim": "Submit app for review to list on marketplace",
+    "url": "https://monday.com/appsdeveloper"
+   }
+  ],
+  "confidence": 0.8,
+  "notes": "Webhooks inferred from apps docs/secondary (rollout.com); not directly fetched on official page.",
+  "evidence_quality": "primary",
+  "needs_human": false,
+  "toolkit_shape": "agent_skills",
+  "blocker_type": "none"
+ },
+ {
+  "id": 77,
+  "app": "ClickUp",
+  "category": "Productivity and Project Management",
+  "subcategory": "work management",
+  "one_liner": "All-in-one work management platform with REST API.",
+  "docs_url": "https://developer.clickup.com",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Personal API token (pk_, never expires) and OAuth 2.0 auth-code; only Workspace owners/admins can create OAuth apps. MCP is OAuth-only.",
+  "access": "self_serve_free",
+  "gate_evidence": "'Only Workspace owners or admins can create OAuth apps'; no plan requirement stated.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.clickup.com/mcp",
+  "community_mcp": "hauptsacheNet/clickup-mcp and others",
+  "verdict": "ready",
+  "blocker": "none",
+  "evidence": [
+   {
+    "claim": "Personal token and OAuth 2.0; admin-only OAuth app creation",
+    "url": "https://developer.clickup.com/docs/authentication"
+   },
+   {
+    "claim": "Webhooks subscribe to Workspace events",
+    "url": "https://developer.clickup.com/docs/webhooks"
+   },
+   {
+    "claim": "Official ClickUp MCP, OAuth only, no API keys",
+    "url": "https://clickup.com/blog/how-to-use-clickup-mcp-server/"
+   },
+   {
+    "claim": "Help center: official ClickUp MCP",
+    "url": "https://help.clickup.com/hc/en-us/articles/33335772678423-What-is-ClickUp-MCP"
+   }
+  ],
+  "confidence": 0.8,
+  "evidence_quality": "primary",
+  "needs_human": false,
+  "toolkit_shape": "agent_skills",
+  "blocker_type": "none"
+ },
+ {
+  "id": 78,
+  "app": "Coda",
+  "category": "Productivity and Project Management",
+  "subcategory": "docs/databases",
+  "one_liner": "Collaborative docs with tables; now under Superhuman branding.",
+  "docs_url": "https://coda.io/developers/apis/v1",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "auth_notes": "REST API uses per-user API token (Bearer); tokens can be scoped to docs/tables. No OAuth for REST API found; MCP supports OAuth2 PKCE or personal token.",
+  "access": "self_serve_free",
+  "gate_evidence": "API offered 'free of charge, in both free and paid workspaces'.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://coda.io/apis/mcp",
+  "community_mcp": "orellazri/coda-mcp, mcp-coda, TJC-LP/coda-mcp-server",
+  "verdict": "ready_with_friction",
+  "blocker": "No OAuth for REST API: multi-tenant use relies on user-pasted API tokens.",
+  "blocker_type": "per_tenant_setup",
+  "evidence": [
+   {
+    "claim": "Bearer API token, all plans incl. free",
+    "url": "https://coda.io/developers/apis/v1"
+   },
+   {
+    "claim": "Official Coda MCP at coda.io/apis/mcp, OAuth2 PKCE or token",
+    "url": "https://help.coda.io/hc/en-us/articles/44722769665549-Security-recommendations-for-the-Coda-MCP"
+   },
+   {
+    "claim": "Connect to the Coda MCP setup guide",
+    "url": "https://help.coda.io/hc/en-us/articles/44722661982989-Connect-to-the-Coda-MCP"
+   }
+  ],
+  "confidence": 0.7,
+  "needs_human": true,
+  "notes": "Coda rebranded to Superhuman Docs; webhook support and REST OAuth not verified.",
+  "evidence_quality": "primary",
+  "toolkit_shape": "agent_skills"
+ },
+ {
+  "id": 79,
+  "app": "Smartsheet",
+  "category": "Productivity and Project Management",
+  "subcategory": "spreadsheet/work management",
+  "one_liner": "Enterprise work management with spreadsheet-style sheets and REST API.",
+  "docs_url": "https://developers.smartsheet.com",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Access tokens from UI (Bearer) and OAuth 2.0 (3-legged); developer registration gives sandbox account. Separate tokens for Gov/EU regions.",
+  "access": "paid_plan",
+  "gate_evidence": "MCP docs: 'Required plan: Business, Enterprise, or Advanced Work Management'; Smartsheet community staff: generating an access token requires a license on a multi-user plan such as Business or Enterprise (Individual plan excluded). 30-day Business trial available.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.smartsheet.com",
+  "community_mcp": "smartsheet-platform/smar-mcp (also Smartsheet-published), Kcrong/smartsheet-mcp",
+  "verdict": "ready_with_friction",
+  "blocker": "Needs paid Business/Enterprise plan or time-boxed trial for tokens and MCP.",
+  "blocker_type": "paid_plan",
+  "evidence": [
+   {
+    "claim": "Access tokens and OAuth 2.0 supported",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication"
+   },
+   {
+    "claim": "MCP requires Business/Enterprise/AWM plan; API token or OAuth",
+    "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server"
+   },
+   {
+    "claim": "Smartsheet MCP Server GA March 2026; needs Business or Enterprise",
+    "url": "https://www.smartsheet.com/content-center/smartsheet-mcp-server-now-generally-available"
+   },
+   {
+    "claim": "Token generation requires paid multi-user license (staff reply)",
+    "url": "https://community.smartsheet.com/discussion/comment/155431"
+   },
+   {
+    "claim": "Developer registration gives sandbox account",
+    "url": "https://developers.smartsheet.com/blog/getting-started-with-the-smartsheet-api"
+   },
+   {
+    "claim": "Free 30-day trial gives Business plan",
+    "url": "https://help.smartsheet.com/articles/529590"
+   }
+  ],
+  "confidence": 0.8,
+  "notes": "Webhooks (yes) from general knowledge; not fetched from official page this pass.",
+  "evidence_quality": "primary",
+  "needs_human": false,
+  "toolkit_shape": "agent_skills"
+ },
+ {
+  "id": 80,
+  "app": "Harvest",
+  "category": "Productivity and Project Management",
+  "subcategory": "time tracking",
+  "one_liner": "Time tracking, invoicing and expenses with REST API v2.",
+  "docs_url": "https://help.getharvest.com/api-v2/",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Personal Access Token (Harvest ID Developers) or OAuth2 (auth code / implicit); Harvest-Account-Id header required.",
+  "access": "self_serve_free",
+  "gate_evidence": "'All Harvest accounts are able to access the Harvest API' including free and trial accounts.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://api.harvestapp.com/mcp",
+  "community_mcp": "valtirallc/harvest-mcp-server, taiste/harvest-mcp-server, standardbeagle/harvest-mcp",
+  "verdict": "ready",
+  "blocker": "none",
+  "evidence": [
+   {
+    "claim": "Personal access tokens and OAuth2",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/"
+   },
+   {
+    "claim": "API access for all accounts incl. free and trial",
+    "url": "https://support.getharvest.com/hc/en-us/articles/360048180732"
+   },
+   {
+    "claim": "Harvest-hosted MCP at api.harvestapp.com/mcp, OAuth sign-in",
+    "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP"
+   }
+  ],
+  "confidence": 0.8,
+  "notes": "Webhooks: docs don't mention them (only secondary source says none) so left unknown.",
+  "evidence_quality": "primary",
+  "needs_human": false,
+  "toolkit_shape": "agent_skills",
+  "blocker_type": "none"
+ }
+]

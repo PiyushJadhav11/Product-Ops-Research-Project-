@@ -1,0 +1,563 @@
+[
+ {
+  "id": 38,
+  "app": "Pinterest",
+  "labels": {
+   "auth_methods": [
+    "oauth2"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "app_review",
+   "official_mcp": "no",
+   "mcp_url": "",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "app_review"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://developers.pinterest.com/docs/getting-started/authentication-and-scopes/",
+    "quote": "This grant type is designed for web apps that access a user's data on behalf of that user.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://developers.pinterest.com/docs/getting-started/authentication-and-scopes/",
+    "quote": "The user must explicitly approve the scopes requested by your app.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+    "quote": "If approved for API use, your app receives Trial access... Your app must already be approved for Trial access",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+    "quote": "Be the first to know when it launches.",
+    "certain": false
+   },
+   "api_type": {
+    "url": "https://developers.pinterest.com/docs/getting-started/authentication-and-scopes/",
+    "quote": "Access token: Token used to authenticate API requests.",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+    "quote": "all Pins and Boards created with Trial access are only visible to their creator as Sandbox entities.",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+    "quote": "Prepare a video recording of your app completing an action using the Pinterest API.",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 40,
+  "app": "SendGrid",
+  "labels": {
+   "auth_methods": [
+    "api_key"
+   ],
+   "toolkit_auth": "api_key",
+   "access": "self_serve_trial",
+   "official_mcp": "no",
+   "mcp_url": "",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+    "quote": "include an Authorization header with the value Bearer <YOUR_API_KEY_HERE> in your request.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+    "quote": "The Twilio SendGrid Web API v3 supports API keys",
+    "certain": true
+   },
+   "access": {
+    "url": "https://www.twilio.com/en-us/sendgrid/pricing",
+    "quote": "Sign up for a free trial\u2014no credit card required.",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://www.usecarly.com/blog/sendgrid-mcp/",
+    "quote": "No \u2014 SendGrid does not ship an official MCP server. (secondary; twilio-labs/mcp covers Twilio API, not SendGrid)",
+    "certain": false
+   },
+   "api_type": {
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+    "quote": "add an HTTP Authorization header to your API request that contains an API Key.",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://www.twilio.com/en-us/sendgrid/pricing",
+    "quote": "Sign up for a free trial\u2014no credit card required.",
+    "certain": false
+   },
+   "blocker_type": {
+    "url": "https://www.twilio.com/en-us/sendgrid/pricing",
+    "quote": "Sign up for a free trial\u2014no credit card required.",
+    "certain": false
+   }
+  }
+ },
+ {
+  "id": 41,
+  "app": "Shopify",
+  "labels": {
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "app_review",
+   "official_mcp": "yes",
+   "mcp_url": "https://shopify.dev/docs/apps/build/customer-accounts-mcp",
+   "api_type": [
+    "graphql",
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "app_review"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://shopify.dev/docs/api/admin-graphql",
+    "quote": "Every GraphQL Admin API request carries an access token in the X-Shopify-Access-Token header.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://shopify.dev/docs/api/admin-graphql",
+    "quote": "apps need to request specific access scopes during the install process.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://shopify.dev/docs/apps/launch/distribution",
+    "quote": "Public distribution also requires registering for the Shopify App Store, which has a one-time fee.",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://shopify.dev/docs/apps/build/customer-accounts-mcp",
+    "quote": "The Customer Accounts MCP server provides tools for customer-specific actions, including order management and account details.",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://shopify.dev/docs/api/admin-graphql",
+    "quote": "Queries are equivalent to making a GET request in REST (REST Admin API is legacy but still exists)",
+    "certain": false
+   },
+   "verdict": {
+    "url": "https://shopify.dev/docs/apps/launch/distribution",
+    "quote": "Installed on a single Shopify store, on multiple stores that belong to the same Plus organization",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://shopify.dev/docs/apps/launch/distribution",
+    "quote": "Public distribution also requires registering for the Shopify App Store",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 42,
+  "app": "WooCommerce",
+  "labels": {
+   "auth_methods": [
+    "basic",
+    "other"
+   ],
+   "toolkit_auth": "basic",
+   "access": "self_serve_free",
+   "official_mcp": "yes",
+   "mcp_url": "https://developer.woocommerce.com/docs/features/mcp/",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "per_tenant_setup"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+    "quote": "providing the REST API Consumer Key as the username and the REST API Consumer Secret as the password. (OAuth 1.0a one-legged over HTTP)",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+    "quote": "This endpoint can be used by any APP to allow users to generate API keys for your APP.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+    "quote": "This endpoint can be used by any APP to allow users to generate API keys for your APP.",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "quote": "The MCP implementation in WooCommerce is currently in developer preview.",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+    "quote": "providing the REST API Consumer Key as the username",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "quote": "https://yourstore.com/wp-json/mcp/mcp-adapter-default-server (each merchant self-hosts their store)",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "quote": "https://yourstore.com/wp-json/mcp/mcp-adapter-default-server",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 49,
+  "app": "Amazon Selling Partner",
+  "labels": {
+   "auth_methods": [
+    "oauth2"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "app_review",
+   "official_mcp": "yes",
+   "mcp_url": "https://github.com/amzn/selling-partner-api-samples/tree/main/use-cases/sp-api-dev-mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "app_review"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://developer-docs.amazon/sp-api/docs/register-as-a-public-developer",
+    "quote": "Public developers must list their application in the Selling Partner Appstore and get explicit seller authorization through OAuth.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://developer-docs.amazon/sp-api/docs/register-as-a-public-developer",
+    "quote": "get explicit seller authorization through OAuth",
+    "certain": true
+   },
+   "access": {
+    "url": "https://developer-docs.amazon/sp-api/docs/register-as-a-public-developer",
+    "quote": "Amazon evaluates developer applications through a comprehensive review process.",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://raw.githubusercontent.com/amzn/selling-partner-api-samples/main/use-cases/sp-api-dev-mcp/README.md",
+    "quote": "sp_api_execute: Execute live SP-API requests with auth and signing.",
+    "certain": false
+   },
+   "api_type": {
+    "url": "https://developer-docs.amazon/sp-api/",
+    "quote": "SP-API is a REST-based API (not quoted verbatim; inferred)",
+    "certain": false
+   },
+   "verdict": {
+    "url": "https://developer-docs.amazon/sp-api/docs/register-as-a-public-developer",
+    "quote": "Amazon evaluates developer applications through a comprehensive review process.",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://developer-docs.amazon/sp-api/docs/register-as-a-public-developer",
+    "quote": "Selecting restricted roles ... requires an architecture review.",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 52,
+  "app": "SE Ranking",
+  "labels": {
+   "auth_methods": [
+    "api_key",
+    "oauth2"
+   ],
+   "toolkit_auth": "api_key",
+   "access": "self_serve_trial",
+   "official_mcp": "yes",
+   "mcp_url": "https://api.seranking.com/mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://seranking.com/api/data/getting-started#authentication",
+    "quote": "Include an Authorization header in your request, with the value Token YOUR_API_KEY. (OAuth 2.1 only on MCP)",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://seranking.com/api/data/getting-started#authentication",
+    "quote": "Alternatively, you can pass the key as a URL query parameter named apikey.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://seranking.com/api/mcp/",
+    "quote": "Start with 100K free credits \u2192 (links to sign-up/trial); API on every current subscription plan",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://seranking.com/api/integrations/mcp/",
+    "quote": "This transport uses OAuth 2.1 with dynamic client registration for authentication at https://api.seranking.com/mcp",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://seranking.com/api/data/getting-started#authentication",
+    "quote": "All requests to the Data API must be authenticated.",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://seranking.com/api/how-to-get-api/",
+    "quote": "The Project API is available on every current subscription plan",
+    "certain": false
+   },
+   "blocker_type": {
+    "url": "https://seranking.com/api/how-to-get-api/",
+    "quote": "The Project API is available on every current subscription plan",
+    "certain": false
+   }
+  }
+ },
+ {
+  "id": 55,
+  "app": "Apify",
+  "labels": {
+   "auth_methods": [
+    "bearer_token",
+    "oauth2"
+   ],
+   "toolkit_auth": "bearer_token",
+   "access": "self_serve_free",
+   "official_mcp": "yes",
+   "mcp_url": "https://mcp.apify.com",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://docs.apify.com/api/v2",
+    "quote": "Add the token to your request's Authorization header as Bearer <token>. (OAuth only via hosted MCP)",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://docs.apify.com/api/v2",
+    "quote": "You can create an API token on the Integrations page in the Apify Console.",
+    "certain": false
+   },
+   "access": {
+    "url": "https://apify.com/pricing",
+    "quote": "$5 to spend in Apify Store or on your own Actors. No credit card required.",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://github.com/apify/apify-mcp-server",
+    "quote": "Connect from your MCP client via OAuth or by including the Authorization: Bearer <APIFY_TOKEN> header",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://docs.apify.com/api/v2",
+    "quote": "Add it as the token parameter to your request URL.",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://apify.com/pricing",
+    "quote": "No credit card required.",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://apify.com/pricing",
+    "quote": "No credit card required.",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 58,
+  "app": "Sherlock",
+  "labels": {
+   "auth_methods": [
+    "none"
+   ],
+   "toolkit_auth": "none",
+   "access": "self_serve_free",
+   "official_mcp": "no",
+   "mcp_url": "",
+   "api_type": [
+    "cli"
+   ],
+   "verdict": "blocked",
+   "blocker_type": "not_a_saas_api"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "pipx install sherlock-project",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "sherlock user123",
+    "certain": true
+   },
+   "access": {
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "pipx install sherlock-project",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "(no MCP server mentioned in repo)",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "usage: sherlock [-h] [--version]",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "Hunt down social media accounts by username across social networks",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "Hunt down social media accounts by username across social networks",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 61,
+  "app": "GitHub",
+  "labels": {
+   "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "jwt_signed",
+    "basic"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "self_serve_free",
+   "official_mcp": "yes",
+   "mcp_url": "https://api.githubcopilot.com/mcp/",
+   "api_type": [
+    "rest",
+    "graphql"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "You can also create an OAuth token with an OAuth app to access the REST API.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "If you want to use the API for an organization or on behalf of another user, GitHub recommends that you use a GitHub App.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "Personal access tokens act as your identity",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://github.com/github/github-mcp-server",
+    "quote": "GitHub's official MCP Server",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://docs.github.com/en/graphql",
+    "quote": "GitHub REST and GraphQL APIs (docs.github.com/rest, /graphql)",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "Personal access tokens act as your identity",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "Personal access tokens act as your identity",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 66,
+  "app": "Neo4j",
+  "labels": {
+   "auth_methods": [
+    "basic",
+    "bearer_token",
+    "oauth2"
+   ],
+   "toolkit_auth": "basic",
+   "access": "self_serve_free",
+   "official_mcp": "yes",
+   "mcp_url": "https://github.com/neo4j/mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "per_tenant_setup"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://neo4j.com/docs/aura/api/authentication/",
+    "quote": "The Aura API uses OAuth 2.0 for API authentication. (Query API: basic or bearer)",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://neo4j.com/docs/query-api/current/authentication-authorization/",
+    "quote": "The header format for basic authentication follows the standard format (RFC 7617)",
+    "certain": false
+   },
+   "access": {
+    "url": "https://neo4j.com/docs/aura/api/authentication/",
+    "quote": "All tiers can create Aura API credentials.",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://neo4j.com/blog/genai/introducing-mcp-for-aura/",
+    "quote": "MCP for Aura is live on every Aura instance.",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://neo4j.com/docs/query-api/current/authentication-authorization/",
+    "quote": "POST http://localhost:7474/db/neo4j/query/v2",
+    "certain": false
+   },
+   "verdict": {
+    "url": "https://neo4j.com/blog/genai/introducing-mcp-for-aura/",
+    "quote": "https://INSTANCE_ID.mcp-instances.neo4j.io (each user provisions own DB instance)",
+    "certain": false
+   },
+   "blocker_type": {
+    "url": "https://neo4j.com/blog/genai/introducing-mcp-for-aura/",
+    "quote": "https://INSTANCE_ID.mcp-instances.neo4j.io",
+    "certain": false
+   }
+  }
+ }
+]

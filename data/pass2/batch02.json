@@ -1,0 +1,569 @@
+[
+ {
+  "id": 11,
+  "app": "Zendesk",
+  "one_liner": "Customer service/ticketing platform (Support, Suite, Help Center, Sunshine).",
+  "docs_url": "https://developer.zendesk.com/",
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "basic"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "OAuth access tokens (recommended); email/token API tokens (Basic header) being pushed to migrate to OAuth; password basic auth must be enabled by admin. Multi-customer apps must use a GLOBAL OAuth client, which only Zendesk can issue.",
+  "access": "app_review",
+  "gate_evidence": "You must request a global OAuth client from Zendesk to create global OAuth tokens. For security reasons, Zendesk doesn't allow developers to create their own global OAuth clients. (plus: apps distributed to multiple customers must be submitted to the Marketplace for review and approval)",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "unknown",
+  "mcp_url": "",
+  "community_mcp": "Third-party only per tldv.io (Workato, Arcade, CData, Redpanda managed MCPs).",
+  "verdict": "ready_with_friction",
+  "blocker": "Global OAuth client for multi-tenant use needs Zendesk approval (sponsored account + Marketplace review).",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Auth options: OAuth access tokens, API tokens; existing basic/API-token users must migrate to OAuth",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/"
+   },
+   {
+    "claim": "Apps/integrations for multiple Zendesk customers must use global OAuth tokens; Zendesk Developer Terms prohibit sharing customer API credentials",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/"
+   },
+   {
+    "claim": "Global OAuth client must be requested from Zendesk; developers cannot create their own",
+    "url": "https://developer.zendesk.com/documentation/marketplace/building-a-marketplace-app/set-up-a-global-oauth-client/"
+   },
+   {
+    "claim": "Free 14-day trial (no card) and sponsored dev account for up to 5 agents for partners",
+    "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/"
+   },
+   {
+    "claim": "Distribution to multiple customers requires Marketplace review/approval",
+    "url": "https://support.zendesk.com/hc/en-us/articles/9561388533018-Announcing-enhanced-security-guidelines-for-third-party-apps-integrations-and-bots"
+   },
+   {
+    "claim": "Zendesk MCP Server announced May 2026, 'early access this summer'; MCP client EAP live Jun 10 2026 (client only)",
+    "url": "https://www.zendesk.com/newsroom/articles/relate-2026/"
+   },
+   {
+    "claim": "MCP client EAP lets Zendesk connect to external MCP servers (opposite direction)",
+    "url": "https://support.zendesk.com/hc/en-us/articles/10889847373466-Announcing-the-MCP-client-early-access-program"
+   },
+   {
+    "claim": "As of Sep 2026 general-purpose server not shipped; only ChatGPT-channel MCP exists (secondary)",
+    "url": "https://tldv.io/blog/zendesk-mcp/"
+   }
+  ],
+  "confidence": 0.72,
+  "needs_human": true,
+  "notes": "official_mcp left unknown: announced for early access but no vendor doc/endpoint found; only secondary source says not shipped. Re-check Zendesk EAP page.",
+  "category": "Support and Helpdesk",
+  "subcategory": "helpdesk",
+  "evidence_quality": "primary"
+ },
+ {
+  "id": 12,
+  "app": "Intercom",
+  "one_liner": "Customer messaging/support platform with Fin AI agent.",
+  "docs_url": "https://developers.intercom.com/docs",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Access Token (private app, own workspace) or OAuth2 (public apps accessing other workspaces).",
+  "access": "app_review",
+  "gate_evidence": "Private apps ... build a private app using your Access Token and it does not require a review. Public apps ... specific requirements in order to publish them, such as setting up OAuth and submitting to the Intercom team for review. Developer workspaces are totally free.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.intercom.com/mcp",
+  "community_mcp": "mcp-intercom (PyPI), fast-intercom-mcp",
+  "verdict": "ready_with_friction",
+  "blocker": "Public (multi-tenant) OAuth app must pass Intercom review; dev workspaces US-region only.",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Free dev workspace; private app = access token, no review; public app = OAuth + review",
+    "url": "https://developers.intercom.com/docs"
+   },
+   {
+    "claim": "Developer workspaces are totally free, dev-only, cannot convert to production",
+    "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/"
+   },
+   {
+    "claim": "Public apps must be submitted for Intercom team review",
+    "url": "https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app"
+   },
+   {
+    "claim": "Access Token vs OAuth by app type",
+    "url": "https://developers.intercom.com/building-apps/docs/authentication"
+   },
+   {
+    "claim": "Intercom hosts remote MCP server at mcp.intercom.com/mcp (US-hosted workspaces only)",
+    "url": "https://developers.intercom.com/docs/guides/mcp"
+   }
+  ],
+  "confidence": 0.88,
+  "notes": "Webhooks configurable in Developer Hub per docs overview. MCP: custom OAuth clients with non-localhost redirects need allowlisting by support (secondary).",
+  "category": "Support and Helpdesk",
+  "subcategory": "helpdesk",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 13,
+  "app": "Freshdesk",
+  "one_liner": "Freshworks helpdesk/ticketing platform.",
+  "docs_url": "https://developers.freshdesk.com/api/",
+  "auth_methods": [
+   "api_key",
+   "basic"
+  ],
+  "toolkit_auth": "api_key",
+  "auth_notes": "Per-agent API key sent as HTTP Basic username (password any placeholder like X). Official MCP supports API key only, no OAuth.",
+  "access": "paid_plan",
+  "gate_evidence": "Access to Freshdesk APIs ... is not available in the free Sprout plan. It will be available from the Blossom plan onwards. (Trials get API at 50 calls/min.)",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://<subdomain>.freshdesk.com/mcp",
+  "community_mcp": "Enreign/freshdeck-mcp",
+  "verdict": "ready_with_friction",
+  "blocker": "API requires a paid plan (not free Sprout); per-tenant subdomain + user API key.",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "API key per agent; no API on free Sprout plan, available from Blossom",
+    "url": "https://support.freshdesk.com/support/solutions/folders/272646"
+   },
+   {
+    "claim": "Official MCP at https://<subdomain>.freshdesk.com/mcp with Authorization: API key",
+    "url": "https://support.freshdesk.com/support/solutions/articles/50000012670"
+   },
+   {
+    "claim": "Freshworks MCP for Freshdesk supports API key auth only; OAuth not supported",
+    "url": "https://support.freshdesk.com/support/solutions/articles/50000014411"
+   },
+   {
+    "claim": "Basic auth with API key as username (n8n/C1 cite developers.freshdesk.com authentication)",
+    "url": "https://developers.freshdesk.com/api/#authentication"
+   },
+   {
+    "claim": "Rate limits per plan; Free plan 0 calls",
+    "url": "https://support.freshdesk.com/en/support/solutions/articles/225439-what-are-the-rate-limits-for-the-api-calls-to-freshdesk"
+   }
+  ],
+  "confidence": 0.82,
+  "notes": "Free-trial accounts can call API (limit 50/min per community-hosted article) so dev testing is possible. Webhooks exist in product but no API-doc evidence gathered.",
+  "category": "Support and Helpdesk",
+  "subcategory": "helpdesk",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 14,
+  "app": "Front",
+  "one_liner": "Shared inbox / customer operations platform for email, SMS and chat.",
+  "docs_url": "https://dev.frontapp.com/docs/welcome",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "OAuth2 for public integrations; admin-created API tokens (Bearer) for internal/single-company use.",
+  "access": "self_serve_free",
+  "gate_evidence": "Follow the instructions on the Developer Portal to create a free developer account to begin building integrations on the Front Platform.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.frontapp.com/mcp",
+  "community_mcp": "@houst-com/front-mcp, dougborg/frontapp-openapi-client",
+  "verdict": "ready",
+  "blocker": "none (MCP OAuth lacks DCR; needs a developer app; publishing to App Store has separate review)",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Free developer account for building integrations",
+    "url": "https://help.front.com/en/articles/2309"
+   },
+   {
+    "claim": "OAuth and API token authentication",
+    "url": "https://dev.frontapp.com/docs/authentication"
+   },
+   {
+    "claim": "API tokens: admins create",
+    "url": "https://dev.frontapp.com/docs/create-and-revoke-api-tokens"
+   },
+   {
+    "claim": "Official MCP server at mcp.frontapp.com/mcp; OAuth per user, no DCR, needs developer app with Front MCP feature",
+    "url": "https://dev.frontapp.com/docs/mcp-server"
+   },
+   {
+    "claim": "MCP described as open beta (secondary)",
+    "url": "https://www.scalekit.com/blog/front-mcp-vs-api"
+   }
+  ],
+  "confidence": 0.8,
+  "notes": "App Store publishing process not verified; dev docs say apps to publish must be built in a developer account. Trial company is 14 days/Professional.",
+  "category": "Support and Helpdesk",
+  "subcategory": "helpdesk",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 15,
+  "app": "Pylon",
+  "one_liner": "B2B support platform (Slack/Teams shared channels, ticketing, AI).",
+  "docs_url": "https://docs.usepylon.com/pylon-docs/developer",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "toolkit_auth": "bearer_token",
+  "auth_notes": "Admin-created API token as Bearer; regional bases (api.usepylon.com / api.eu.usepylon.com). MCP uses OAuth (AuthKit) or the same API token.",
+  "access": "paid_plan",
+  "gate_evidence": "Pylon offers free trials for prospects, set up with a sales representative. Pylon does not have a free plan. ... REST API, webhooks, Pylon MCP server ... available on every plan.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.usepylon.com",
+  "community_mcp": "",
+  "verdict": "ready_with_friction",
+  "blocker": "No self-serve signup: trial is sales-led, pricing via demo form; only Admins can create API tokens.",
+  "blocker_type": "other",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Bearer API token; only Admins create tokens (Settings > API tokens)",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication"
+   },
+   {
+    "claim": "No free plan; trials set up with sales; API/webhooks/MCP on every plan",
+    "url": "https://www.usepylon.com/pylon-facts"
+   },
+   {
+    "claim": "Official MCP at mcp.usepylon.com (US) / mcp.eu.usepylon.com; API token or OAuth",
+    "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp"
+   },
+   {
+    "claim": "22 resource groups in REST reference",
+    "url": "https://docs.usepylon.com/pylon-docs/developer"
+   }
+  ],
+  "confidence": 0.7,
+  "needs_human": true,
+  "notes": "Sales-led trial makes dev testing friction; no OAuth for third-party apps found (only API tokens). Webhooks per vendor facts page.",
+  "category": "Support and Helpdesk",
+  "subcategory": "helpdesk",
+  "evidence_quality": "primary"
+ },
+ {
+  "id": 16,
+  "app": "LiveAgent",
+  "one_liner": "Help desk with live chat, ticketing and call center (QualityUnit).",
+  "docs_url": "https://support.liveagent.com/567924-Documentation",
+  "auth_methods": [
+   "api_key",
+   "oauth2",
+   "bearer_token"
+  ],
+  "toolkit_auth": "api_key",
+  "auth_notes": "REST API v3 key (scoped privileges) generated per account under Configuration > System > API; separate v1 key. MCP supports OAuth 2.1 + PKCE or bearer token.",
+  "access": "self_serve_trial",
+  "gate_evidence": "30-day free trial no credit card (liveagent.com/pricing). API v3 docs live inside each account at https://YOURDOMAIN.ladesk.com/docs/api/v3/ and keys are managed by Admins.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://<your-liveagent-domain>/api/mcp",
+  "community_mcp": "Pipedream/Klavis-hosted LiveAgent MCPs (third-party)",
+  "verdict": "ready_with_friction",
+  "blocker": "Per-tenant domain; API docs only visible inside an account; free-plan API availability unclear.",
+  "blocker_type": "per_tenant_setup",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "API v3 key creation with permissions; anybody with key has access",
+    "url": "https://support.liveagent.com/741982-API-key"
+   },
+   {
+    "claim": "APIv3 documentation found in-account (Admins/Owner only); Swagger descriptor",
+    "url": "https://support.liveagent.com/060897-Where-can-I-find-the-APIv3-documentation"
+   },
+   {
+    "claim": "v1 and v3 keys are separate",
+    "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors"
+   },
+   {
+    "claim": "30-day free trial, no credit card",
+    "url": "https://www.liveagent.com/pricing"
+   },
+   {
+    "claim": "Built-in MCP server at /api/mcp; OAuth 2.1 or bearer token",
+    "url": "https://support.liveagent.com/647358-MCP-Integration-for-Agents"
+   }
+  ],
+  "confidence": 0.7,
+  "notes": "Free plan exists (liveagent.com/free.plan says integrations not included) so API on free plan unknown; self-serve trial works.",
+  "category": "Support and Helpdesk",
+  "subcategory": "helpdesk",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 17,
+  "app": "Plain",
+  "one_liner": "API-first B2B support platform (Slack/email/in-app) with GraphQL API.",
+  "docs_url": "https://www.plain.com/docs/api-reference/graphql/introduction",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "toolkit_auth": "api_key",
+  "auth_notes": "Machine-user API keys with fine-grained permissions as Bearer; OAuth apps to act as a workspace user. MCP is OAuth only.",
+  "access": "self_serve_trial",
+  "gate_evidence": "Every plan starts with a free trial lasting 7 days, and the trial doesn't need a credit card.",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.plain.com/mcp",
+  "community_mcp": "tellahq/plain-mcp, ndom91/plain-mcp-server",
+  "verdict": "ready",
+  "blocker": "none (no free plan; 7-day trial then paid)",
+  "blocker_type": "none",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "GraphQL API at core-api.uk.plain.com with Bearer API key; MCP suggested for agents",
+    "url": "https://plain.com/docs/api-reference/graphql/introduction"
+   },
+   {
+    "claim": "API keys created via Settings > Machine users; OAuth app option",
+    "url": "https://www.plain.com/docs/api-reference/graphql/authentication"
+   },
+   {
+    "claim": "7-day no-card trial; no free plan",
+    "url": "https://help.plain.com/article/pricing"
+   },
+   {
+    "claim": "Official MCP at mcp.plain.com/mcp supports OAuth only",
+    "url": "https://help.plain.com/article/does-the-plain-mcp-server-support-api-key-authentication-h7d83qtfdzxo4h49x4oyklwx"
+   },
+   {
+    "claim": "HMAC-signed webhooks, SDKs, hosted MCP (secondary summary)",
+    "url": "https://apis.io/providers/plain/"
+   }
+  ],
+  "confidence": 0.85,
+  "notes": "Trial length conflicts between pages (7 vs 14 days); help-center pricing says 7.",
+  "category": "Support and Helpdesk",
+  "subcategory": "helpdesk",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 18,
+  "app": "Help Scout",
+  "one_liner": "Shared inbox / help desk with Docs knowledge base and Beacon.",
+  "docs_url": "https://developer.helpscout.com/",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Inbox API 2.0: OAuth2 (authorization code + client credentials). Docs API: separate per-user API key (Basic).",
+  "access": "paid_plan",
+  "gate_evidence": "API access, Webhooks & OAuth apps appear on Standard/Plus/Pro (200/400/800 calls/min); free trial of Standard or Plus: 15 days, no credit card. Free plan has no API per secondary sources.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.helpscout.net/mcp",
+  "community_mcp": "drewburchfield/help-scout-mcp-server",
+  "verdict": "ready_with_friction",
+  "blocker": "API requires paid plan (Standard+); 15-day trial available.",
+  "blocker_type": "paid_plan",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Inbox API: OAuth 2.0 auth code and client credentials flows",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication"
+   },
+   {
+    "claim": "Each plan has different API access levels",
+    "url": "https://docs.helpscout.com/article/1140-mailbox-api"
+   },
+   {
+    "claim": "Pricing: API access and Webhooks & OAuth apps rows; 15-day trial for Standard/Plus no card",
+    "url": "https://www.helpscout.com/pricing"
+   },
+   {
+    "claim": "Official Help Scout MCP at mcp.helpscout.net/mcp",
+    "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports"
+   },
+   {
+    "claim": "Vendor blog introducing Help Scout MCP",
+    "url": "https://articles.helpscout.com/blog/introducing-help-scout-mcp/"
+   },
+   {
+    "claim": "Docs API uses separate API key",
+    "url": "https://developer.helpscout.com/docs-api/"
+   }
+  ],
+  "confidence": 0.82,
+  "notes": "Free-plan-no-API claim is from secondary sources (eesel, lilachbullock); pricing page implies it. MCP documented in help center not dev portal; read-only per eesel (secondary).",
+  "category": "Support and Helpdesk",
+  "subcategory": "helpdesk",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 19,
+  "app": "Gorgias",
+  "one_liner": "E-commerce helpdesk (Shopify-centric) with AI agent.",
+  "docs_url": "https://developers.gorgias.com/",
+  "auth_methods": [
+   "basic",
+   "api_key",
+   "oauth2"
+  ],
+  "toolkit_auth": "oauth2",
+  "auth_notes": "Private apps: HTTP Basic with account email + API key. Public apps: OAuth2 (required to be approved).",
+  "access": "app_review",
+  "gate_evidence": "API key authentication method can be used only for private apps. In order to be able to have an approved public app with Gorgias, it is required that the app is using OAuth2. 7-day free trial.",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "unknown",
+  "sandbox": "unknown",
+  "official_mcp": "yes",
+  "mcp_url": "https://mcp.gorgias.com/mcp",
+  "community_mcp": "NoBanks/gorgias-mcp and others",
+  "verdict": "ready_with_friction",
+  "blocker": "Multi-tenant OAuth2 apps must go through Gorgias App Store review; credentials are per-store.",
+  "blocker_type": "app_review",
+  "toolkit_shape": "agent_skills",
+  "evidence": [
+   {
+    "claim": "Two auth methods: private app API key, public app OAuth2",
+    "url": "https://developers.gorgias.com/v1.1/reference/authentication"
+   },
+   {
+    "claim": "API keys private apps only; Basic auth username:API_KEY",
+    "url": "https://developers.gorgias.com/docs/access-tokens-api-keys"
+   },
+   {
+    "claim": "Approved public app must use OAuth2",
+    "url": "https://developers.gorgias.com/docs/oauth2-authentication-for-creating-apps-with-gorgias"
+   },
+   {
+    "claim": "7-day free trial starts on helpdesk creation",
+    "url": "https://docs.gorgias.com/create-a-gorgias-helpdesk-82010"
+   },
+   {
+    "claim": "Official Gorgias MCP at mcp.gorgias.com/mcp (OAuth via subdomain)",
+    "url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-gorgias-6310546"
+   },
+   {
+    "claim": "MCP open beta, free on every Helpdesk plan (secondary)",
+    "url": "https://www.scalekit.com/blog/gorgias-mcp-vs-api"
+   }
+  ],
+  "confidence": 0.8,
+  "notes": "OAuth review requirement stated by Gorgias; scalekit also says public apps must pass review. Webhooks/sandbox not checked.",
+  "category": "Support and Helpdesk",
+  "subcategory": "helpdesk",
+  "evidence_quality": "primary",
+  "needs_human": false
+ },
+ {
+  "id": 20,
+  "app": "Gladly",
+  "one_liner": "Person-centric customer service platform (voice/chat/SMS) for enterprise CX.",
+  "docs_url": "https://developer.gladly.com/rest/",
+  "auth_methods": [
+   "basic"
+  ],
+  "toolkit_auth": "basic",
+  "auth_notes": "HTTP Basic: agent email + API token; token created by a user with API User permission, scoped to that user and environment (sandbox tokens differ from prod).",
+  "access": "partner_gated",
+  "gate_evidence": "To create and use an API token, your user must have the API User permission; Gladly Administrators set it per agent. No public signup/trial: sales/demo-led (secondary).",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "webhooks": "yes",
+  "sandbox": "yes",
+  "official_mcp": "no",
+  "mcp_url": "",
+  "community_mcp": "StackOne, Truto managed MCPs (third-party)",
+  "verdict": "blocked",
+  "blocker": "Only existing Gladly customers (demo-led sales, no trial) can obtain tokens/sandbox; cannot self-serve dev access.",
+  "blocker_type": "partner_gate",
+  "toolkit_shape": "wait_for_partner",
+  "evidence": [
+   {
+    "claim": "Token-based Basic auth; API User permission required; sandbox environment; webhook endpoints",
+    "url": "https://developer.gladly.com/rest/"
+   },
+   {
+    "claim": "Setup & testing: tokens tied to users with API user permission",
+    "url": "https://help.gladly.com/developer-tutorials/docs/setup-and-testing"
+   },
+   {
+    "claim": "Generate API tokens requires API User role; sandbox tokens not valid in production",
+    "url": "https://help.gladly.com/docs/generate-api-tokens-and-create-webhooks.md"
+   },
+   {
+    "claim": "No official Gladly MCP in public registries as of Aug 2026 (secondary)",
+    "url": "https://supergood.ai/api-report-card/gladly"
+   },
+   {
+    "claim": "Sales-led pricing, demo before access (secondary)",
+    "url": "https://www.xpay.sh/saas-pricing/gladly/"
+   }
+  ],
+  "evidence_quality": "secondary",
+  "confidence": 0.6,
+  "needs_human": true,
+  "notes": "Gate verdict hinges on secondary evidence for 'no trial' (sources conflict: Slashdot says trial Yes). Existing customers can self-create tokens, so a customer-tenant toolkit is feasible; flagged for human decision. Official MCP 'no' from one secondary source.",
+  "category": "Support and Helpdesk",
+  "subcategory": "helpdesk"
+ }
+]

@@ -1,0 +1,16 @@
+[
+ {
+  "id": 96,
+  "field": "access",
+  "to": "paid_plan",
+  "url": "https://devin.ai/pricing",
+  "quote": "Compare Plans table: \"Devin API\" row shows \u2717 for Free ($0), \u2713 for Pro ($20/mo), Max, Team, Enterprise (rendered checkmark icons; JS-only, unreadable by WebFetch)"
+ },
+ {
+  "id": 29,
+  "field": "access",
+  "to": "self_serve_trial",
+  "url": "https://aircall.io/pricing/",
+  "quote": "\"Aircall offers free access to test the platform before committing.\" / \"All plans include API access\""
+ }
+]

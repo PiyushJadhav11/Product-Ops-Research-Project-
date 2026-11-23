@@ -1,0 +1,346 @@
+{
+ "patches": [
+  {
+   "id": 38,
+   "app": "Pinterest",
+   "field": "official_mcp",
+   "from": "yes",
+   "to": "no",
+   "check": "C1",
+   "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+   "quote": "Be the first to know when it launches."
+  },
+  {
+   "id": 38,
+   "app": "Pinterest",
+   "field": "mcp_url",
+   "from": "https://api.pinterest.com/mcp",
+   "to": "",
+   "check": "C1",
+   "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+   "quote": "Don't miss the big launch!"
+  },
+  {
+   "id": 29,
+   "app": "Aircall",
+   "field": "access",
+   "from": "partner_gated",
+   "to": "paid_plan",
+   "check": "C4",
+   "url": "https://aircall.io/pricing/",
+   "quote": "All plans include API access and 250+ integrations."
+  },
+  {
+   "id": 29,
+   "app": "Aircall",
+   "field": "verdict",
+   "from": "blocked",
+   "to": "ready_with_friction",
+   "check": "C4",
+   "url": "https://developer.aircall.io/docs/public-vs-private-app",
+   "quote": "is authenticated using API keys scoped to your specific Aircall account."
+  },
+  {
+   "id": 29,
+   "app": "Aircall",
+   "field": "blocker_type",
+   "from": "partner_gate",
+   "to": "paid_plan",
+   "check": "C4",
+   "url": "https://aircall.io/pricing/",
+   "quote": "All plans include API access and 250+ integrations."
+  },
+  {
+   "id": 29,
+   "app": "Aircall",
+   "field": "blocker",
+   "from": "OAuth multi-tenant needs Technology Partner Program membership; otherwise each customer supplies their own API key (requires an Aircall account).",
+   "to": "Each customer pastes their own API id:token from a paid Aircall account (no free plan; 'free access' test offer not confirmed self-serve). OAuth public apps need Technology Partner Program.",
+   "check": "C4",
+   "url": "https://aircall.io/pricing/",
+   "quote": "Aircall offers free access to test the platform before committing."
+  },
+  {
+   "id": 37,
+   "app": "systeme.io",
+   "field": "access",
+   "from": "unknown",
+   "to": "self_serve_free",
+   "check": "C5",
+   "url": "https://systeme.io/mcp",
+   "quote": "Whether you are on our Free, Startup, Webinar, or Unlimited plan, you can connect your account to AI tools."
+  },
+  {
+   "id": 37,
+   "app": "systeme.io",
+   "field": "blocker",
+   "from": "Plan requirement for API/MCP keys not documented; API covers contacts, tags, courses, etc. only (funnel editing via MCP unsupported).",
+   "to": "Narrow API (contacts, tags, courses, communities, webhooks); no OAuth, each user pastes own key.",
+   "check": "C5",
+   "url": "https://systeme.io/mcp",
+   "quote": "The MCP server is a powerful feature included in all systeme.io plans."
+  },
+  {
+   "id": 21,
+   "app": "Slack",
+   "field": "sandbox",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://docs.slack.dev/tools/developer-sandboxes",
+   "quote": "To provision a sandbox, navigate to Sandboxes and click Provision Sandbox."
+  },
+  {
+   "id": 22,
+   "app": "Twilio",
+   "field": "mcp_url",
+   "from": "https://mcp.twilio.com/docs",
+   "to": "https://github.com/twilio-labs/mcp",
+   "check": "C1",
+   "url": "https://raw.githubusercontent.com/twilio-labs/mcp/main/README.md",
+   "quote": "MCP Server for all of Twilio's Public API"
+  }
+ ],
+ "checked": [
+  {
+   "id": 21,
+   "app": "Slack",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "MCP restricted to Marketplace/internal apps confirmed; app_review stands. Sandbox resolved to yes (free Developer Program sandboxes). MCP URL still from secondary directory."
+  },
+  {
+   "id": 22,
+   "app": "Twilio",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "mcp.twilio.com is docs-only ('does not connect to a Twilio account or execute any API calls'); official_mcp=yes kept only via twilio-labs (Twilio Alpha, Twilio GitHub org) API-executing server; mcp_url repointed. Borderline: README has no explicit maintenance statement."
+  },
+  {
+   "id": 23,
+   "app": "Zoho Cliq",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Official Cliq MCP confirmed on zoho.com. Access stays unknown: pricing page has Free plan with Developer platform (bots 100/org on Free) but 'API support' row cell unreadable; no patch. Webhooks unverified."
+  },
+  {
+   "id": 24,
+   "app": "Lark (Larksuite)",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "larksuite/lark-openapi-mcp confirmed official, Beta, calls OpenAPI with tenant/user tokens. No change."
+  },
+  {
+   "id": 25,
+   "app": "Pumble",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Vendor learn page: 'Pumble maintains a native MCP'; API add-on on all plans; no OAuth; no Events API. No change (webhooks left unknown; no explicit statement on incoming webhooks)."
+  },
+  {
+   "id": 26,
+   "app": "Discord",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C5: Discord docs landing and llms.txt have no MCP entries, supporting official_mcp=no from a vendor source. OAuth2 bot-install flow is self-registerable; verification >100 servers -> app_review stands."
+  },
+  {
+   "id": 27,
+   "app": "Telegram",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "BotFather token quote confirmed; core.telegram.org/bots mentions no MCP. No change."
+  },
+  {
+   "id": 28,
+   "app": "WhatsApp Business",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Meta blog: MCP 'currently discoverable on Claude, Codex and ChatGPT', rolling out gradually, dev/testing focus -> usable, official_mcp=yes kept. Endpoint URL still secondary (setup guide page failed to fetch). Business Verification checked by MCP up front. No change."
+  },
+  {
+   "id": 29,
+   "app": "Aircall",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C4 pattern: per-user API key path exists (private app, own dashboard keys), so partner programme is not the gate. Pricing: all plans include API; no free plan; 'free access' test not confirmed self-serve -> paid_plan, ready_with_friction."
+  },
+  {
+   "id": 30,
+   "app": "Vonage",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Tooling MCP (@vonage/vonage-mcp-server-api-bindings) on developer.vonage.com 'lets you invoke various API actions' with API key/secret -> official_mcp=yes stands. No change."
+  },
+  {
+   "id": 31,
+   "app": "Google Ads",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Vendor page confirms dev-token sunset 2026-09-09, Test access by default, Explorer/Basic/Standard for production. MCP in googleads GitHub org (vendor org), read + limited mutate; not labelled officially supported product but counts per rubric. No change."
+  },
+  {
+   "id": 32,
+   "app": "Meta Ads",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Vendor overview confirms endpoint https://mcp.facebook.com/ads (now primary). Blog: open to any developer with own Meta app; Advanced Access review for other businesses -> app_review stands. No change."
+  },
+  {
+   "id": 33,
+   "app": "LinkedIn Ads",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Product catalog confirms Advertising API access form + LinkedIn review; no MCP mentioned. increasing-access page failed to fetch. No change."
+  },
+  {
+   "id": 34,
+   "app": "GoHighLevel",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Help center: 'Both OAuth 2.0 and Private Integration Tokens (PIT) are available across plans.' C3 (marketplace review/install caps for public apps) could not be confirmed: App Review Guidelines page not reachable from fetched pages. No patch; possible app_review risk."
+  },
+  {
+   "id": 35,
+   "app": "Mailchimp",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Vendor page confirms Mailchimp Connector in Claude acts on account data; endpoint URL still secondary. OAuth review/install caps not stated on auth page. No change."
+  },
+  {
+   "id": 36,
+   "app": "Klaviyo",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C3: review only needed for Marketplace listing; 'customers and testers can still install and use your app' with an unreviewed-app warning, no install cap -> self_serve_free stands. MCP role-restricted to Owner/Admin/Manager."
+  },
+  {
+   "id": 37,
+   "app": "systeme.io",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Resolved access: MCP included in all plans incl. Free; API keys created under same settings. Webhooks confirmed on help page. Verdict stays ready_with_friction (narrow API, rubric requires >=moderate for ready); blocker text updated."
+  },
+  {
+   "id": 38,
+   "app": "Pinterest",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "C1: MCP page is pre-launch signup ('Be the first to know when it launches') -> official_mcp=no. Access tiers quotes confirmed; verdict ready_with_friction/app_review unchanged."
+  },
+  {
+   "id": 39,
+   "app": "Threads (Meta)",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Get-started confirms App Review + published app for non-role users; no MCP mentioned. No change."
+  },
+  {
+   "id": 40,
+   "app": "SendGrid",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+   ],
+   "note": "Pricing confirms '$0/mo for 60 days', 100 emails/day, no credit card -> self_serve_trial/ready stands. Twilio docs MCP is docs-only; no official SendGrid account MCP. No change."
+  }
+ ]
+}

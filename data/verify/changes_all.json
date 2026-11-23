@@ -1,0 +1,1092 @@
+[
+ {
+  "id": 5,
+  "app": "Twenty",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "normalize"
+ },
+ {
+  "id": 7,
+  "app": "Zoho CRM",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "normalize"
+ },
+ {
+  "id": 10,
+  "app": "DealCloud",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "blocked",
+  "loop": "normalize"
+ },
+ {
+  "id": 15,
+  "app": "Pylon",
+  "field": "blocker_type",
+  "from": "other",
+  "to": "paid_plan",
+  "loop": "normalize"
+ },
+ {
+  "id": 25,
+  "app": "Pumble",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "normalize"
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "blocked",
+  "loop": "normalize"
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "normalize"
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 40,
+  "app": "SendGrid",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 52,
+  "app": "SE Ranking",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "normalize"
+ },
+ {
+  "id": 52,
+  "app": "SE Ranking",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 60,
+  "app": "Clay",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "normalize"
+ },
+ {
+  "id": 60,
+  "app": "Clay",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 69,
+  "app": "Datadog",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "normalize"
+ },
+ {
+  "id": 69,
+  "app": "Datadog",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 84,
+  "app": "Paygent Connect",
+  "field": "blocker_type",
+  "from": "other",
+  "to": "no_public_api",
+  "loop": "normalize"
+ },
+ {
+  "id": 87,
+  "app": "Xero",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "normalize"
+ },
+ {
+  "id": 87,
+  "app": "Xero",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 88,
+  "app": "Brex",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "blocked",
+  "loop": "normalize"
+ },
+ {
+  "id": 89,
+  "app": "Ramp",
+  "field": "blocker_type",
+  "from": "per_tenant_setup",
+  "to": "app_review",
+  "loop": "normalize"
+ },
+ {
+  "id": 98,
+  "app": "Mermaid CLI",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "blocked",
+  "loop": "normalize"
+ },
+ {
+  "id": 8,
+  "app": "Close",
+  "field": "access",
+  "from": "self_serve_trial",
+  "to": "app_review",
+  "loop": "fix_C3",
+  "url": "https://developer.close.com/integrations/publish",
+  "quote": "Once approved, your app will be marked as Public and any Close user will be able to authorize it."
+ },
+ {
+  "id": 8,
+  "app": "Close",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "fix_C3",
+  "url": "https://developer.close.com/integrations/publish",
+  "quote": "Once approved, your app will be marked as Public and any Close user will be able to authorize it."
+ },
+ {
+  "id": 8,
+  "app": "Close",
+  "field": "blocker_type",
+  "from": "none",
+  "to": "app_review",
+  "loop": "fix_C3",
+  "url": "https://developer.close.com/integrations/publish",
+  "quote": "Once approved, your app will be marked as Public and any Close user will be able to authorize it."
+ },
+ {
+  "id": 8,
+  "app": "Close",
+  "field": "blocker",
+  "from": "none",
+  "to": "Multi-org OAuth app must be made Public via Close review before other organizations can authorize it",
+  "loop": "fix_C3",
+  "url": "https://developer.close.com/integrations/publish",
+  "quote": "Once approved, your app will be marked as Public and any Close user will be able to authorize it."
+ },
+ {
+  "id": 14,
+  "app": "Front",
+  "field": "access",
+  "from": "self_serve_free",
+  "to": "app_review",
+  "loop": "fix_C3",
+  "url": "https://dev.frontapp.com/docs/partnering-with-front",
+  "quote": "We'll use your form submission to first test your integration ... We reserve the right to refuse certain integrations."
+ },
+ {
+  "id": 14,
+  "app": "Front",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "fix_C3",
+  "url": "https://dev.frontapp.com/docs/partnering-with-front",
+  "quote": "We'll use your form submission to first test your integration ... We reserve the right to refuse certain integrations."
+ },
+ {
+  "id": 14,
+  "app": "Front",
+  "field": "blocker_type",
+  "from": "none",
+  "to": "app_review",
+  "loop": "fix_C3",
+  "url": "https://dev.frontapp.com/docs/partnering-with-front",
+  "quote": "We'll use your form submission to first test your integration ... We reserve the right to refuse certain integrations."
+ },
+ {
+  "id": 14,
+  "app": "Front",
+  "field": "blocker",
+  "from": "none",
+  "to": "Apps are private to the creating Front instance by default; publishing for all customers requires Front partner submission/test/approval",
+  "loop": "fix_C3",
+  "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+  "quote": "By default, apps are private to the Front instance they are created in"
+ },
+ {
+  "id": 15,
+  "app": "Pylon",
+  "field": "access",
+  "from": "paid_plan",
+  "to": "partner_gated",
+  "loop": "fix_C5",
+  "url": "https://www.usepylon.com/pricing",
+  "quote": "Pylon offers free trials for prospects. Your sales representative will work with you on setting up the demo organization."
+ },
+ {
+  "id": 15,
+  "app": "Pylon",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "blocked",
+  "loop": "fix_C5",
+  "url": "https://www.usepylon.com/pricing",
+  "quote": "Pylon offers free trials for prospects. Your sales representative will work with you on setting up the demo organization."
+ },
+ {
+  "id": 15,
+  "app": "Pylon",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "partner_gate",
+  "loop": "fix_C5",
+  "url": "https://www.usepylon.com/pricing",
+  "quote": "Professional and Advanced CTAs: \"Book a demo\"; Enterprise: \"Talk to sales\" (no self-serve signup)"
+ },
+ {
+  "id": 15,
+  "app": "Pylon",
+  "field": "sandbox",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://www.usepylon.com/pylon-facts",
+  "quote": "Everything in Advanced + MSA, SAML SSO, SCIM, sandbox, data retention controls, priority support SLAs"
+ },
+ {
+  "id": 10,
+  "app": "DealCloud",
+  "field": "toolkit_auth",
+  "from": "oauth2",
+  "to": "api_key",
+  "loop": "fix_C2",
+  "url": "https://api.docs.dealcloud.com/docs/token",
+  "quote": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token"
+ },
+ {
+  "id": 11,
+  "app": "Zendesk",
+  "field": "webhooks",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://developer.zendesk.com/documentation/webhooks/",
+  "quote": "Use the Webhooks API to create a webhook."
+ },
+ {
+  "id": 11,
+  "app": "Zendesk",
+  "field": "sandbox",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://developer.zendesk.com/documentation/developer-tools/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+  "quote": "Customer developers or individual private app developers should use their own instances or sandboxes."
+ },
+ {
+  "id": 11,
+  "app": "Zendesk",
+  "field": "official_mcp",
+  "from": "unknown",
+  "to": "no",
+  "loop": "fix_C1",
+  "url": "https://www.zendesk.com/newsroom/articles/relate-2026/",
+  "quote": "Zendesk MCP Server ... Early access this summer"
+ },
+ {
+  "id": 19,
+  "app": "Gorgias",
+  "field": "sandbox",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://developers.gorgias.com/docs/1-register-on-developer-portal.md",
+  "quote": "You will need to have a draft app to get approved for the Sandbox Account."
+ },
+ {
+  "id": 38,
+  "app": "Pinterest",
+  "field": "official_mcp",
+  "from": "yes",
+  "to": "no",
+  "loop": "fix_C1",
+  "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+  "quote": "Be the first to know when it launches."
+ },
+ {
+  "id": 38,
+  "app": "Pinterest",
+  "field": "mcp_url",
+  "from": "https://api.pinterest.com/mcp",
+  "to": "",
+  "loop": "fix_C1",
+  "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+  "quote": "Don't miss the big launch!"
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "field": "access",
+  "from": "partner_gated",
+  "to": "paid_plan",
+  "loop": "fix_C4",
+  "url": "https://aircall.io/pricing/",
+  "quote": "All plans include API access and 250+ integrations."
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "field": "verdict",
+  "from": "blocked",
+  "to": "ready_with_friction",
+  "loop": "fix_C4",
+  "url": "https://developer.aircall.io/docs/public-vs-private-app",
+  "quote": "is authenticated using API keys scoped to your specific Aircall account."
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "field": "blocker_type",
+  "from": "partner_gate",
+  "to": "paid_plan",
+  "loop": "fix_C4",
+  "url": "https://aircall.io/pricing/",
+  "quote": "All plans include API access and 250+ integrations."
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "field": "blocker",
+  "from": "OAuth multi-tenant needs Technology Partner Program membership; otherwise each customer supplies their own API key (requires an Aircall account).",
+  "to": "Each customer pastes their own API id:token from a paid Aircall account (no free plan; 'free access' test offer not confirmed self-serve). OAuth public apps need Technology Partner Program.",
+  "loop": "fix_C4",
+  "url": "https://aircall.io/pricing/",
+  "quote": "Aircall offers free access to test the platform before committing."
+ },
+ {
+  "id": 37,
+  "app": "systeme.io",
+  "field": "access",
+  "from": "unknown",
+  "to": "self_serve_free",
+  "loop": "fix_C5",
+  "url": "https://systeme.io/mcp",
+  "quote": "Whether you are on our Free, Startup, Webinar, or Unlimited plan, you can connect your account to AI tools."
+ },
+ {
+  "id": 37,
+  "app": "systeme.io",
+  "field": "blocker",
+  "from": "Plan requirement for API/MCP keys not documented; API covers contacts, tags, courses, etc. only (funnel editing via MCP unsupported).",
+  "to": "Narrow API (contacts, tags, courses, communities, webhooks); no OAuth, each user pastes own key.",
+  "loop": "fix_C5",
+  "url": "https://systeme.io/mcp",
+  "quote": "The MCP server is a powerful feature included in all systeme.io plans."
+ },
+ {
+  "id": 21,
+  "app": "Slack",
+  "field": "sandbox",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://docs.slack.dev/tools/developer-sandboxes",
+  "quote": "To provision a sandbox, navigate to Sandboxes and click Provision Sandbox."
+ },
+ {
+  "id": 22,
+  "app": "Twilio",
+  "field": "mcp_url",
+  "from": "https://mcp.twilio.com/docs",
+  "to": "https://github.com/twilio-labs/mcp",
+  "loop": "fix_C1",
+  "url": "https://raw.githubusercontent.com/twilio-labs/mcp/main/README.md",
+  "quote": "MCP Server for all of Twilio's Public API"
+ },
+ {
+  "id": 43,
+  "app": "BigCommerce",
+  "field": "access",
+  "from": "self_serve_trial",
+  "to": "app_review",
+  "loop": "fix_C3",
+  "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/managing-apps-in-dev-portal",
+  "quote": "To make an app available to other stores, submit it for approval."
+ },
+ {
+  "id": 43,
+  "app": "BigCommerce",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "fix_C3",
+  "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/managing-apps-in-dev-portal",
+  "quote": "To make an app available to other stores, submit it for approval."
+ },
+ {
+  "id": 43,
+  "app": "BigCommerce",
+  "field": "blocker_type",
+  "from": "none",
+  "to": "app_review",
+  "loop": "fix_C3",
+  "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/managing-apps-in-dev-portal",
+  "quote": "To make an app available to other stores, submit it for approval."
+ },
+ {
+  "id": 43,
+  "app": "BigCommerce",
+  "field": "blocker",
+  "from": "none",
+  "to": "OAuth app must pass App Marketplace approval before stores other than the owner's can install it",
+  "loop": "fix_C3",
+  "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/managing-apps-in-dev-portal",
+  "quote": "To make an app available to other stores, submit it for approval."
+ },
+ {
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "field": "access",
+  "from": "unknown",
+  "to": "partner_gated",
+  "loop": "fix_C5",
+  "url": "https://developer.salesforce.com/docs/commerce/sfra/guide/scapi-get-started.html",
+  "quote": "For B2C Commerce customers, the API is available at no extra cost."
+ },
+ {
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "blocked",
+  "loop": "fix_C5",
+  "url": "https://developer.salesforce.com/docs/commerce/sfra/guide/scapi-get-started.html",
+  "quote": "For B2C Commerce customers, the API is available at no extra cost."
+ },
+ {
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "field": "blocker_type",
+  "from": "per_tenant_setup",
+  "to": "partner_gated",
+  "loop": "fix_C5",
+  "url": "https://developer.salesforce.com/docs/commerce/sfra/guide/scapi-get-started.html",
+  "quote": "For B2C Commerce customers, the API is available at no extra cost."
+ },
+ {
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "field": "mcp_url",
+  "from": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/agentic-mcp-shopper-tools-quick-start.html",
+  "to": "https://developer.salesforce.com/docs/commerce/sfra/guide/b2c-developer-tooling.html#connect-your-ai-assistant",
+  "loop": "fix_C1",
+  "url": "https://developer.salesforce.com/docs/commerce/sfra/guide/b2c-developer-tooling.html#connect-your-ai-assistant",
+  "quote": "live cartridge debugging, log investigation, deployment tools, and general-purpose SCAPI Admin API access"
+ },
+ {
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "field": "webhooks",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://developer.adobe.com/commerce/extensibility/webhooks/",
+  "quote": "Webhooks resolve as successful, by throwing an exception, or by modifying the event data payload."
+ },
+ {
+  "id": 46,
+  "app": "Squarespace",
+  "field": "official_mcp",
+  "from": "no",
+  "to": "yes",
+  "loop": "fix_C1",
+  "url": "https://developers.squarespace.com/mcp/overview",
+  "quote": "The Squarespace MCP server connects AI assistants to Squarespace."
+ },
+ {
+  "id": 46,
+  "app": "Squarespace",
+  "field": "mcp_url",
+  "from": null,
+  "to": "https://mcp.squarespace.com/mcp",
+  "loop": "fix_C1",
+  "url": "https://developers.squarespace.com/mcp/overview",
+  "quote": "https://mcp.squarespace.com/mcp"
+ },
+ {
+  "id": 47,
+  "app": "Ecwid",
+  "field": "webhooks",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://docs.ecwid.com/webhook-automations/webhook-automations-overview.md",
+  "quote": "Ecwid webhooks are automatic real-time notifications for apps about different events in the store."
+ },
+ {
+  "id": 47,
+  "app": "Ecwid",
+  "field": "sandbox",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://docs.ecwid.com/launch-apps/faq-about-public-applications.md",
+  "quote": "a developer with a paid subscription account in a test store"
+ },
+ {
+  "id": 49,
+  "app": "Amazon Selling Partner",
+  "field": "webhooks",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://developer-docs.amazon/sp-api/docs/onboarding-overview",
+  "quote": "You can receive these notifications through Amazon Simple Queue Service or Amazon EventBridge."
+ },
+ {
+  "id": 50,
+  "app": "fanbasis",
+  "field": "official_mcp",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://github.com/FanBasis/fbnewapi",
+  "quote": "MCP server integration for Claude Desktop and other AI assistants"
+ },
+ {
+  "id": 54,
+  "app": "MrScraper",
+  "field": "evidence_quality",
+  "from": "secondary",
+  "to": "primary",
+  "loop": "fix_C5",
+  "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+  "quote": "Use this exact URL, including the `/mcp` path."
+ },
+ {
+  "id": 59,
+  "app": "Waterfall.io",
+  "field": "access",
+  "from": "unknown",
+  "to": "partner_gated",
+  "loop": "fix_C5",
+  "url": "https://docs.waterfall.io/v1/authentication.md",
+  "quote": "Contact the team"
+ },
+ {
+  "id": 59,
+  "app": "Waterfall.io",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "blocked",
+  "loop": "fix_C5",
+  "url": "https://docs.waterfall.io/v1/evaluate-waterfall.md",
+  "quote": "Talk to our team about a test plan, API access, and pricing."
+ },
+ {
+  "id": 59,
+  "app": "Waterfall.io",
+  "field": "blocker_type",
+  "from": "other",
+  "to": "partner_gated",
+  "loop": "fix_C5",
+  "url": "https://docs.waterfall.io/v1/evaluate-waterfall.md",
+  "quote": "Talk to our team about a test plan, API access, and pricing."
+ },
+ {
+  "id": 59,
+  "app": "Waterfall.io",
+  "field": "official_mcp",
+  "from": "unknown",
+  "to": "no",
+  "loop": "fix_C5",
+  "url": "https://docs.waterfall.io/v1/skills-overview.md",
+  "quote": "Installing a skill does not create an account or provide API access."
+ },
+ {
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "field": "toolkit_auth",
+  "from": "oauth2",
+  "to": "api_key",
+  "loop": "fix_C2",
+  "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+  "quote": "Service accounts provide improved security over API keys by using the industry standard OAuth 2.0 protocol with the Client Credentials flow."
+ },
+ {
+  "id": 70,
+  "app": "Sentry",
+  "field": "access",
+  "from": "self_serve_free",
+  "to": "paid_plan",
+  "loop": "fix_C5",
+  "url": "https://sentry.io/pricing/",
+  "quote": "| API | No | Yes | Yes | Yes | (Developer column = No; Team lists \"API & third-party integrations\")"
+ },
+ {
+  "id": 70,
+  "app": "Sentry",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "fix_C5",
+  "url": "https://sentry.io/pricing/",
+  "quote": "| API | No | Yes | Yes | Yes |"
+ },
+ {
+  "id": 70,
+  "app": "Sentry",
+  "field": "blocker_type",
+  "from": "none",
+  "to": "paid_plan",
+  "loop": "fix_C5",
+  "url": "https://sentry.io/pricing/",
+  "quote": "| Third-party integrations | No | Yes | Yes | Yes |"
+ },
+ {
+  "id": 70,
+  "app": "Sentry",
+  "field": "blocker",
+  "from": "none",
+  "to": "API and third-party integrations require Team plan or higher (Developer free plan: API No); Business 14-day trial",
+  "loop": "fix_C5",
+  "url": "https://sentry.io/pricing/",
+  "quote": "try Business for 14 days with no credit card"
+ },
+ {
+  "id": 71,
+  "app": "Notion",
+  "field": "access",
+  "from": "app_review",
+  "to": "self_serve_free",
+  "loop": "fix_C3",
+  "url": "https://developers.notion.com/guides/get-started/marketplace-listing.md",
+  "quote": "your connection can be used via its OAuth flow without being listed."
+ },
+ {
+  "id": 71,
+  "app": "Notion",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "fix_C3",
+  "url": "https://developers.notion.com/guides/get-started/marketplace-listing.md",
+  "quote": "Listing on the Marketplace is optional and helps your connection reach a wider audience."
+ },
+ {
+  "id": 71,
+  "app": "Notion",
+  "field": "blocker_type",
+  "from": "app_review",
+  "to": "none",
+  "loop": "fix_C3",
+  "url": "https://developers.notion.com/guides/get-started/marketplace-listing.md",
+  "quote": "The Notion team reviews every listing submission"
+ },
+ {
+  "id": 71,
+  "app": "Notion",
+  "field": "blocker",
+  "from": "Public (multi-tenant) OAuth connection is submitted for review; unclear whether review gates installs or only listing.",
+  "to": "none",
+  "loop": "fix_C3",
+  "url": "https://developers.notion.com/guides/get-started/marketplace-listing.md",
+  "quote": "your connection can be used via its OAuth flow without being listed."
+ },
+ {
+  "id": 69,
+  "app": "Datadog",
+  "field": "access",
+  "from": "self_serve_trial",
+  "to": "self_serve_free",
+  "loop": "fix_C5",
+  "url": "https://www.datadoghq.com/pricing/",
+  "quote": "On the Free tier, you get up to five Basic hosts with 1-day metric retention, at no cost."
+ },
+ {
+  "id": 69,
+  "app": "Datadog",
+  "field": "webhooks",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://docs.datadoghq.com/api/latest/webhooks-integration/",
+  "quote": "Configure your Datadog-Webhooks integration directly through the Datadog API."
+ },
+ {
+  "id": 62,
+  "app": "Vercel",
+  "field": "webhooks",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://vercel.com/docs/rest-api",
+  "quote": "POST /v1/webhooks ... Creates a webhook"
+ },
+ {
+  "id": 78,
+  "app": "Coda",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "fix_C4",
+  "url": "https://coda.io/developers/apis/v1",
+  "quote": "We make the Coda API available to all of our users free of charge, in both free and paid workspaces."
+ },
+ {
+  "id": 78,
+  "app": "Coda",
+  "field": "blocker_type",
+  "from": "per_tenant_setup",
+  "to": "none",
+  "loop": "fix_C4",
+  "url": "https://coda.io/developers/apis/v1",
+  "quote": "The Coda API can be accessed using an API token, which can be obtained from My account in Coda."
+ },
+ {
+  "id": 78,
+  "app": "Coda",
+  "field": "blocker",
+  "from": "No OAuth for REST API: multi-tenant use relies on user-pasted API tokens.",
+  "to": "none",
+  "loop": "fix_C4",
+  "url": "https://coda.io/developers/apis/v1",
+  "quote": "The Coda API can be accessed using an API token, which can be obtained from My account in Coda."
+ },
+ {
+  "id": 79,
+  "app": "Smartsheet",
+  "field": "gate_evidence",
+  "from": "MCP docs: 'Required plan: Business, Enterprise, or Advanced Work Management'; Smartsheet community staff: generating an access token requires a license on a multi-user plan such as Business or Enterprise (Individual plan excluded). 30-day Business trial available.",
+  "to": "Smartsheet Help 'Generate an API key': Who can use this? Business, Enterprise (replaces community staff reply as primary source). 30-day Business trial available.",
+  "loop": "fix_C5",
+  "url": "https://help.smartsheet.com/articles/2482389-generate-API-key",
+  "quote": "Who can use this? ... Business ... Enterprise"
+ },
+ {
+  "id": 87,
+  "app": "Xero",
+  "field": "access",
+  "from": "self_serve_free",
+  "to": "app_review",
+  "loop": "fix_C3",
+  "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+  "quote": "The Starter tier has unlimited data access to enable early innovation but is capped at 5 connections."
+ },
+ {
+  "id": 87,
+  "app": "Xero",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "fix_C3",
+  "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+  "quote": "The Starter tier has unlimited data access to enable early innovation but is capped at 5 connections."
+ },
+ {
+  "id": 87,
+  "app": "Xero",
+  "field": "blocker_type",
+  "from": "none",
+  "to": "app_review",
+  "loop": "fix_C3",
+  "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+  "quote": "The Starter tier has unlimited data access to enable early innovation but is capped at 5 connections."
+ },
+ {
+  "id": 87,
+  "app": "Xero",
+  "field": "blocker",
+  "from": "none",
+  "to": "Free Starter tier capped at 5 connections; more requires paid Core tier, Plus+ requires App Certification",
+  "loop": "fix_C3",
+  "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+  "quote": "The Starter tier has unlimited data access to enable early innovation but is capped at 5 connections."
+ },
+ {
+  "id": 88,
+  "app": "Brex",
+  "field": "toolkit_auth",
+  "from": "oauth2",
+  "to": "bearer_token",
+  "loop": "fix_C4",
+  "url": "https://developer.brex.com/guides/authentication.md",
+  "quote": "sign in to the dashboard as an account admin or card admin"
+ },
+ {
+  "id": 88,
+  "app": "Brex",
+  "field": "access",
+  "from": "partner_gated",
+  "to": "self_serve_free",
+  "loop": "fix_C4",
+  "url": "https://www.brex.com/pricing",
+  "quote": "Essentials ... $0 user/month ... Brex API access"
+ },
+ {
+  "id": 88,
+  "app": "Brex",
+  "field": "verdict",
+  "from": "blocked",
+  "to": "ready_with_friction",
+  "loop": "fix_C4",
+  "url": "https://developer.brex.com/docs/mcp",
+  "quote": "An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer."
+ },
+ {
+  "id": 88,
+  "app": "Brex",
+  "field": "blocker_type",
+  "from": "partner_gate",
+  "to": "per_tenant_setup",
+  "loop": "fix_C4",
+  "url": "https://developer.brex.com/docs/mcp",
+  "quote": "An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer."
+ },
+ {
+  "id": 88,
+  "app": "Brex",
+  "field": "blocker",
+  "from": "Multi-tenant OAuth client credentials issued only by Brex developer support; every user must be a Brex customer",
+  "to": "Each customer admin must accept Developer API agreement and generate a user token (partner OAuth needs Brex support); hosted MCP supports OAuth with DCR",
+  "loop": "fix_C4",
+  "url": "https://developer.brex.com/docs/mcp",
+  "quote": "An account admin or card admin must accept the Developer API agreement in Settings \u2192 Developer."
+ },
+ {
+  "id": 92,
+  "app": "Otter AI",
+  "field": "evidence_quality",
+  "from": "secondary",
+  "to": "primary",
+  "loop": "fix_C5",
+  "url": "https://otter.ai/pricing",
+  "quote": "Enterprise: Otter API & Webhooks ... Basic: Otter MCP server"
+ },
+ {
+  "id": 92,
+  "app": "Otter AI",
+  "field": "gate_evidence",
+  "from": null,
+  "to": "Otter pricing page lists 'Otter API & Webhooks' on the Enterprise plan card; 'Otter MCP server' on Basic.",
+  "loop": "fix_C5",
+  "url": "https://otter.ai/pricing",
+  "quote": "Otter API & Webhooks"
+ },
+ {
+  "id": 83,
+  "app": "Binance",
+  "field": "sandbox",
+  "from": "unknown",
+  "to": "yes",
+  "loop": "fix_C5",
+  "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
+  "quote": "Testnet (section in Spot Trading docs sidebar)"
+ },
+ {
+  "id": 37,
+  "app": "systeme.io",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "normalize"
+ },
+ {
+  "id": 37,
+  "app": "systeme.io",
+  "field": "blocker_type",
+  "from": "other",
+  "to": "none",
+  "loop": "normalize"
+ },
+ {
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "field": "blocker_type",
+  "from": "partner_gated",
+  "to": "partner_gate",
+  "loop": "normalize"
+ },
+ {
+  "id": 59,
+  "app": "Waterfall.io",
+  "field": "blocker_type",
+  "from": "partner_gated",
+  "to": "partner_gate",
+  "loop": "normalize"
+ },
+ {
+  "id": 96,
+  "app": "Devin",
+  "field": "access",
+  "from": "unknown",
+  "to": "paid_plan",
+  "loop": "browser",
+  "url": "https://devin.ai/pricing",
+  "quote": "Compare Plans table: \"Devin API\" row shows \u2717 for Free ($0), \u2713 for Pro ($20/mo), Max, Team, Enterprise (rendered checkmark icons; JS-only, unreadable by WebFetch)"
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "field": "access",
+  "from": "paid_plan",
+  "to": "self_serve_trial",
+  "loop": "browser",
+  "url": "https://aircall.io/pricing/",
+  "quote": "\"Aircall offers free access to test the platform before committing.\" / \"All plans include API access\""
+ },
+ {
+  "id": 28,
+  "app": "WhatsApp Business",
+  "field": "toolkit_auth",
+  "from": "bearer_token",
+  "to": "oauth2",
+  "loop": "adjudication",
+  "url": "https://developers.facebook.com/docs/whatsapp/access-tokens",
+  "quote": "Business Integration system user access tokens: Used by Tech Providers and Solution Partners for onboarded customers"
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "adjudication",
+  "url": "https://aircall.io/pricing/",
+  "quote": "All plans include API access and 250+ integrations."
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "none",
+  "loop": "adjudication",
+  "url": "https://developers.aircall.io/tutorials/how-aircall-oauth-flow-works/",
+  "quote": "client_id and client_secret ... by contacting Aircall at marketplace@aircall.io (OAuth gated; basic auth not)"
+ },
+ {
+  "id": 30,
+  "app": "Vonage",
+  "field": "toolkit_auth",
+  "from": "jwt_signed",
+  "to": "api_key",
+  "loop": "adjudication",
+  "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+  "quote": "When you create a Vonage account, an API key and secret will be created for you."
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "field": "access",
+  "from": "self_serve_trial",
+  "to": "app_review",
+  "loop": "adjudication",
+  "url": "https://marketplace.gohighlevel.com/docs/MarketplacePolicies/PrivateAppInstallLimits.md",
+  "quote": "A Private app may be installed in up to 5 Agencies."
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "adjudication",
+  "url": "https://marketplace.gohighlevel.com/docs/MarketplacePolicies/PrivateAppInstallLimits.md",
+  "quote": "A Private app may be installed in up to 5 Agencies."
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "field": "blocker_type",
+  "from": "none",
+  "to": "app_review",
+  "loop": "adjudication",
+  "url": "https://marketplace.gohighlevel.com/docs/MarketplacePolicies/PrivateAppInstallLimits.md",
+  "quote": "Only after you exceed the cap (installs in 6 or more Agencies)"
+ },
+ {
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "field": "verdict",
+  "from": "ready_with_friction",
+  "to": "ready",
+  "loop": "adjudication",
+  "url": "https://www.mongodb.com/pricing",
+  "quote": "M0 512 MB Shared Shared Free forever"
+ },
+ {
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "field": "blocker_type",
+  "from": "per_tenant_setup",
+  "to": "none",
+  "loop": "adjudication",
+  "url": "https://www.mongodb.com/pricing",
+  "quote": "Free Tier (M0): Best for learning and exploring"
+ },
+ {
+  "id": 92,
+  "app": "Otter AI",
+  "field": "access",
+  "from": "paid_plan",
+  "to": "self_serve_free",
+  "loop": "adjudication",
+  "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+  "quote": "MCP plan availability not stated on this page; AI Chat overview says connectors 'may vary by Otter plan'"
+ },
+ {
+  "id": 92,
+  "app": "Otter AI",
+  "field": "blocker_type",
+  "from": "paid_plan",
+  "to": "no_public_api",
+  "loop": "adjudication",
+  "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+  "quote": "We currently do not have a public API key at this time."
+ },
+ {
+  "id": 96,
+  "app": "Devin",
+  "field": "blocker_type",
+  "from": "per_tenant_setup",
+  "to": "paid_plan",
+  "loop": "adjudication",
+  "url": "https://docs.devin.ai/api-reference/overview",
+  "quote": "For teams and standard organizations."
+ }
+]

@@ -1,0 +1,396 @@
+{
+ "patches": [
+  {
+   "id": 43,
+   "app": "BigCommerce",
+   "field": "access",
+   "from": "self_serve_trial",
+   "to": "app_review",
+   "check": "C3",
+   "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/managing-apps-in-dev-portal",
+   "quote": "To make an app available to other stores, submit it for approval."
+  },
+  {
+   "id": 43,
+   "app": "BigCommerce",
+   "field": "verdict",
+   "from": "ready",
+   "to": "ready_with_friction",
+   "check": "C3",
+   "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/managing-apps-in-dev-portal",
+   "quote": "To make an app available to other stores, submit it for approval."
+  },
+  {
+   "id": 43,
+   "app": "BigCommerce",
+   "field": "blocker_type",
+   "from": "none",
+   "to": "app_review",
+   "check": "C3",
+   "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/managing-apps-in-dev-portal",
+   "quote": "To make an app available to other stores, submit it for approval."
+  },
+  {
+   "id": 43,
+   "app": "BigCommerce",
+   "field": "blocker",
+   "from": "none",
+   "to": "OAuth app must pass App Marketplace approval before stores other than the owner's can install it",
+   "check": "C3",
+   "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/managing-apps-in-dev-portal",
+   "quote": "To make an app available to other stores, submit it for approval."
+  },
+  {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud",
+   "field": "access",
+   "from": "unknown",
+   "to": "partner_gated",
+   "check": "C5",
+   "url": "https://developer.salesforce.com/docs/commerce/sfra/guide/scapi-get-started.html",
+   "quote": "For B2C Commerce customers, the API is available at no extra cost."
+  },
+  {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud",
+   "field": "verdict",
+   "from": "ready_with_friction",
+   "to": "blocked",
+   "check": "C5",
+   "url": "https://developer.salesforce.com/docs/commerce/sfra/guide/scapi-get-started.html",
+   "quote": "For B2C Commerce customers, the API is available at no extra cost."
+  },
+  {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud",
+   "field": "blocker_type",
+   "from": "per_tenant_setup",
+   "to": "partner_gated",
+   "check": "C5",
+   "url": "https://developer.salesforce.com/docs/commerce/sfra/guide/scapi-get-started.html",
+   "quote": "For B2C Commerce customers, the API is available at no extra cost."
+  },
+  {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud",
+   "field": "mcp_url",
+   "from": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/agentic-mcp-shopper-tools-quick-start.html",
+   "to": "https://developer.salesforce.com/docs/commerce/sfra/guide/b2c-developer-tooling.html#connect-your-ai-assistant",
+   "check": "C1",
+   "url": "https://developer.salesforce.com/docs/commerce/sfra/guide/b2c-developer-tooling.html#connect-your-ai-assistant",
+   "quote": "live cartridge debugging, log investigation, deployment tools, and general-purpose SCAPI Admin API access"
+  },
+  {
+   "id": 45,
+   "app": "Magento (Adobe Commerce)",
+   "field": "webhooks",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://developer.adobe.com/commerce/extensibility/webhooks/",
+   "quote": "Webhooks resolve as successful, by throwing an exception, or by modifying the event data payload."
+  },
+  {
+   "id": 46,
+   "app": "Squarespace",
+   "field": "official_mcp",
+   "from": "no",
+   "to": "yes",
+   "check": "C1",
+   "url": "https://developers.squarespace.com/mcp/overview",
+   "quote": "The Squarespace MCP server connects AI assistants to Squarespace."
+  },
+  {
+   "id": 46,
+   "app": "Squarespace",
+   "field": "mcp_url",
+   "from": null,
+   "to": "https://mcp.squarespace.com/mcp",
+   "check": "C1",
+   "url": "https://developers.squarespace.com/mcp/overview",
+   "quote": "https://mcp.squarespace.com/mcp"
+  },
+  {
+   "id": 47,
+   "app": "Ecwid",
+   "field": "webhooks",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://docs.ecwid.com/webhook-automations/webhook-automations-overview.md",
+   "quote": "Ecwid webhooks are automatic real-time notifications for apps about different events in the store."
+  },
+  {
+   "id": 47,
+   "app": "Ecwid",
+   "field": "sandbox",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://docs.ecwid.com/launch-apps/faq-about-public-applications.md",
+   "quote": "a developer with a paid subscription account in a test store"
+  },
+  {
+   "id": 49,
+   "app": "Amazon Selling Partner",
+   "field": "webhooks",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://developer-docs.amazon/sp-api/docs/onboarding-overview",
+   "quote": "You can receive these notifications through Amazon Simple Queue Service or Amazon EventBridge."
+  },
+  {
+   "id": 50,
+   "app": "fanbasis",
+   "field": "official_mcp",
+   "from": "unknown",
+   "to": "yes",
+   "check": "C5",
+   "url": "https://github.com/FanBasis/fbnewapi",
+   "quote": "MCP server integration for Claude Desktop and other AI assistants"
+  },
+  {
+   "id": 54,
+   "app": "MrScraper",
+   "field": "evidence_quality",
+   "from": "secondary",
+   "to": "primary",
+   "check": "C5",
+   "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+   "quote": "Use this exact URL, including the `/mcp` path."
+  },
+  {
+   "id": 59,
+   "app": "Waterfall.io",
+   "field": "access",
+   "from": "unknown",
+   "to": "partner_gated",
+   "check": "C5",
+   "url": "https://docs.waterfall.io/v1/authentication.md",
+   "quote": "Contact the team"
+  },
+  {
+   "id": 59,
+   "app": "Waterfall.io",
+   "field": "verdict",
+   "from": "ready_with_friction",
+   "to": "blocked",
+   "check": "C5",
+   "url": "https://docs.waterfall.io/v1/evaluate-waterfall.md",
+   "quote": "Talk to our team about a test plan, API access, and pricing."
+  },
+  {
+   "id": 59,
+   "app": "Waterfall.io",
+   "field": "blocker_type",
+   "from": "other",
+   "to": "partner_gated",
+   "check": "C5",
+   "url": "https://docs.waterfall.io/v1/evaluate-waterfall.md",
+   "quote": "Talk to our team about a test plan, API access, and pricing."
+  },
+  {
+   "id": 59,
+   "app": "Waterfall.io",
+   "field": "official_mcp",
+   "from": "unknown",
+   "to": "no",
+   "check": "C5",
+   "url": "https://docs.waterfall.io/v1/skills-overview.md",
+   "quote": "Installing a skill does not create an account or provide API access."
+  }
+ ],
+ "checked": [
+  {
+   "id": 41,
+   "app": "Shopify",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3"
+   ],
+   "note": "C1: Shop MCP/Storefront Catalog MCP are Shopify-hosted and act on buyer carts/checkout/order history (shopify.dev/docs/agents); kept yes though no Admin MCP. OAuth auth-code + review gates fine."
+  },
+  {
+   "id": 42,
+   "app": "WooCommerce",
+   "checks_done": [
+    "C1",
+    "C5"
+   ],
+   "note": "C1: developer preview, usable via MCP Adapter, products/orders CRUD -> yes holds. sandbox unknown left (no vendor page)."
+  },
+  {
+   "id": 43,
+   "app": "BigCommerce",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C5"
+   ],
+   "note": "C1 Store Management MCP 'early access and available to all stores' -> yes. C3: draft apps only installable on owner-registered stores; patched to app_review. Sandboxes require Partner Portal account."
+  },
+  {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C5"
+   ],
+   "note": "C1: shopper MCP is pilot via AE, but Salesforce B2C MCP (@salesforce/b2c-dx-mcp) executes SCAPI Admin APIs -> yes kept, mcp_url patched. Access: only B2C Commerce customers (Account Manager/realm) -> partner_gated, blocked. Webhooks/sandbox not resolved (on-demand sandboxes need realm)."
+  },
+  {
+   "id": 45,
+   "app": "Magento (Adobe Commerce)",
+   "checks_done": [
+    "C1",
+    "C5"
+   ],
+   "note": "Webhooks patched yes. No Adobe MCP on extensibility pages (developer-agent is code-migration tooling, not MCP); official_mcp left unknown (no vendor quote proving absence), lean no."
+  },
+  {
+   "id": 46,
+   "app": "Squarespace",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3"
+   ],
+   "note": "Official MCP exists (mcp.squarespace.com/mcp; Commerce tools act on products/contacts/orders, sign-in, Claude/ChatGPT only). OAuth review gate confirmed."
+  },
+  {
+   "id": 47,
+   "app": "Ecwid",
+   "checks_done": [
+    "C2",
+    "C3",
+    "C5"
+   ],
+   "note": "'Only stores on paid plans can access API' confirmed; public apps also go through review. Kept paid_plan. Webhooks/sandbox patched."
+  },
+  {
+   "id": 48,
+   "app": "Gumroad",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C5"
+   ],
+   "note": "gumroad.com/mcp is Gumroad's own OAuth connector acting on products/sales -> yes. No app review found. Sandbox unknown unresolved (gumroad.com/api page unrenderable)."
+  },
+  {
+   "id": 49,
+   "app": "Amazon Selling Partner",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C3",
+    "C5"
+   ],
+   "note": "Webhooks patched (Notifications API via SQS/EventBridge). C1 unresolved: sp-api-dev-mcp README not fetchable (robots); repo says samples 'not supported products'; lean no, needs_human."
+  },
+  {
+   "id": 50,
+   "app": "fanbasis",
+   "checks_done": [
+    "C5"
+   ],
+   "note": "Official MCP in FanBasis GitHub org patched yes. Key issuance/plan still undocumented; access left unknown."
+  },
+  {
+   "id": 51,
+   "app": "DataForSEO",
+   "checks_done": [
+    "C1",
+    "C5"
+   ],
+   "note": "Primary evidence already; no change."
+  },
+  {
+   "id": 52,
+   "app": "SE Ranking",
+   "checks_done": [
+    "C1",
+    "C5"
+   ],
+   "note": "Hosted MCP api.seranking.com/mcp live (OAuth 2.1 or X-Api-Key). Webhooks not mentioned; left unknown."
+  },
+  {
+   "id": 53,
+   "app": "Ahrefs",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C4"
+   ],
+   "note": "Bearer key path, paid Lite+; no change."
+  },
+  {
+   "id": 54,
+   "app": "MrScraper",
+   "checks_done": [
+    "C1",
+    "C5"
+   ],
+   "note": "Vendor docs confirm hosted MCP mcp.mrscraper.com/mcp (OAuth 2.1 or bearer key), webhooks integration, Free plan 'no credit card required' (billing page). Evidence upgraded to primary."
+  },
+  {
+   "id": 55,
+   "app": "Apify",
+   "checks_done": [
+    "C1",
+    "C5"
+   ],
+   "note": "Primary evidence; no change."
+  },
+  {
+   "id": 56,
+   "app": "Firecrawl",
+   "checks_done": [
+    "C1",
+    "C5"
+   ],
+   "note": "Primary evidence; no change."
+  },
+  {
+   "id": 57,
+   "app": "Bright Data",
+   "checks_done": [
+    "C1",
+    "C5"
+   ],
+   "note": "Free tier confirmed: 'Every new account includes 5,000 free requests per month.' No change."
+  },
+  {
+   "id": 58,
+   "app": "Sherlock",
+   "checks_done": [
+    "C5"
+   ],
+   "note": "Local CLI, not SaaS; blocked holds."
+  },
+  {
+   "id": 59,
+   "app": "Waterfall.io",
+   "checks_done": [
+    "C1",
+    "C5"
+   ],
+   "note": "Access is sales-led (contact team/book a call, no self-serve signup) -> partner_gated/blocked. Only agent skills, no MCP."
+  },
+  {
+   "id": 60,
+   "app": "Clay",
+   "checks_done": [
+    "C1",
+    "C2",
+    "C5"
+   ],
+   "note": "Vendor docs: 'developer platform is available across all Clay plans, including free'; clay-api-key header; webhooks page exists; MCP referenced ('Use MCP to call Clay functions'). No change; replace secondary evidence with developers.clay.com/public-api/authentication.md and webhooks.md."
+  }
+ ]
+}

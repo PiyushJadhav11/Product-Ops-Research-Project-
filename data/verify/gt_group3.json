@@ -1,0 +1,609 @@
+[
+ {
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "labels": {
+   "auth_methods": [
+    "oauth2",
+    "api_key"
+   ],
+   "toolkit_auth": "api_key",
+   "access": "self_serve_free",
+   "official_mcp": "yes",
+   "mcp_url": "https://github.com/mongodb-js/mongodb-mcp-server",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+    "quote": "Service account access tokens (OAuth 2.0) ... API keys (HTTP Digest Authentication)",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+    "quote": "OAuth 2.0 protocol with the Client Credentials flow.",
+    "certain": false
+   },
+   "access": {
+    "url": "https://www.mongodb.com/pricing",
+    "quote": "Yes, MongoDB Atlas offers a free-forever tier, the M0.",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "quote": "A Model Context Protocol server to connect to MongoDB databases and MongoDB Atlas Clusters.",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "quote": "Service Accounts Atlas API credentials are required to use the Atlas tools.",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+    "quote": "The Atlas Administration API accepts the following authentication methods:",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://www.mongodb.com/pricing",
+    "quote": "M0 512 MB Shared Shared Free forever",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://www.mongodb.com/pricing",
+    "quote": "Free Tier (M0): Best for learning and exploring",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 74,
+  "app": "Jira",
+  "labels": {
+   "auth_methods": [
+    "oauth2",
+    "basic",
+    "jwt_signed"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "self_serve_free",
+   "official_mcp": "yes",
+   "mcp_url": "https://mcp.atlassian.com/v2/mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "quote": "Basic auth requires API tokens.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+    "quote": "OAuth 2.0 (3LO) allows external applications and services to access Atlassian product APIs on a user's behalf.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://www.atlassian.com/software/jira/free",
+    "quote": "free for up to 10 users - get started today.",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://developer.atlassian.com/cloud/rovo-mcp/",
+    "quote": "The Atlassian Rovo MCP Server is a cloud-hosted Model Context Protocol (MCP) server that connects AI-powered clients",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://developer.atlassian.com/cloud/rovo-mcp/",
+    "quote": "An AI client connects to the server endpoint at https://mcp.atlassian.com/v2/mcp.",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "quote": "Basic auth requires API tokens.",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+    "quote": "Users trying to install an unapproved OAuth 2.0 integration are warned that the app has not yet been reviewed by Atlassian.",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+    "quote": "If you want to distribute your app to other users, you must enable sharing.",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 75,
+  "app": "Asana",
+  "labels": {
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "self_serve_free",
+   "official_mcp": "yes",
+   "mcp_url": "https://mcp.asana.com/v2/mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://developers.asana.com/docs/authentication",
+    "quote": "A personal access token (PAT) is the quickest and simplest way to authenticate in the API.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://developers.asana.com/docs/share-your-app",
+    "quote": "This will allow users from any Asana workspace to authorize the app if they are given the authorization URL.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://asana.com/pricing",
+    "quote": "For one or two people managing personal projects.",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+    "quote": "The Asana MCP V2 server is available at: https://mcp.asana.com/v2/mcp.",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+    "quote": "The Asana MCP V2 server is available at: https://mcp.asana.com/v2/mcp.",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://developers.asana.com/docs/authentication",
+    "quote": "Asana's API has several options for authenticating.",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://developers.asana.com/docs/share-your-app",
+    "quote": "If your app is intended to be shared with many users, select Any workspace.",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://developers.asana.com/docs/share-your-app",
+    "quote": "If your app is intended to be shared with many users, select Any workspace.",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 77,
+  "app": "ClickUp",
+  "labels": {
+   "auth_methods": [
+    "oauth2",
+    "api_key"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "self_serve_free",
+   "official_mcp": "yes",
+   "mcp_url": "https://mcp.clickup.com/mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "Use a personal API token for individual or testing purposes.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "Only Workspace owners or admins can create OAuth apps.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://clickup.com/pricing",
+    "quote": "Free Forever $0 No credit card required",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://help.clickup.com/hc/en-us/articles/33335772678423-What-is-ClickUp-MCP",
+    "quote": "use our official MCP (Model Context Protocol) server to access your ClickUp data ... ClickUp MCP is available on all plans.",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://clickup.com/blog/how-to-use-clickup-mcp-server/",
+    "quote": "Official endpoint https://mcp.clickup.com/mcp",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "implement the OAuth2 flow so each user has their own token",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://clickup.com/pricing",
+    "quote": "Free Forever $0 No credit card required",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://clickup.com/pricing",
+    "quote": "Free Forever $0 No credit card required",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 86,
+  "app": "QuickBooks",
+  "labels": {
+   "auth_methods": [
+    "oauth2"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "app_review",
+   "official_mcp": "yes",
+   "mcp_url": "https://github.com/intuit/quickbooks-online-mcp-server",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "app_review"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+    "quote": "QuickBooks Online integration is gated by Intuit's OAuth app setup.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+    "quote": "You must register an app on the Intuit Developer Portal and complete a one-time, browser-based OAuth handshake.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+    "quote": "Sandbox supports http://localhost redirect URIs; production requires a public HTTPS callback",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://blogs.intuit.com/?p=35282",
+    "quote": "Note that this local MCP server can only be run in the Sandbox environment.",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+    "quote": "A comprehensive Model Context Protocol (MCP) server for QuickBooks Online",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://blogs.intuit.com/?p=35282",
+    "quote": "This local MCP server is built on top of Quickbooks Online Accounting APIs",
+    "certain": false
+   },
+   "verdict": {
+    "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+    "quote": "QuickBooks Online integration is gated by Intuit's OAuth app setup.",
+    "certain": false
+   },
+   "blocker_type": {
+    "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+    "quote": "production requires a public HTTPS callback for the initial authorization.",
+    "certain": false
+   }
+  }
+ },
+ {
+  "id": 87,
+  "app": "Xero",
+  "labels": {
+   "auth_methods": [
+    "oauth2"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "app_review",
+   "official_mcp": "yes",
+   "mcp_url": "https://github.com/XeroAPI/xero-mcp-server",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "app_review"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/HEAD/README.md",
+    "quote": "There are 2 modes of authentication supported ... 1. Custom Connections",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/HEAD/README.md",
+    "quote": "Xero OAuth2 authentication with custom connections",
+    "certain": true
+   },
+   "access": {
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Connections (maximum): Starter 5, Core 50, Plus 1,000 (Plus prerequisite: App Certification)",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/HEAD/README.md",
+    "quote": "This is a Model Context Protocol (MCP) server implementation for Xero.",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/HEAD/README.md",
+    "quote": "npx -y @xeroapi/xero-mcp-server@latest",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/HEAD/README.md",
+    "quote": "Xero OpenAPI Specs",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Starter Monthly Tier Fee: No charge; Connections (maximum) 5",
+    "certain": false
+   },
+   "blocker_type": {
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Plus prerequisite: App Certification",
+    "certain": false
+   }
+  }
+ },
+ {
+  "id": 90,
+  "app": "PitchBook",
+  "labels": {
+   "auth_methods": [
+    "api_key"
+   ],
+   "toolkit_auth": "api_key",
+   "access": "partner_gated",
+   "official_mcp": "yes",
+   "mcp_url": "https://premium.mcp.pitchbook.com/mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "blocked",
+   "blocker_type": "partner_gate"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://pitchbook.com/help/pitchbook-api",
+    "quote": "help you establish the API connection through an API key or authentication token.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://pitchbook.com/help/pitchbook-api",
+    "quote": "help you establish the API connection through an API key or authentication token.",
+    "certain": true
+   },
+   "access": {
+    "url": "https://pitchbook.com/help/pitchbook-api",
+    "quote": "help you establish the API connection ... (API requires a separate contract via Direct Data team)",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://shareholders.morningstar.com/investor-resources/investor-qa/qa-details/2026/How-are-PitchBook-Model-Context-Protocol-MCP-Connectors-monetized-today-if-at-all--2026-cy9M2BxfO7/default.aspx",
+    "quote": "paying PitchBook subscribers can access PitchBook data through premium connectors",
+    "certain": false
+   },
+   "mcp_url": {
+    "url": "https://claude.com/marketplace/connectors/pitchbook",
+    "quote": "Made by PitchBook ... https://premium.mcp.pitchbook.com/mcp",
+    "certain": false
+   },
+   "api_type": {
+    "url": "https://pitchbook.com/help/pitchbook-api",
+    "quote": "The PitchBook API is a RESTful implementation",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://pitchbook.com/help/pitchbook-api",
+    "quote": "Every call will use the same base URL: https://api.pitchbook.com",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://shareholders.morningstar.com/investor-resources/investor-qa/qa-details/2026/How-are-PitchBook-Model-Context-Protocol-MCP-Connectors-monetized-today-if-at-all--2026-cy9M2BxfO7/default.aspx",
+    "quote": "which today still requires at least one full PitchBook platform license",
+    "certain": true
+   }
+  }
+ },
+ {
+  "id": 92,
+  "app": "Otter AI",
+  "labels": {
+   "auth_methods": [
+    "oauth2"
+   ],
+   "toolkit_auth": "oauth2",
+   "access": "self_serve_free",
+   "official_mcp": "yes",
+   "mcp_url": "https://mcp.otter.ai/mcp",
+   "api_type": [
+    "none"
+   ],
+   "verdict": "blocked",
+   "blocker_type": "no_public_api"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+    "quote": "All access is OAuth-authenticated with granular permissions.",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+    "quote": "All access is OAuth-authenticated with granular permissions.",
+    "certain": false
+   },
+   "access": {
+    "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+    "quote": "MCP plan availability not stated on this page; AI Chat overview says connectors 'may vary by Otter plan'",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+    "quote": "MCP server URL: https://mcp.otter.ai/mcp",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://claude.com/connectors/otter-ai",
+    "quote": "Otter's MCP Server integrates with Otter.ai's meeting intelligence platform",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+    "quote": "We currently do not have a public API key at this time.",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+    "quote": "We currently do not have a public API key at this time.",
+    "certain": false
+   },
+   "blocker_type": {
+    "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+    "quote": "We currently do not have a public API key at this time.",
+    "certain": false
+   }
+  }
+ },
+ {
+  "id": 96,
+  "app": "Devin",
+  "labels": {
+   "auth_methods": [
+    "api_key",
+    "bearer_token"
+   ],
+   "toolkit_auth": "api_key",
+   "access": "paid_plan",
+   "official_mcp": "yes",
+   "mcp_url": "https://mcp.devin.ai/mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready_with_friction",
+   "blocker_type": "paid_plan"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://docs.devin.ai/api-reference/authentication",
+    "quote": "Authorization: Bearer cog_your_token_here (service user API key; personal access token)",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+    "quote": "Use a personal access token or a service user key as <API_KEY>.",
+    "certain": false
+   },
+   "access": {
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "For teams and standard organizations. Create a service user and make your first API call in minutes.",
+    "certain": false
+   },
+   "official_mcp": {
+    "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+    "quote": "The Devin MCP server is an authenticated service that provides access to both public and private repositories",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+    "quote": "URL: https://mcp.devin.ai/mcp",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "Learn how to programmatically interact with Devin using our REST APIs.",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://devin.ai/pricing",
+    "quote": "Free $0 ... light quota to code with agents (API row plan coverage not readable)",
+    "certain": false
+   },
+   "blocker_type": {
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "For teams and standard organizations.",
+    "certain": false
+   }
+  }
+ },
+ {
+  "id": 99,
+  "app": "YouTube Transcript",
+  "labels": {
+   "auth_methods": [
+    "api_key",
+    "oauth2"
+   ],
+   "toolkit_auth": "api_key",
+   "access": "self_serve_free",
+   "official_mcp": "yes",
+   "mcp_url": "https://transcriptapi.com/mcp",
+   "api_type": [
+    "rest"
+   ],
+   "verdict": "ready",
+   "blocker_type": "none"
+  },
+  "proof": {
+   "auth_methods": {
+    "url": "https://github.com/ZeroPointRepo/youtube-mcp",
+    "quote": "OAuth 2.1 + API key auth",
+    "certain": true
+   },
+   "toolkit_auth": {
+    "url": "https://transcriptapi.com",
+    "quote": "Authorization: Bearer API_KEY",
+    "certain": false
+   },
+   "access": {
+    "url": "https://transcriptapi.com",
+    "quote": "new accounts get 100 free credits, no card required",
+    "certain": true
+   },
+   "official_mcp": {
+    "url": "https://transcriptapi.com",
+    "quote": "MCP server URL https://transcriptapi.com/mcp; Claude and ChatGPT MCP setups connect with OAuth",
+    "certain": true
+   },
+   "mcp_url": {
+    "url": "https://github.com/ZeroPointRepo/youtube-mcp",
+    "quote": "\"url\": \"https://transcriptapi.com/mcp\"",
+    "certain": true
+   },
+   "api_type": {
+    "url": "https://transcriptapi.com",
+    "quote": "https://transcriptapi.com/api/v2/youtube/transcript",
+    "certain": true
+   },
+   "verdict": {
+    "url": "https://transcriptapi.com",
+    "quote": "new accounts get 100 free credits, no card required",
+    "certain": true
+   },
+   "blocker_type": {
+    "url": "https://transcriptapi.com",
+    "quote": "new accounts get 100 free credits, no card required",
+    "certain": true
+   }
+  }
+ }
+]
