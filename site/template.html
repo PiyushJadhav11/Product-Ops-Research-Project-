@@ -128,15 +128,15 @@ footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <div class="brand">composio · app-research case study · Piyush Jadhav</div>
-  <nav aria-label="Sections"><a href="#findings">Findings</a><a href="#patterns">Patterns</a><a href="#agent">Agent</a><a href="#verification">Verification</a><a href="#apps-table">All 100 apps</a><a href="#run">Run it</a></nav>
+  <div class="brand">composio · app-research case study · Om Prakash</div>
+  <nav aria-label="Sections"><a href="#findings">Findings</a><a href="#patterns">Patterns</a><a href="#agent">Agent</a><a href="#verification">Verification</a><a href="#apps-table">All 100 apps</a><a href="#run">Run it</a><a href="https://github.com/PiyushJadhav11/Product-Ops-Research-Project-" rel="noopener">GitHub repo ↗</a></nav>
 </div></header>
 
 <main>
 <section id="findings" style="padding-top:38px"><div class="wrap">
   <div class="eyebrow">Toolkit research · 100 apps · 10 categories · researched November 2026</div>
   <h1>Can we build the toolkit today? For 41 of 100 apps, yes. For 49 the API exists but something stands in the way. 10 are blocked.</h1>
-  <p class="lede">A multi-agent pipeline researched auth, access gating, API surface and MCP for each app and cited the vendor's own docs for every answer. Four verification loops took field accuracy from <b>74%</b> (model memory) to <b>92.5%</b> on a 30-app hand-adjudicated sample, and to <b>90%</b> on a holdout the loops never saw.</p>
+  <p class="lede">A multi-agent pipeline researched auth, access gating, API surface and MCP for each app and cited the vendor's own docs for every answer. Four verification loops took field accuracy from <b>74%</b> (model memory) to <b>92.5%</b> on a 30-app sample checked against vendor docs by independent verifier agents, and to <b>90%</b> on a holdout the loops never saw. No human verified the labels; every sampled answer carries a URL and quote so anyone can audit it.</p>
   <div class="tiles" id="tiles"></div>
 
   <h2 style="margin-top:34px">What the 100 apps say</h2>
@@ -169,17 +169,18 @@ footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
 </div></section>
 
 <section id="agent"><div class="wrap">
-  <div class="sec-head"><div><div class="eyebrow">The agent</div><h2>What I built, and where a human had to step in</h2>
+  <div class="sec-head"><div><div class="eyebrow">The agent</div><h2>What I built, and where the agents needed a judgment call</h2>
   <p>An orchestrator fans the 100 apps out to parallel research workers that share one prompt, one JSON schema and one labelling rubric. Every later stage is a verification loop that either recomputes a label from evidence or proposes a patch with a vendor URL and quote. No record changes silently: all <b id="nchanges"></b> field changes are logged with the loop that made them.</p></div></div>
   <div class="flow" id="flow"></div>
   <div class="grid2" style="margin-top:16px">
     <div class="panel">
-      <h3>Where a human was needed</h3>
+      <h3>Judgment calls (made by the orchestrator agent, no human)</h3>
       <ul class="small" style="margin:0;padding-left:18px;display:grid;gap:6px">
-        <li><b>Defining the labels.</b> Pass 2 workers disagreed on what "official MCP" and "gated" mean. A person wrote <code>rubric.md</code>: an announced or docs-search-only MCP is not official; the gate is the most restrictive one a toolkit serving <i>other people's</i> accounts would hit.</li>
-        <li><b>Policy calls the evidence can't settle.</b> An app with no REST API but an official remote MCP (Otter) counts as buildable with friction, not blocked. An API key and a pasted bearer token count as the same auth for scoring. Local CLIs (Mermaid, Sherlock) are not SaaS APIs; they become sandboxed tools with no auth.</li>
-        <li><b>Adjudicating disagreements.</b> When the blind ground-truth agent and the research agent disagreed, a reviewer read both cited pages and decided. The verifier itself was wrong twice (Podio and WhatsApp MCPs exist).</li>
+        <li><b>Defining the labels.</b> Pass 2 workers disagreed on what "official MCP" and "gated" mean. The orchestrator agent wrote <code>rubric.md</code>: an announced or docs-search-only MCP is not official; the gate is the most restrictive one a toolkit serving <i>other people's</i> accounts would hit.</li>
+        <li><b>Policy calls the evidence can't settle.</b> The orchestrator decided these, and a human owner should review them: An app with no REST API but an official remote MCP (Otter) counts as buildable with friction, not blocked. An API key and a pasted bearer token count as the same auth for scoring. Local CLIs (Mermaid, Sherlock) are not SaaS APIs; they become sandboxed tools with no auth.</li>
+        <li><b>Adjudicating disagreements.</b> When the blind ground-truth agent and the research agent disagreed, the orchestrator agent re-read both cited vendor pages and decided. The verifier itself was wrong twice (Podio and WhatsApp MCPs exist).</li>
         <li><b>Pages agents can't read.</b> JS-rendered pricing tables (Devin) and checkmark icons came through WebFetch blank and needed a real browser.</li>
+        <li><b>Still needs a human:</b> nobody has hand-checked the labels yet. <code>human_review.csv</code> lists all 120 sampled answers with proof links for that audit.</li>
         <li><b>Long-tail apps.</b> Paygent Connect, iPayX and fanbasis have no findable developer docs. One vendor page also carried hidden text addressed to LLM summarisers; the worker ignored it and flagged it.</li>
       </ul>
     </div>
@@ -203,7 +204,7 @@ footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
 
 <section id="verification"><div class="wrap">
   <div class="sec-head"><div><div class="eyebrow">Verification</div><h2>How I know the table is right: measured, not asserted</h2>
-  <p>I drew a stratified random sample of 30 apps (3 per category, seed 2026) and split it in two. <b>Sample A</b> (20 apps) was used to find error patterns and tune the loops. <b>Sample B</b> (10 apps) was held out: no loop was designed using it, so its score is the honest estimate for the 70 apps nobody hand-checked. Ground truth came from blind verifier agents reading only vendor pages, then a reviewer adjudicated every disagreement. Scored fields: toolkit auth, access gate, official MCP, verdict (4 × 30 = 120 checks).</p></div></div>
+  <p>I drew a stratified random sample of 30 apps (3 per category, seed 2026) and split it in two. <b>Sample A</b> (20 apps) was used to find error patterns and tune the loops. <b>Sample B</b> (10 apps) was held out: no loop was designed using it, so its score is the honest estimate for the 70 apps outside the sample. Ground truth came from blind verifier agents reading only vendor pages, then the orchestrator agent adjudicated every disagreement by re-reading both cited pages. No human was involved, so this measures agreement with carefully sourced agent labels, not with a human expert. Scored fields: toolkit auth, access gate, official MCP, verdict (4 × 30 = 120 checks).</p></div></div>
   <div class="grid2">
     <div class="panel">
       <h3>Field accuracy by stage</h3>
@@ -232,7 +233,7 @@ footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
 
 <section id="apps-table"><div class="wrap">
   <div class="sec-head"><div><div class="eyebrow">Findings table</div><h2>All 100 apps</h2>
-  <p>Click any row for the one-liner, gate evidence, API surface, cited sources and every change the loops made. <span class="tag">A</span>/<span class="tag">B</span> marks the 30 hand-verified apps.</p></div></div>
+  <p>Click any row for the one-liner, gate evidence, API surface, cited sources and every change the loops made. <span class="tag">A</span>/<span class="tag">B</span> marks the 30 apps in the verified sample.</p></div></div>
   <div class="controls">
     <label class="small" for="q" style="position:absolute;left:-9999px">Search apps</label>
     <input id="q" type="search" placeholder="Search app, category, blocker…">
@@ -252,8 +253,11 @@ footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
 
 <section id="run"><div class="wrap">
   <div class="sec-head"><div><div class="eyebrow">Proof</div><h2>Run it yourself</h2>
+  <p style="margin:6px 0 0"><b>Source repo:</b> <a href="https://github.com/PiyushJadhav11/Product-Ops-Research-Project-" rel="noopener">github.com/PiyushJadhav11/Product-Ops-Research-Project-</a></p>
   <p>The repo holds the prompts, schema, rubric, every intermediate pass, the ground-truth files and the scripts that produced each number on this page. The deterministic loops run offline in seconds. The research stage needs an Anthropic key, and a Composio key if you want Composio's Firecrawl toolkit to do the page fetching.</p></div></div>
-<pre># reproduce every number on this page from the committed data (no keys needed)
+<pre>git clone https://github.com/PiyushJadhav11/Product-Ops-Research-Project-.git && cd Product-Ops-Research-Project-
+
+# reproduce every number on this page from the committed data (no keys needed)
 python agent/lint.py      data/pass2/pass2.json
 python agent/normalize.py data/pass3/patched.json data/pass3/patched_norm.json
 python agent/score.py     data/pass1/pass1.json all      # 74.2%
@@ -339,11 +343,11 @@ const steps=[
  ['agent','Pass 1 · Baseline','One agent fills all 100 records from model memory, with no web access. This is the "before" measurement.','pass1.json · 100 rows'],
  ['agent','Pass 2 · Research workers','10 parallel workers, one per category. Each finds the docs, auth, gate, API, MCP and verdict for its apps, with at least 2 cited vendor URLs per record.','pass2.json · '+M.evidence+' citations'],
  ['code','Loop 1 · Lint','11 deterministic rules catch contradictions, such as "ready" while paid-gated, an MCP without a URL, an unknown key field, or secondary-only evidence.',M.lint_p2+' records flagged'],
- ['human','Ground truth + rubric','3 blind verifier agents label a 30-app sample from vendor pages only. A reviewer adjudicates every disagreement and pins label definitions in rubric.md.','truth.json · 120 checks'],
+ ['agent','Ground truth + rubric','3 blind verifier agents label a 30-app sample from vendor pages only. The orchestrator agent adjudicates every disagreement and pins label definitions in rubric.md.','truth.json · 120 checks'],
  ['code','Loop 2 · Rubric normaliser','Re-derives the verdict and blocker from access, API and MCP facts, so all 100 rows obey one rule instead of 10 workers\' judgement.',M.ch_norm+' field changes'],
  ['agent','Loop 3 · Targeted re-research','5 fix agents re-check all 100 apps for the 5 error patterns found on sample A. Each change is a patch with a vendor URL and a verbatim quote.',M.ch_fix+' patches'],
  ['agent','Loop 4 · Browser check','A real browser reads pages that WebFetch returns blank (JS pricing tables, icon checkmarks).',M.ch_browser+' fields resolved'],
- ['human','Review queue','The 30-row sheet and the low-confidence rows go to a person with proof links. Unknowns stay unknown and are not guessed.','human_review.csv']
+ ['human','Open: human audit','Not done yet. The 120-row sheet and the low-confidence rows are ready for a person, with proof links. Unknowns stay unknown and are not guessed.','human_review.csv']
 ];
 $('#flow').innerHTML=steps.map((s,i)=>`<div class="step"><span class="pill who who-${s[0]}">${s[0]==='code'?'script':s[0]}</span><div class="n">${String(i+1).padStart(2,'0')}</div><h3>${s[1]}</h3><p>${s[2]}</p><div class="out">→ ${s[3]}</div></div>`).join('');
 $('#nchanges').textContent=M.ch_total;
@@ -368,7 +372,7 @@ $('#q').oninput=render; sel.onchange=render;
 const LOOPN={normalize:'rubric normaliser',browser:'browser check',adjudication:'adjudication'};
 function detail(r){
   const ch=r.changes.length?`<ul>${r.changes.map(c=>`<li><span class="tag">${esc(LOOPN[c[0]]||('re-research '+c[0].replace('fix_','')))}</span> ${esc(c[1])}: <code>${esc(c[2])}</code> → <code>${esc(c[3])}</code></li>`).join('')}</ul>`:'<span class="muted">No changes after pass 2.</span>';
-  return `<dl class="det"><div><dt>What it does</dt><dd>${esc(r.what)}</dd><dt>Auth methods offered</dt><dd>${r.auth.map(a=>`<span class="tag">${esc(TL[a]||a)}</span>`).join(' ')}</dd><dt>Access evidence</dt><dd>${esc(r.gate)||'<span class="muted">—</span>'}</dd><dt>API surface</dt><dd>${esc(r.api.join(', ').toUpperCase())} · breadth: ${esc(r.breadth)} · webhooks: ${esc(r.hooks)}</dd><dt>Blocker / note</dt><dd>${esc(r.blocker)}</dd><dt>MCP</dt><dd>${r.mcp_url?`<a href="${esc(r.mcp_url.startsWith('http')?r.mcp_url:'#')}" rel="noopener">${esc(r.mcp_url)}</a>`:'<span class="muted">none found</span>'}</dd></div><div><dt>Docs</dt><dd>${r.docs?`<a href="${esc(r.docs)}" rel="noopener">${esc(r.docs)}</a>`:'—'}</dd><dt>Evidence (${r.ev.length})</dt><dd><ul>${r.ev.map(e=>`<li><a href="${esc(e[1])}" rel="noopener">${esc(e[0]||e[1])}</a></li>`).join('')}</ul></dd><dt>Changed by the loops</dt><dd>${ch}</dd><dt>Confidence</dt><dd>${r.conf??'—'}${r.sample?` · hand-verified (sample ${r.sample})`:''}</dd></div></dl>`;
+  return `<dl class="det"><div><dt>What it does</dt><dd>${esc(r.what)}</dd><dt>Auth methods offered</dt><dd>${r.auth.map(a=>`<span class="tag">${esc(TL[a]||a)}</span>`).join(' ')}</dd><dt>Access evidence</dt><dd>${esc(r.gate)||'<span class="muted">—</span>'}</dd><dt>API surface</dt><dd>${esc(r.api.join(', ').toUpperCase())} · breadth: ${esc(r.breadth)} · webhooks: ${esc(r.hooks)}</dd><dt>Blocker / note</dt><dd>${esc(r.blocker)}</dd><dt>MCP</dt><dd>${r.mcp_url?`<a href="${esc(r.mcp_url.startsWith('http')?r.mcp_url:'#')}" rel="noopener">${esc(r.mcp_url)}</a>`:'<span class="muted">none found</span>'}</dd></div><div><dt>Docs</dt><dd>${r.docs?`<a href="${esc(r.docs)}" rel="noopener">${esc(r.docs)}</a>`:'—'}</dd><dt>Evidence (${r.ev.length})</dt><dd><ul>${r.ev.map(e=>`<li><a href="${esc(e[1])}" rel="noopener">${esc(e[0]||e[1])}</a></li>`).join('')}</ul></dd><dt>Changed by the loops</dt><dd>${ch}</dd><dt>Confidence</dt><dd>${r.conf??'—'}${r.sample?` · in verified sample ${r.sample}`:''}</dd></div></dl>`;
 }
 function render(){
   const q=$('#q').value.toLowerCase(), c=sel.value;

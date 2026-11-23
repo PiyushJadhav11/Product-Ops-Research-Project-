@@ -4,7 +4,8 @@ Can each of 100 apps become an AI-agent toolkit today? For each app this repo re
 access gate, API surface, official MCP, verdict and main blocker, with the vendor-doc URL behind each answer.
 It also shows how accurate those answers are.
 
-**Case study page:** `site/index.html` (the live link is in the submission). The page has the findings,
+**Live case study:** https://piyushjadhav11.github.io/Product-Ops-Research-Project-/ (GitHub Pages, served from `docs/`; source `site/`)  
+**Repo:** https://github.com/PiyushJadhav11/Product-Ops-Research-Project- The page has the findings,
 the patterns, how the agent works, the verification results and a filterable table of all 100 apps.
 
 ## Results
@@ -24,7 +25,7 @@ apps.csv ─▶ Pass 1: baseline from model memory (no web)   data/pass1/
         ─▶ Pass 2: 10 parallel research workers, cited    data/pass2/
         ─▶ Loop 1: lint.py        (11 consistency rules)  data/verify/lint_pass2.json
         ─▶ Ground truth: 3 blind verifier agents on a 30-app stratified sample,
-                         a reviewer adjudicates each disagreement, rubric.md fixes the definitions
+                         the orchestrator agent adjudicates each disagreement, rubric.md fixes the definitions
         ─▶ Loop 2: normalize.py   (re-derive verdict from facts per rubric)
         ─▶ Loop 3: fix agents     (patch + URL + quote for 5 error patterns found on sample A)
         ─▶ Loop 4: browser check  (JS-rendered pages)
@@ -43,6 +44,7 @@ python agent/score.py     data/pass1/pass1.json all          # 74.2%
 python agent/score.py     data/pass2/pass2.json all          # 86.7%
 python agent/score.py     data/pass3/patched_norm.json B     # 90.0% on the holdout
 python site/build.py                                         # rebuilds site/index.html from the data
+cp site/index.html site/data.json site/final.csv docs/      # publish via GitHub Pages
 ```
 
 ## Re-run the research agent
@@ -74,15 +76,20 @@ agent/lint.py normalize.py score.py   deterministic loops + scorer
 data/apps.csv               the 100 apps
 data/pass1 pass2 pass3      every intermediate pass and the fix-loop patches
 data/verify/                sample.json (seed 2026), gt_raw.json (blind verifiers), truth.json (adjudicated),
-                            human_review.csv (120-row sign-off sheet with proof links), browser_checks.json
+                            human_review.csv (120 sampled answers with proof links, ready for a human audit), browser_checks.json
 data/final.json final.csv   the deliverable dataset
 site/                       case-study page + build script
 ```
 
 ## Known limits
 
+- **No human verified the labels.** Ground truth for the 30-app sample comes from blind verifier agents reading vendor pages, with disagreements adjudicated by the orchestrator agent. Accuracy therefore means agreement with carefully sourced agent labels. `data/verify/human_review.csv` lists every sampled answer with its URL and quote for a human audit.
+
 - Access is still `unknown` for 4 long-tail apps (Zoho Cliq, fanbasis, Paygent Connect, iPayX). They need a vendor contact.
 - The 70 apps outside the sample are about 90% accurate per field (holdout estimate). Re-check the lowest-confidence rows first (`confidence < 0.7`).
 - Gates and MCP availability change monthly. Data as of 23 Nov 2026.
+<<<<<<< HEAD
 =======
 # Product-Ops-Research-Project-
+=======
+>>>>>>> 233c9a2 (Remove human-check claims, add GitHub Pages)
