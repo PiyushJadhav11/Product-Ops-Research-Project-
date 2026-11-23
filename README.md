@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Composio app research: 100 apps, agent-researched and verified
 
 Can each of 100 apps become an AI-agent toolkit today? For each app this repo records the auth method,
@@ -84,3 +85,6 @@ site/                       case-study page + build script
 - Access is still `unknown` for 4 long-tail apps (Zoho Cliq, fanbasis, Paygent Connect, iPayX). They need a vendor contact.
 - The 70 apps outside the sample are about 90% accurate per field (holdout estimate). Re-check the lowest-confidence rows first (`confidence < 0.7`).
 - Gates and MCP availability change monthly. Data as of 23 Nov 2026.
+=======
+# Product-Ops-Research-Project-
+>>>>>>> e8180f47efb516b18082d7ae1ae9cad971daa449
