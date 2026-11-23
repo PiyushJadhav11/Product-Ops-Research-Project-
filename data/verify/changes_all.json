@@ -1097,5 +1097,50 @@
   "to": "other",
   "loop": "override",
   "quote": "Policy call: no self-serve REST API (Enterprise-only), but the official OAuth MCP (mcp.otter.ai, read-only) is on all plans, so it is buildable with friction rather than blocked."
+ },
+ {
+  "id": 17,
+  "app": "Plain",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "human",
+  "quote": ""
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "field": "access",
+  "from": "self_serve_trial",
+  "to": "app_review",
+  "loop": "human",
+  "quote": ""
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "field": "verdict",
+  "from": "ready",
+  "to": "ready_with_friction",
+  "loop": "human",
+  "quote": ""
+ },
+ {
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "field": "toolkit_auth",
+  "from": "api_key",
+  "to": "oauth2",
+  "loop": "human",
+  "quote": ""
+ },
+ {
+  "id": 92,
+  "app": "Otter AI",
+  "field": "access",
+  "from": "self_serve_free",
+  "to": "unknown",
+  "loop": "human",
+  "quote": ""
  }
 ]

@@ -1,5 +1,7 @@
 # Composio app research: 100 apps, agent-researched and verified
 
+*Author: Piyush Jadhav*
+
 Can each of 100 apps become an AI-agent toolkit today? For each app this repo records the auth method,
 access gate, API surface, official MCP, verdict and main blocker, with the vendor-doc URL behind each answer.
 It also shows how accurate those answers are.
@@ -14,8 +16,8 @@ table of all 100 apps. Requires only Python 3.9+ to reproduce; no Claude account
 
 | | |
 |---|---|
-| Ready today | 41 |
-| Ready with friction (app review / paid plan / per-tenant setup) | 49 |
+| Ready today | 40 |
+| Ready with friction (app review / paid plan / per-tenant setup / MCP-only) | 50 |
 | Blocked (partner or sales gate, no API, or not a SaaS API) | 10 |
 | Field accuracy: model memory → web research → after loops | 74.2% → 86.7% → **92.5%** (30-app sample, 120 checks) |
 | Accuracy on the holdout sample (never used for tuning) | 72.5% → 85.0% → **90.0%** |
@@ -32,6 +34,7 @@ apps.csv ─▶ Pass 1: baseline from model memory (no web)   data/pass1/
         ─▶ Loop 3: fix agents     (patch + URL + quote for 5 error patterns found on sample A)
         ─▶ Loop 4: browser check  (JS-rendered pages)
         ─▶ adjudicated truth + documented overrides (data/verify/overrides.json)
+        ─▶ Human spot-check: 20 answers (all disputed + random controls) checked by hand  data/verify/human_spotcheck.csv
         ─▶ data/final.json / data/final.csv        ← agent/pipeline.py rebuilds this whole chain
 ```
 
@@ -82,7 +85,8 @@ data/apps.csv               the 100 apps
 data/pass1 pass2 pass3      every intermediate pass and the fix-loop patches
 data/verify/                sample.json (seed 2026), gt_raw.json (blind verifiers), truth.json (adjudicated),
                             human_review.csv (120 sampled answers with proof links, ready for a human audit), browser_checks.json,
-                            overrides.json (2 documented policy calls), changes_all.json (every field change)
+                            overrides.json (2 documented policy calls), changes_all.json (every field change),
+                            human_spotcheck.csv (20 rows checked by hand), human_check.json + truth_final.json (its result)
 data/final.json final.csv   the deliverable dataset
 site/                       page template + build script (build.py writes index.html)
 docs/                       built page for GitHub Pages
@@ -90,7 +94,19 @@ docs/                       built page for GitHub Pages
 
 ## Known limits
 
-- **No human verified the labels.** Ground truth for the 30-app sample comes from blind verifier agents reading vendor pages, with disagreements adjudicated by the orchestrator agent. Accuracy therefore means agreement with carefully sourced agent labels. `data/verify/human_review.csv` lists every sampled answer with its URL and quote for a human audit.
+- **Human checks are a spot-check, not a full audit.** Ground truth for the 30-app sample comes from blind verifier agents reading vendor pages, with disagreements adjudicated by the orchestrator agent. A human (Piyush Jadhav) then checks 20 of those answers by hand in `data/verify/human_spotcheck.csv`; corrections override the agents and the page reports the result. `human_review.csv` has all 120 sampled answers for a fuller audit.
 - Access is still `unknown` for 4 long-tail apps (Zoho Cliq, fanbasis, Paygent Connect, iPayX). They need a vendor contact.
 - The 70 apps outside the sample are about 90% accurate per field (holdout estimate). Re-check the lowest-confidence rows first (`confidence < 0.7`).
 - Gates and MCP availability change monthly. Data as of 23 Nov 2026.
+
+## Human spot-check (how to do it, ~20 minutes)
+
+1. Open `data/verify/human_spotcheck.csv` in Excel or Google Sheets.
+2. For each row, open `proof_url`, read `how_to_check`, and type `y` (our answer is right) or `n` in `your_verdict (y/n)`.
+   If `n`, put the right value in `correct_value_if_n` (same words as `our_answer` uses) and a short `note`.
+3. Save as CSV (same name), then run:
+   ```
+   python agent/pipeline.py
+   python site/build.py
+   ```
+   The page, the accuracy numbers and the "where a human was needed" text update automatically.

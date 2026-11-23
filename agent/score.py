@@ -25,7 +25,8 @@ def score(recs, truth, ids):
 
 if __name__ == "__main__":
     recs = json.load(open(sys.argv[1]))
-    truth = json.load(open(ROOT / "data/verify/truth.json"))
+    tf = ROOT / "data/verify/truth_final.json"  # truth + human corrections, if any
+    truth = json.load(open(tf if tf.exists() else ROOT / "data/verify/truth.json"))
     s = json.load(open(ROOT / "data/verify/sample.json"))
     which = sys.argv[2] if len(sys.argv) > 2 else "all"
     ids = {"A": s["calibration_A"], "B": s["holdout_B"], "all": s["calibration_A"] + s["holdout_B"]}[which]

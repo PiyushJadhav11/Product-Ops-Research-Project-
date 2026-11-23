@@ -7,6 +7,7 @@
       -> apply browser checks (loop 4)              data/verify/browser_checks.json
       -> apply adjudicated truth on the 30 sampled apps   data/verify/truth.json
       -> apply documented overrides                 data/verify/overrides.json
+      -> apply the human spot-check (y/n per row)   data/verify/human_spotcheck.csv
       -> normalize (locked verdicts kept)           data/final.json + data/final.csv
 Every field change goes to data/verify/changes_all.json with the loop that made it.
 
@@ -19,6 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "agent"))
 from normalize import normalize  # noqa: E402
 
+REVIEWER = "Piyush Jadhav"   # the human who fills data/verify/human_spotcheck.csv
 KEY_FIELDS = ["toolkit_auth", "access", "official_mcp", "verdict", "blocker_type"]
 CSV_COLS = ["id", "app", "category", "one_liner", "toolkit_auth", "auth_methods", "access", "gate_evidence",
             "api_type", "api_breadth", "webhooks", "official_mcp", "mcp_url", "verdict", "blocker_type", "blocker",
@@ -98,6 +100,35 @@ def main():
                 log.append({"id": r["id"], "app": r["app"], "field": f, "from": r.get(f), "to": v,
                             "loop": "override", "quote": o["reason"]})
             r[f] = v
+
+    # human spot-check: rows marked "n" with a corrected value win over every agent answer
+    human = {"reviewer": REVIEWER, "rows": 0, "checked": 0, "confirmed": 0, "corrected": 0, "corrections": []}
+    truth_final = json.loads(json.dumps(truth))
+    hp = P("data/verify/human_spotcheck.csv")
+    if hp.exists():
+        for row in csv.DictReader(open(hp, encoding="utf-8")):
+            human["rows"] += 1
+            v = (row.get("your_verdict (y/n)") or "").strip().lower()
+            if v not in ("y", "n"):
+                continue
+            human["checked"] += 1
+            if v == "y":
+                human["confirmed"] += 1
+                continue
+            human["corrected"] += 1
+            new = (row.get("correct_value_if_n") or "").strip()
+            i, f = int(row["id"]), row["field"]
+            human["corrections"].append([row["app"], f, row["our_answer"], new or "(flagged, no value)", row.get("note", "")])
+            if new:
+                r = by[i]
+                log.append({"id": i, "app": r["app"], "field": f, "from": r.get(f), "to": new, "loop": "human",
+                            "quote": row.get("note", "")})
+                r[f] = new
+                r["verdict_locked"] = f == "verdict" or r.get("verdict_locked", False)
+                if str(i) in truth_final:
+                    truth_final[str(i)]["labels"][f] = new
+    dump(human, "data/verify/human_check.json")
+    dump(truth_final, "data/verify/truth_final.json")
 
     final = sorted(by.values(), key=lambda r: r["id"])
     final = [normalize(r)[0] for r in final]          # locked records are left alone

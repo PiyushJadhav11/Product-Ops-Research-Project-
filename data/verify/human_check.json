@@ -1,0 +1,44 @@
+{
+ "reviewer": "Piyush Jadhav",
+ "rows": 20,
+ "checked": 20,
+ "confirmed": 15,
+ "corrected": 5,
+ "corrections": [
+  [
+   "Plain",
+   "verdict",
+   "ready",
+   "ready_with_friction",
+   ""
+  ],
+  [
+   "Aircall",
+   "access",
+   "self_serve_trial",
+   "app_review",
+   ""
+  ],
+  [
+   "Aircall",
+   "verdict",
+   "ready",
+   "ready_with_friction",
+   ""
+  ],
+  [
+   "MongoDB Atlas",
+   "toolkit_auth",
+   "api_key",
+   "oauth2",
+   ""
+  ],
+  [
+   "Otter AI",
+   "access",
+   "self_serve_free",
+   "unknown",
+   ""
+  ]
+ ]
+}

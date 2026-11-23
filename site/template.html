@@ -124,19 +124,20 @@ pre{font:12.5px/1.5 var(--mono);background:var(--wash);padding:12px 14px;border-
 footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
 @media (prefers-reduced-motion:no-preference){.acc-fill,.catrow .bar span{transition:width .4s ease}}
 @media (max-width:560px){.catrow{grid-template-columns:110px 1fr 44px}.acc-row{grid-template-columns:1fr}}
+@media print{.tbl-wrap{max-height:none;overflow:visible}.controls,.top nav{display:none}section{break-inside:auto}.panel,.finding,.step,.list{break-inside:avoid}th{position:static}body{background:#fff}}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <div class="brand">composio · app-research case study · Om Prakash</div>
+  <div class="brand">composio · app-research case study · Piyush Jadhav</div>
   <nav aria-label="Sections"><a href="#findings">Findings</a><a href="#patterns">Patterns</a><a href="#agent">Agent</a><a href="#verification">Verification</a><a href="#apps-table">All 100 apps</a><a href="#run">Run it</a><a href="https://github.com/PiyushJadhav11/Product-Ops-Research-Project-" rel="noopener">GitHub repo ↗</a></nav>
 </div></header>
 
 <main>
 <section id="findings" style="padding-top:38px"><div class="wrap">
   <div class="eyebrow">Toolkit research · 100 apps · 10 categories · researched November 2026</div>
-  <h1>Can we build the toolkit today? For 41 of 100 apps, yes. For 49 the API exists but something stands in the way. 10 are blocked.</h1>
-  <p class="lede">A multi-agent pipeline researched auth, access gating, API surface and MCP for each app and cited the vendor's own docs for every answer. Four verification loops took field accuracy from <b>74%</b> (model memory) to <b>92.5%</b> on a 30-app sample checked against vendor docs by independent verifier agents, and to <b>90%</b> on a holdout the loops never saw. No human verified the labels; every sampled answer carries a URL and quote so anyone can audit it.</p>
+  <h1>Can we build the toolkit today? For __READY__ of 100 apps, yes. For __FRICTION__ the API exists but something stands in the way. __BLOCKED__ are blocked.</h1>
+  <p class="lede">A multi-agent pipeline researched auth, access gating, API surface and MCP for each app and cited the vendor's own docs for every answer. Four verification loops took field accuracy from <b>__P1__%</b> (model memory) to <b>__FIN__%</b> on a 30-app sample checked against vendor docs by independent verifier agents, and to <b>__HOLD__%</b> on a holdout the loops never saw. __H_LEDE__</p>
   <div class="tiles" id="tiles"></div>
 
   <h2 style="margin-top:34px">What the 100 apps say</h2>
@@ -174,13 +175,13 @@ footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
   <div class="flow" id="flow"></div>
   <div class="grid2" style="margin-top:16px">
     <div class="panel">
-      <h3>Judgment calls (made by the orchestrator agent, no human)</h3>
+      <h3>Judgment calls, and where a human was needed</h3>
       <ul class="small" style="margin:0;padding-left:18px;display:grid;gap:6px">
         <li><b>Defining the labels.</b> Pass 2 workers disagreed on what "official MCP" and "gated" mean. The orchestrator agent wrote <code>rubric.md</code>: an announced or docs-search-only MCP is not official; the gate is the most restrictive one a toolkit serving <i>other people's</i> accounts would hit.</li>
         <li><b>Policy calls the evidence can't settle.</b> The orchestrator decided these, and a human owner should review them: An app with no REST API but an official remote MCP (Otter) counts as buildable with friction, not blocked. An API key and a pasted bearer token count as the same auth for scoring. Local CLIs (Mermaid, Sherlock) are not SaaS APIs; they become sandboxed tools with no auth.</li>
         <li><b>Adjudicating disagreements.</b> When the blind ground-truth agent and the research agent disagreed, the orchestrator agent re-read both cited vendor pages and decided. The verifier itself was wrong twice (Podio and WhatsApp MCPs exist).</li>
         <li><b>Pages agents can't read.</b> JS-rendered pricing tables (Devin) and checkmark icons came through WebFetch blank and needed a real browser.</li>
-        <li><b>Still needs a human:</b> nobody has hand-checked the labels yet. <code>human_review.csv</code> lists all 120 sampled answers with proof links for that audit.</li>
+        <li><b>Human check:</b> __H_BULLET__</li>
         <li><b>Long-tail apps.</b> Paygent Connect, iPayX and fanbasis have no findable developer docs. One vendor page also carried hidden text addressed to LLM summarisers; the worker ignored it and flagged it.</li>
       </ul>
     </div>
@@ -204,18 +205,18 @@ footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
 
 <section id="verification"><div class="wrap">
   <div class="sec-head"><div><div class="eyebrow">Verification</div><h2>How I know the table is right: measured, not asserted</h2>
-  <p>I drew a stratified random sample of 30 apps (3 per category, seed 2026) and split it in two. <b>Sample A</b> (20 apps) was used to find error patterns and tune the loops. <b>Sample B</b> (10 apps) was held out: no loop was designed using it, so its score is the honest estimate for the 70 apps outside the sample. Ground truth came from blind verifier agents reading only vendor pages, then the orchestrator agent adjudicated every disagreement by re-reading both cited pages. No human was involved, so this measures agreement with carefully sourced agent labels, not with a human expert. Scored fields: toolkit auth, access gate, official MCP, verdict (4 × 30 = 120 checks).</p></div></div>
+  <p>I drew a stratified random sample of 30 apps (3 per category, seed 2026) and split it in two. <b>Sample A</b> (20 apps) was used to find error patterns and tune the loops. <b>Sample B</b> (10 apps) was held out: no loop was designed using it, so its score is the honest estimate for the 70 apps outside the sample. Ground truth came from blind verifier agents reading only vendor pages, then the orchestrator agent adjudicated every disagreement by re-reading both cited pages. __H_VERIF__ Scored fields: toolkit auth, access gate, official MCP, verdict (4 × 30 = 120 checks).</p></div></div>
   <div class="grid2">
     <div class="panel">
       <h3>Field accuracy by stage</h3>
       <div class="legend"><span><i class="sw" style="background:var(--ink-3)"></i>Pass 1 · model memory, no web</span><span><i class="sw" style="background:var(--warn)"></i>Pass 2 · web research with citations</span><span><i class="sw" style="background:var(--accent)"></i>After loops (lint, rubric, re-research)</span></div>
       <div class="acc-chart" id="accchart"></div>
-      <div class="callout">The holdout tracks the calibration sample to within 4 points at every stage, so the loops fixed real error patterns rather than memorising the sample. Expected accuracy on the unchecked 70 apps is about 90% per field.</div>
+      <div class="callout">The holdout tracks the calibration sample to within 4 points at every stage, so the loops fixed real error patterns rather than memorising the sample. Expected accuracy on the unchecked 70 apps is about __HOLD__% per field.</div>
     </div>
     <div class="panel">
       <h3>Accuracy per field (all 30 sampled apps)</h3>
       <table id="perfield"></table>
-      <p class="small muted" style="margin:10px 0 0">Memory was worst on <b>access gating</b> (57%) and <b>MCP</b>. Many MCP servers launched in 2026, after the model's training data (Pipedrive in June, Meta Ads in July, WhatsApp in September), so this research has to run against live docs.</p>
+      <p class="small muted" style="margin:10px 0 0">Memory was worst on <b>access gating</b> (__P1ACC__%) and <b>MCP</b>. Many MCP servers launched in 2026, after the model's training data (Pipedrive in June, Meta Ads in July, WhatsApp in September), so this research has to run against live docs.</p>
     </div>
   </div>
   <div style="display:grid;gap:16px;margin-top:16px">
@@ -225,9 +226,13 @@ footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
     </div>
     <div class="panel">
       <h3>Misses still standing after the loops</h3>
-      <p class="small muted" style="margin:0 0 8px">9 of 120 checks. All 9 were corrected in the final table by adjudication or the browser check. They are listed here because they show the error types that remain on the 70 unchecked apps.</p>
+      <p class="small muted" style="margin:0 0 8px">__NMISS__ of __NCHK__ checks. All __NMISS__ were corrected in the final table by adjudication or the browser check. They are listed here because they show the error types that remain on the 70 unchecked apps.</p>
       <table class="misses" id="misses"></table>
     </div>
+  </div>
+  <div class="panel" style="margin-top:16px">
+    <h3>Human spot-check (by hand, against vendor docs)</h3>
+    __H_PANEL__
   </div>
 </div></section>
 
@@ -260,9 +265,9 @@ footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
 # reproduce every number on this page from the committed data (no keys needed)
 python agent/lint.py      data/pass2/pass2.json
 python agent/normalize.py data/pass3/patched.json data/pass3/patched_norm.json
-python agent/score.py     data/pass1/pass1.json all      # 74.2%
-python agent/score.py     data/pass2/pass2.json all      # 86.7%
-python agent/score.py     data/pass3/patched_norm.json B # 90.0% holdout
+python agent/score.py     data/pass1/pass1.json all      # __P1__%
+python agent/score.py     data/pass2/pass2.json all      # __P2__%
+python agent/score.py     data/pass3/patched_norm.json B # __HOLD__% holdout
 python agent/pipeline.py   # rebuild data/final.json from the agent outputs
 python site/build.py       # rebuild this page
 
@@ -349,7 +354,7 @@ const steps=[
  ['code','Loop 2 · Rubric normaliser','Re-derives the verdict and blocker from access, API and MCP facts, so all 100 rows obey one rule instead of 10 workers\' judgement.',M.ch_norm+' field changes'],
  ['agent','Loop 3 · Targeted re-research','5 fix agents re-check all 100 apps for the 5 error patterns found on sample A. Each change is a patch with a vendor URL and a verbatim quote.',M.ch_fix+' patches'],
  ['agent','Loop 4 · Browser check','A real browser reads pages that WebFetch returns blank (JS pricing tables, icon checkmarks).',M.ch_browser+' fields resolved'],
- ['human','Open: human audit','Not done yet. The 120-row sheet and the low-confidence rows are ready for a person, with proof links. Unknowns stay unknown and are not guessed.','human_review.csv']
+ ['human','Human spot-check',M.human_step,'human_spotcheck.csv']
 ];
 $('#flow').innerHTML=steps.map((s,i)=>`<div class="step"><span class="pill who who-${s[0]}">${s[0]==='code'?'script':s[0]}</span><div class="n">${String(i+1).padStart(2,'0')}</div><h3>${s[1]}</h3><p>${s[2]}</p><div class="out">→ ${s[3]}</div></div>`).join('');
 $('#nchanges').textContent=M.ch_total;

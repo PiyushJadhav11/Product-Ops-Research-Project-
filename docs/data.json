@@ -906,7 +906,7 @@
   "official_mcp": "yes",
   "mcp_url": "https://mcp.plain.com/mcp",
   "community_mcp": "tellahq/plain-mcp, ndom91/plain-mcp-server",
-  "verdict": "ready",
+  "verdict": "ready_with_friction",
   "blocker": "none",
   "blocker_type": "none",
   "toolkit_shape": "agent_skills",
@@ -938,7 +938,8 @@
   "subcategory": "helpdesk",
   "evidence_quality": "primary",
   "needs_human": false,
-  "verified_sample": "B"
+  "verified_sample": "B",
+  "verdict_locked": true
  },
  {
   "id": 18,
@@ -1537,7 +1538,7 @@
   ],
   "toolkit_auth": "basic",
   "auth_notes": "Private apps: API id:token Basic auth generated in dashboard (Integrations & API). Public apps: OAuth 2.0 authorization code, scope public_api.",
-  "access": "self_serve_trial",
+  "access": "app_review",
   "gate_evidence": "Public App: \"To build one, you must first join the Aircall Technology Partner Program.\" Private App has no developer account and uses API keys from your own dashboard.",
   "api_type": [
    "rest"
@@ -1548,8 +1549,8 @@
   "official_mcp": "no",
   "mcp_url": "",
   "community_mcp": "Allo aircall-mcp-server (unofficial); Composio/StackOne/Activepieces",
-  "verdict": "ready",
-  "blocker": "none",
+  "verdict": "ready_with_friction",
+  "blocker": "Each customer pastes their own API id:token from a paid Aircall account (no free plan; 'free access' test offer not confirmed self-serve). OAuth public apps need Technology Partner Program.",
   "blocker_type": "none",
   "toolkit_shape": "agent_skills",
   "evidence": [
@@ -1595,7 +1596,8 @@
   "category": "Communications and Messaging",
   "evidence_quality": "primary",
   "needs_human": false,
-  "verified_sample": "A"
+  "verified_sample": "A",
+  "verdict_locked": true
  },
  {
   "id": 30,
@@ -3553,7 +3555,7 @@
    "api_key",
    "basic"
   ],
-  "toolkit_auth": "api_key",
+  "toolkit_auth": "oauth2",
   "auth_notes": "Service accounts (OAuth2 client-credentials, 1h tokens, recommended); legacy API keys via HTTP Digest. Admin API cannot read/write data; data needs DB user credentials/connection string.",
   "access": "self_serve_free",
   "gate_evidence": "Docs state no pricing tier requirement for service accounts/API keys; Atlas has free M0 tier (not quoted in a fetched page). Project/org Owner role required to create credentials.",
@@ -3593,7 +3595,8 @@
   "category": "Developer, Infra and Data platforms",
   "evidence_quality": "primary",
   "needs_human": false,
-  "verified_sample": "A"
+  "verified_sample": "A",
+  "verdict_locked": false
  },
  {
   "id": 69,
@@ -4834,7 +4837,7 @@
   ],
   "toolkit_auth": "oauth2",
   "auth_notes": "REST Public API: Bearer API key from Integrations > Developer tab, max 2 keys/user, no OAuth. MCP server: OAuth in browser (works for standard accounts).",
-  "access": "self_serve_free",
+  "access": "unknown",
   "gate_evidence": "Otter pricing page lists 'Otter API & Webhooks' on the Enterprise plan card; 'Otter MCP server' on Basic.",
   "api_type": [
    "rest"
