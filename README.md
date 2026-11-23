@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Composio app research: 100 apps, agent-researched and verified
 
 Can each of 100 apps become an AI-agent toolkit today? For each app this repo records the auth method,
@@ -87,4 +86,3 @@ site/                       case-study page + build script
 - Gates and MCP availability change monthly. Data as of 23 Nov 2026.
 =======
 # Product-Ops-Research-Project-
->>>>>>> e8180f47efb516b18082d7ae1ae9cad971daa449
