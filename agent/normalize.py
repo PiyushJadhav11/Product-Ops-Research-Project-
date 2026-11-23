@@ -11,7 +11,19 @@ import json, sys
 def normalize(r):
     r = dict(r)
     changes = []
-    if r.get("verdict_locked"):  # human/adjudicator decision wins
+    if r.get("verdict_locked"):  # human/adjudicator decision wins; only keep blocker_type consistent with it
+        bt = r.get("blocker_type", "none")
+        if r["verdict"] == "ready":
+            nb = "none"
+        elif bt in (None, "none"):
+            nb = {"app_review": "app_review", "paid_plan": "paid_plan", "partner_gated": "partner_gate"}.get(r["access"], "other")
+        else:
+            nb = bt
+        if nb != bt:
+            changes.append(("blocker_type", bt, nb))
+            r["blocker_type"] = nb
+            if nb == "other" and r.get("blocker") in (None, "", "none"):
+                r["blocker"] = "Human reviewer judged this ready_with_friction (see data/verify/human_spotcheck.csv)"
         return r, changes
     acc, bt = r["access"], r.get("blocker_type", "none")
     has_api = r.get("api_breadth") not in ("none", None) and r.get("api_type") not in ([], ["none"], None)

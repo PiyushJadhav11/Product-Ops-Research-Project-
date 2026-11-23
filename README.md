@@ -16,11 +16,11 @@ table of all 100 apps. Requires only Python 3.9+ to reproduce; no Claude account
 
 | | |
 |---|---|
-| Ready today | 40 |
-| Ready with friction (app review / paid plan / per-tenant setup / MCP-only) | 50 |
+| Ready today | 38 |
+| Ready with friction (app review / paid plan / per-tenant setup / MCP-only) | 52 |
 | Blocked (partner or sales gate, no API, or not a SaaS API) | 10 |
-| Field accuracy: model memory → web research → after loops | 74.2% → 86.7% → **92.5%** (30-app sample, 120 checks) |
-| Accuracy on the holdout sample (never used for tuning) | 72.5% → 85.0% → **90.0%** |
+| Field accuracy: model memory → web research → after loops | 75.8% → 87.5% → **91.7%** (30-app sample, 120 checks, truth includes human corrections) |
+| Accuracy on the holdout sample (never used for tuning) | 70.0% → 82.5% → **87.5%** |
 
 ## Pipeline
 
@@ -46,9 +46,9 @@ Every field change is logged in `data/verify/changes_all.json` with the loop tha
 pip install jsonschema           # optional, used for schema validation
 python agent/lint.py      data/pass2/pass2.json
 python agent/normalize.py data/pass3/patched.json data/pass3/patched_norm.json
-python agent/score.py     data/pass1/pass1.json all          # 74.2%
-python agent/score.py     data/pass2/pass2.json all          # 86.7%
-python agent/score.py     data/pass3/patched_norm.json B     # 90.0% on the holdout
+python agent/score.py     data/pass1/pass1.json all          # 75.8%
+python agent/score.py     data/pass2/pass2.json all          # 87.5%
+python agent/score.py     data/pass3/patched_norm.json B     # 87.5% on the holdout
 python agent/pipeline.py                                     # rebuilds data/final.json + final.csv from the agent outputs
 python site/build.py                                         # rebuilds site/index.html and copies it to docs/ (GitHub Pages)
 ```
@@ -94,9 +94,9 @@ docs/                       built page for GitHub Pages
 
 ## Known limits
 
-- **Human checks are a spot-check, not a full audit.** Ground truth for the 30-app sample comes from blind verifier agents reading vendor pages, with disagreements adjudicated by the orchestrator agent. A human (Piyush Jadhav) then checks 20 of those answers by hand in `data/verify/human_spotcheck.csv`; corrections override the agents and the page reports the result. `human_review.csv` has all 120 sampled answers for a fuller audit.
+- **Human checks are a spot-check, not a full audit.** Ground truth for the 30-app sample comes from blind verifier agents reading vendor pages, with disagreements adjudicated by the orchestrator agent. A human (Piyush Jadhav) then checked 20 of those answers by hand (15 confirmed, 5 corrected) in `data/verify/human_spotcheck.csv`; corrections override the agents and the page reports the result. `human_review.csv` has all 120 sampled answers for a fuller audit.
 - Access is still `unknown` for 4 long-tail apps (Zoho Cliq, fanbasis, Paygent Connect, iPayX). They need a vendor contact.
-- The 70 apps outside the sample are about 90% accurate per field (holdout estimate). Re-check the lowest-confidence rows first (`confidence < 0.7`).
+- The 70 apps outside the sample are about 87.5% accurate per field (holdout estimate). Re-check the lowest-confidence rows first (`confidence < 0.7`).
 - Gates and MCP availability change monthly. Data as of 23 Nov 2026.
 
 ## Human spot-check (how to do it, ~20 minutes)

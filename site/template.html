@@ -211,7 +211,7 @@ footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
       <h3>Field accuracy by stage</h3>
       <div class="legend"><span><i class="sw" style="background:var(--ink-3)"></i>Pass 1 · model memory, no web</span><span><i class="sw" style="background:var(--warn)"></i>Pass 2 · web research with citations</span><span><i class="sw" style="background:var(--accent)"></i>After loops (lint, rubric, re-research)</span></div>
       <div class="acc-chart" id="accchart"></div>
-      <div class="callout">The holdout tracks the calibration sample to within 4 points at every stage, so the loops fixed real error patterns rather than memorising the sample. Expected accuracy on the unchecked 70 apps is about __HOLD__% per field.</div>
+      <div class="callout">The holdout scores below the calibration sample at every stage (__GAP__ points after the loops). That is expected, because the loops were tuned on sample A, and it is why the holdout figure is the one to trust: expect about __HOLD__% per field on the 70 unchecked apps.</div>
     </div>
     <div class="panel">
       <h3>Accuracy per field (all 30 sampled apps)</h3>
@@ -226,7 +226,7 @@ footer{padding:28px 0 50px;color:var(--ink-3);font-size:13px}
     </div>
     <div class="panel">
       <h3>Misses still standing after the loops</h3>
-      <p class="small muted" style="margin:0 0 8px">__NMISS__ of __NCHK__ checks. All __NMISS__ were corrected in the final table by adjudication or the browser check. They are listed here because they show the error types that remain on the 70 unchecked apps.</p>
+      <p class="small muted" style="margin:0 0 8px">__NMISS__ of __NCHK__ checks. All __NMISS__ are corrected in the final table (by adjudication, the browser check or the human spot-check). They are listed here because they show the error types that remain on the 70 unchecked apps.</p>
       <table class="misses" id="misses"></table>
     </div>
   </div>

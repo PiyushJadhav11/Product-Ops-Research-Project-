@@ -33,11 +33,13 @@ for k, f in files.items():
 # 2. misses still standing after the loops (explanations written after reading each case)
 _, _, misses = score(load(files["loops"]), truth, ALL)
 WHY = {
-    (29, "access"): "Read 'free access to test' as paid; browser check confirmed a self-serve trial",
+    (29, "access"): "Human reviewer: the OAuth path needs Aircall Marketplace/partner approval, so the gate is app review",
+    (68, "toolkit_auth"): "Human reviewer: Atlas service accounts use OAuth 2.0 (client credentials); agents labelled it a key",
+    (17, "verdict"): "Human reviewer judged trial-only access (no free plan) as friction",
     (29, "verdict"): "Follows from the access miss",
     (30, "toolkit_auth"): "Chose the Voice-API JWT over key/secret; both valid, definitional",
     (68, "verdict"): "Counted per-project API key setup as per-tenant setup",
-    (92, "access"): "REST API is Enterprise-only but the MCP is free; rubric gates on the MCP path",
+    (92, "access"): "Human reviewer: no vendor page says which plans include the MCP, so access is unknown",
     (28, "toolkit_auth"): "Used the system-user token; multi-tenant Tech Providers use Embedded Signup (OAuth)",
     (34, "access"): "Fix agent couldn't load marketplace docs; public apps need review",
     (34, "verdict"): "Follows from the access miss",
@@ -108,6 +110,7 @@ vc = collections.Counter(r["verdict"] for r in final)
 html = html.replace("__READY__", str(vc["ready"])).replace("__FRICTION__", str(vc["ready_with_friction"])).replace("__BLOCKED__", str(vc["blocked"]))
 hs.update({"__P1__": f"{acc['p1']['all']:g}", "__P2__": f"{acc['p2']['all']:g}", "__FIN__": f"{acc['loops']['all']:g}",
            "__HOLD__": f"{acc['loops']['B']:g}", "__P1ACC__": str(round(100 * field['p1']['access'] / len(ALL))),
+           "__GAP__": f"{acc['loops']['A'] - acc['loops']['B']:.1f}",
            "__NMISS__": str(len(M["misses"])), "__NCHK__": str(len(ALL) * len(KEY))})
 for k, v in hs.items():
     html = html.replace(k, v)

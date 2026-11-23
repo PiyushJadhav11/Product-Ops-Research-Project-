@@ -907,8 +907,8 @@
   "mcp_url": "https://mcp.plain.com/mcp",
   "community_mcp": "tellahq/plain-mcp, ndom91/plain-mcp-server",
   "verdict": "ready_with_friction",
-  "blocker": "none",
-  "blocker_type": "none",
+  "blocker": "Human reviewer judged this ready_with_friction (see data/verify/human_spotcheck.csv)",
+  "blocker_type": "other",
   "toolkit_shape": "agent_skills",
   "evidence": [
    {
@@ -1551,7 +1551,7 @@
   "community_mcp": "Allo aircall-mcp-server (unofficial); Composio/StackOne/Activepieces",
   "verdict": "ready_with_friction",
   "blocker": "Each customer pastes their own API id:token from a paid Aircall account (no free plan; 'free access' test offer not confirmed self-serve). OAuth public apps need Technology Partner Program.",
-  "blocker_type": "none",
+  "blocker_type": "app_review",
   "toolkit_shape": "agent_skills",
   "evidence": [
    {
